@@ -1,0 +1,2039 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found]){display:none!important}</style></head><body>
+<title>Langley Departures</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Baloo+2:wght@600;700&display=swap">
+<style>
+  :root{
+    --bg:#eef1ef;
+    --surface:#ffffff;
+    --surface-2:#f4f6f4;
+    --ink:#1f2a24;
+    --ink-soft:#5b6a61;
+    --line:#d7ded9;
+    --line-soft:#e6ebe7;
+    --accent:#2f6f5e;
+    --accent-soft:#dceae4;
+    --warn:#9a6316;
+    --warn-soft:#f4e7d2;
+    --bad:#b23b3b;
+    --francis:#2b7a8c;   --francis-soft:#dbeef1;
+    --mathilda:#b0477e;  --mathilda-soft:#f6e0ec;
+    --mum:#2f6f5e;       --mum-soft:#dceae4;
+    --dad:#8a6a22;       --dad-soft:#eee5cd;
+    --font-display:"Sora", ui-sans-serif, system-ui, sans-serif;
+    --font-body:"Work Sans", ui-sans-serif, system-ui, sans-serif;
+    --font-mono:"IBM Plex Mono", ui-monospace, monospace;
+    --font-kid:"Baloo 2", ui-rounded, system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#101512;
+      --surface:#17201c;
+      --surface-2:#141c19;
+      --ink:#e8eeea;
+      --ink-soft:#93a49b;
+      --line:#28352d;
+      --line-soft:#212c26;
+      --accent:#7fd6b8;
+      --accent-soft:#1d2e27;
+      --warn:#e0a75c;
+      --warn-soft:#2c2317;
+      --bad:#e88;
+      --francis:#6cc7d6;   --francis-soft:#16323a;
+      --mathilda:#e79bc4;  --mathilda-soft:#3a2130;
+      --mum:#7fd6b8;       --mum-soft:#1d2e27;
+      --dad:#d8b978;       --dad-soft:#2d2716;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#101512;
+    --surface:#17201c;
+    --surface-2:#141c19;
+    --ink:#e8eeea;
+    --ink-soft:#93a49b;
+    --line:#28352d;
+    --line-soft:#212c26;
+    --accent:#7fd6b8;
+    --accent-soft:#1d2e27;
+    --warn:#e0a75c;
+    --warn-soft:#2c2317;
+    --bad:#e88;
+    --francis:#6cc7d6;   --francis-soft:#16323a;
+    --mathilda:#e79bc4;  --mathilda-soft:#3a2130;
+    --mum:#7fd6b8;       --mum-soft:#1d2e27;
+    --dad:#d8b978;       --dad-soft:#2d2716;
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; }
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--font-body);
+    font-size:15px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    padding:2.25rem 1.25rem 3rem;
+    display:flex;
+    justify-content:center;
+  }
+  .wrap{ width:100%; max-width:880px; }
+
+  header{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:1rem;
+    flex-wrap:wrap;
+    padding-bottom:1rem;
+    border-bottom:1px solid var(--line);
+  }
+  .brand h1{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:1.5rem;
+    letter-spacing:-0.01em;
+    margin:0;
+  }
+  .brand .sub{
+    font-family:var(--font-mono);
+    font-size:.7rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  .now{ text-align:right; }
+  .now .clock{
+    font-family:var(--font-mono);
+    font-variant-numeric:tabular-nums;
+    font-size:1.5rem;
+    font-weight:500;
+    line-height:1;
+    color:var(--ink);
+  }
+  .now .date{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:.1rem;
+    margin-top:.35rem;
+  }
+  .date-day{
+    font-family:var(--font-kid);
+    font-size:1.15rem;
+    font-weight:600;
+    letter-spacing:.01em;
+    color:var(--accent);
+    line-height:1;
+  }
+  .date-rest{
+    font-family:var(--font-mono);
+    font-size:.68rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+
+  /* Rotating ticker — replaces the brand title on the kiosk screen only
+     (see the compact layout media query below), cycling bins/Arsenal/weather. */
+  .ticker{ display:none; }
+
+  .nextup{
+    font-family:var(--font-mono);
+    font-size:.8rem;
+    color:var(--ink-soft);
+    margin:.9rem 0 0;
+    padding:.55rem .8rem;
+    background:var(--surface-2);
+    border:1px solid var(--line-soft);
+    border-radius:10px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+  }
+  .nextup .lbl{
+    color:var(--accent);
+    font-weight:600;
+    letter-spacing:.12em;
+    margin-right:.7em;
+  }
+
+  .status-banner{
+    margin-top:.9rem;
+    padding:.6rem .8rem;
+    border-radius:10px;
+    font-size:.85rem;
+    background:var(--warn-soft);
+    color:var(--warn);
+  }
+  .status-banner.error{ color:var(--bad); }
+
+  .people{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1rem;
+    margin-top:1.25rem;
+  }
+  .cards2{
+    display:grid;
+    grid-template-columns:1fr 1.35fr;
+    gap:1rem;
+    margin-top:1rem;
+    align-items:start;
+  }
+  @media (max-width:760px){
+    .people, .cards2{ grid-template-columns:1fr; }
+  }
+
+  .person, .card{
+    position:relative;
+    overflow:hidden;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:1.15rem 1.25rem;
+  }
+  .person::before{
+    content:"";
+    position:absolute;
+    left:0; top:0; bottom:0;
+    width:3px;
+    background:var(--ink-soft);
+  }
+  .person[data-p="francis"]::before{ background:var(--francis); }
+  .person[data-p="mathilda"]::before{ background:var(--mathilda); }
+  .person[data-p="mum"]::before{ background:var(--mum); }
+  .person[data-p="dad"]::before{ background:var(--dad); }
+
+  .person h2, .card h3{
+    font-family:var(--font-display);
+    font-weight:600;
+    font-size:1.05rem;
+    margin:0 0 .9rem;
+    display:flex;
+    align-items:center;
+    gap:.55rem;
+    flex-wrap:wrap;
+  }
+  .card h3 .hsub{
+    font-family:var(--font-mono);
+    font-weight:400;
+    font-size:.6rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+
+  .badge{
+    font-family:var(--font-mono);
+    font-size:.62rem;
+    font-weight:500;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    border-radius:999px;
+    padding:.28rem .6rem;
+    color:var(--accent);
+    background:var(--accent-soft);
+    white-space:nowrap;
+  }
+  .person[data-p="francis"] .badge{ color:var(--francis); background:var(--francis-soft); }
+  .person[data-p="mathilda"] .badge{ color:var(--mathilda); background:var(--mathilda-soft); }
+  .person[data-p="mum"] .badge{ color:var(--mum); background:var(--mum-soft); }
+  .person[data-p="dad"] .badge{ color:var(--dad); background:var(--dad-soft); }
+
+  .rows{ display:flex; flex-direction:column; gap:.7rem; }
+  .row{
+    display:grid;
+    grid-template-columns:6.2rem 1fr;
+    gap:.75rem;
+    font-size:.92rem;
+    line-height:1.5;
+  }
+  .row .label{
+    font-family:var(--font-mono);
+    font-size:.62rem;
+    font-weight:500;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    padding-top:.2rem;
+  }
+  .row .value{ color:var(--ink); min-width:0; }
+  .row .value b{ font-weight:600; }
+  .row .value.sub{ color:var(--ink-soft); font-size:.88rem; }
+
+  .vsub{
+    display:block;
+    color:var(--ink-soft);
+    font-size:.82rem;
+    margin-top:.18rem;
+  }
+  .vsub.foot{
+    font-family:var(--font-mono);
+    font-size:.62rem;
+    letter-spacing:.03em;
+    margin-top:.35rem;
+  }
+  .pron{
+    font-family:var(--font-mono);
+    font-size:.78rem;
+    color:var(--ink-soft);
+    margin-left:.4rem;
+  }
+  .i{
+    display:inline-block;
+    width:.9rem;
+    height:.9rem;
+    vertical-align:-.14rem;
+    margin-right:.35rem;
+    color:var(--ink-soft);
+  }
+  .i svg{ width:100%; height:100%; display:block; }
+
+  /* bus row states (Francis) */
+  .row.bus.bus-urgent{
+    background:var(--warn-soft);
+    border-radius:9px;
+    margin:-.3rem -.45rem;
+    padding:.3rem .45rem;
+    animation:pulse 1.6s ease-in-out infinite;
+  }
+  .row.bus.bus-urgent .value b{ color:var(--warn); }
+  .row.bus.bus-quiet .value b{ color:var(--ink-soft); font-weight:500; }
+  @keyframes pulse{
+    0%,100%{ box-shadow:0 0 0 0 rgba(154,99,22,.28); }
+    50%{ box-shadow:0 0 0 6px rgba(154,99,22,0); }
+  }
+  @media (prefers-reduced-motion:reduce){ .row.bus.bus-urgent{ animation:none; } }
+
+  /* mini event lists */
+  .mini{ display:block; }
+  .mini + .mini{ margin-top:.4rem; }
+  .mini-when{
+    display:block;
+    font-family:var(--font-mono);
+    font-size:.66rem;
+    letter-spacing:.03em;
+    color:var(--ink-soft);
+  }
+  .mini-empty{ color:var(--ink-soft); font-size:.88rem; }
+
+  /* Francis's boxed weekly facts (history / German word) */
+  .fact-box{
+    background:var(--surface-2);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:.55rem .7rem;
+  }
+  .fact-label{
+    display:block;
+    font-family:var(--font-mono);
+    font-size:.62rem;
+    font-weight:500;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:.3rem;
+  }
+  .fact-value{ font-size:.9rem; line-height:1.5; color:var(--ink); }
+  .fact-value b{ font-weight:600; }
+
+  /* Rotating ticker version of the two fact-boxes above — used only on the
+     kiosk screen (see the compact layout media query below), where there
+     isn't room to show the history fact and the German word at once. */
+  .fact-ticker{ display:none; }
+
+  /* Kiosk-only "coming up" ticker that replaces the Around-the-house and
+     Family diary cards below the person grid — see the kiosk media query. */
+  .family-ticker{ display:none; }
+
+  /* Mathilda's weekly whereabouts (child-friendly) */
+  .where-list{
+    display:flex;
+    flex-direction:column;
+    gap:.3rem;
+    margin-top:.9rem;
+    padding-top:.85rem;
+    border-top:1px solid var(--line-soft);
+  }
+  .where-row{
+    display:flex;
+    align-items:center;
+    gap:.55rem;
+    border-radius:8px;
+    padding:.2rem .3rem;
+  }
+  .where-row.is-today{
+    background:var(--mathilda-soft);
+    padding:.35rem .5rem;
+    margin:0 -.2rem;
+  }
+  .where-day{
+    font-family:var(--font-mono);
+    font-size:.62rem;
+    font-weight:600;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    width:2.3rem;
+    flex:none;
+  }
+  .where-row.is-today .where-day{ color:var(--mathilda); }
+  .where-emoji{ font-size:1.15rem; line-height:1; flex:none; }
+  .where-place{ font-family:var(--font-kid); font-size:.98rem; color:var(--ink); }
+  .where-row.is-today .where-place{ font-weight:600; }
+
+  /* Mathilda's letter/number of the week, side by side */
+  .weekly-cards{
+    display:flex;
+    gap:.6rem;
+    margin-top:.9rem;
+  }
+  .weekly-card{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:.15rem;
+    background:var(--mathilda-soft);
+    border:1px solid var(--mathilda);
+    border-radius:12px;
+    padding:.6rem .4rem .5rem;
+  }
+  .weekly-card-label{
+    font-family:var(--font-mono);
+    font-size:.58rem;
+    font-weight:600;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--mathilda);
+  }
+  .weekly-card-value{
+    font-family:var(--font-kid);
+    font-size:2rem;
+    font-weight:600;
+    line-height:1;
+    color:var(--ink);
+  }
+
+  /* around the house */
+  .tea-main{ display:block; font-weight:600; }
+  .tea-main.tea-empty{ font-weight:500; color:var(--ink-soft); }
+  .tea-foot{
+    display:block;
+    font-family:var(--font-mono);
+    font-size:.62rem;
+    letter-spacing:.03em;
+    color:var(--ink-soft);
+    margin-top:.35rem;
+  }
+  .tea-foot.tea-stale{ color:var(--warn); }
+  .row.bin-soon .value b{ color:var(--warn); }
+  .bin-out{ display:flex; flex-wrap:wrap; gap:.4rem; margin-top:.5rem; }
+  .bin-pill{
+    display:inline-flex;
+    align-items:center;
+    gap:.35rem;
+    background:var(--surface-2);
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:.24rem .55rem .24rem .35rem;
+    font-size:.75rem;
+    color:var(--ink);
+    white-space:nowrap;
+  }
+  .bin-pill svg{ width:1.05rem; height:1.05rem; flex:none; display:block; }
+  .bin-next-list{
+    display:flex;
+    flex-direction:column;
+    gap:.35rem;
+    margin-top:.6rem;
+    padding-top:.55rem;
+    border-top:1px solid var(--line-soft);
+  }
+  .bin-next-row{
+    display:flex;
+    align-items:center;
+    gap:.45rem;
+    font-size:.8rem;
+    color:var(--ink-soft);
+  }
+  .bin-next-row svg{ width:.95rem; height:.95rem; flex:none; display:block; }
+  .bin-next-name{ color:var(--ink); }
+  .bin-next-when{
+    margin-left:auto;
+    font-family:var(--font-mono);
+    font-variant-numeric:tabular-nums;
+    font-size:.72rem;
+  }
+  .wx{ display:flex; align-items:center; gap:.5rem; }
+  .wxicon{ width:1.4rem; height:1.4rem; flex:none; color:var(--accent); }
+  .wxicon svg{ width:100%; height:100%; display:block; }
+  .chip-alert{
+    display:inline-block;
+    margin-top:.3rem;
+    font-family:var(--font-mono);
+    font-size:.6rem;
+    letter-spacing:.05em;
+    color:var(--warn);
+    background:var(--warn-soft);
+    padding:.12rem .4rem;
+    border-radius:4px;
+  }
+
+  /* family diary agenda */
+  .agenda{ display:flex; flex-direction:column; }
+  .agenda-day{
+    font-family:var(--font-mono);
+    font-size:.64rem;
+    font-weight:600;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--accent);
+    padding:.9rem 0 .45rem;
+    border-bottom:1px solid var(--line-soft);
+  }
+  .agenda-day:first-child{ padding-top:0; }
+  .agenda .row{
+    grid-template-columns:4.2rem .9rem 1fr;
+    gap:.15rem .7rem;
+    align-items:start;
+    padding:.6rem 0;
+    border-bottom:1px solid var(--line-soft);
+    font-size:.9rem;
+  }
+  .agenda .row:last-child{ border-bottom:none; }
+  .row-time{
+    font-family:var(--font-mono);
+    font-variant-numeric:tabular-nums;
+    font-size:.82rem;
+    color:var(--ink-soft);
+    padding-top:.1rem;
+  }
+  .dot{
+    width:.5rem;
+    height:.5rem;
+    border-radius:50%;
+    margin-top:.5rem;
+    background:var(--ink-soft);
+  }
+  .dot.francis{ background:var(--francis); }
+  .dot.mathilda{ background:var(--mathilda); }
+  .dot.family{ background:var(--accent); }
+  .row-body{ min-width:0; }
+  .row-title{
+    font-size:.92rem;
+    font-weight:500;
+    line-height:1.45;
+    color:var(--ink);
+    overflow-wrap:break-word;
+  }
+  .row-who{
+    margin-left:.4rem;
+    font-family:var(--font-mono);
+    font-size:.68rem;
+    color:var(--ink-soft);
+    white-space:nowrap;
+  }
+  .row-loc{ font-size:.8rem; color:var(--ink-soft); margin-top:.1rem; }
+  .row-more{
+    font-family:var(--font-mono);
+    font-size:.72rem;
+    letter-spacing:.03em;
+    color:var(--ink-soft);
+    padding:.6rem 0 0;
+  }
+  .row-placeholder{
+    font-family:var(--font-mono);
+    font-size:.82rem;
+    color:var(--ink-soft);
+    padding:.7rem 0;
+  }
+
+  .gtk{ margin-top:1.1rem; padding-top:1rem; border-top:1px solid var(--line); }
+  .gtk h4{
+    font-family:var(--font-mono);
+    font-size:.62rem;
+    font-weight:500;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin:0 0 .7rem;
+  }
+
+  .foot{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:1rem;
+    margin-top:1.5rem;
+    padding-top:1rem;
+    border-top:1px solid var(--line);
+    font-family:var(--font-mono);
+    font-size:.64rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  .refresh-btn{
+    background:transparent;
+    border:1px solid var(--line);
+    color:var(--ink-soft);
+    padding:.35rem .7rem;
+    border-radius:8px;
+    cursor:pointer;
+    font-family:var(--font-mono);
+    font-size:.64rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+  }
+  .refresh-btn:hover{ color:var(--accent); border-color:var(--accent); }
+  :focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+
+  /* Compact kiosk layout for Jessica's 7" Raspberry Pi touchscreen
+     (REENOVE 800x480 landscape display, driven off a Pi in the kitchen).
+     Triggers on any short, moderately-narrow viewport — a plugged-in kiosk
+     screen or a phone turned landscape — but not on tall mobile portrait
+     screens, which keep the roomier stacked layout from the rule above.
+     Almost everything else in this file is sized in rem, so shrinking the
+     root font does most of the work; these overrides handle the bits that
+     don't scale on their own (column counts, section spacing, and trimming
+     the least essential content so the board fits without scrolling). */
+  @media (max-width:900px) and (max-height:560px){
+    :root{ font-size:13px; }
+    body{ padding:.3rem .35rem .35rem; }
+    .wrap{ max-width:100%; }
+    header{ padding-bottom:.4rem; align-items:center; }
+    .brand{ display:none; }
+    .ticker{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:.4rem;
+      flex:1;
+      min-width:0;
+    }
+    .ticker-item{
+      display:flex;
+      align-items:center;
+      gap:.32rem;
+      min-width:0;
+      font-family:var(--font-mono);
+      font-size:.58rem;
+      color:var(--ink-soft);
+      overflow:hidden;
+      white-space:nowrap;
+      background:var(--surface-2);
+      border:1px solid var(--line);
+      border-radius:6px;
+      padding:.2rem .4rem;
+    }
+    .ticker-icon{ font-size:.85rem; flex:none; line-height:1; }
+    .ticker-text{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    #teaCard{ display:none; }
+    .now .clock{ font-size:1.1rem; }
+    .date-day{ font-size:.85rem; }
+    .date-rest{ font-size:.55rem; }
+    .nextup{ display:none; }
+    .status-banner{ margin-top:.3rem; padding:.3rem .5rem; font-size:.62rem; }
+    .people{ grid-template-columns:repeat(2,1fr); gap:.45rem; margin-top:.4rem; }
+    .person[data-p="mum"]{ order:1; }
+    .person[data-p="dad"]{ order:2; }
+    .person[data-p="francis"]{ order:3; }
+    .person[data-p="mathilda"]{ order:4; }
+    .cards2{ display:none; }
+    .person, .card{ padding:.4rem .45rem; border-radius:8px; }
+    .person h2, .card h3{ font-size:.75rem; margin-bottom:.3rem; gap:.25rem; }
+    .card h3 .hsub{ font-size:.48rem; }
+    .badge{ font-size:.46rem; padding:.14rem .35rem; }
+    .rows{ gap:.3rem; }
+    .row{ grid-template-columns:3.4rem 1fr; gap:.3rem; font-size:.62rem; line-height:1.3; }
+    .row .label{ font-size:.48rem; }
+    .row .value.sub{ font-size:.6rem; }
+    .vsub{ font-size:.58rem; margin-top:.1rem; }
+    .fact-box{ display:none; }
+    .fact-ticker{
+      display:block;
+      background:var(--surface-2);
+      border:1px solid var(--line);
+      border-radius:8px;
+      padding:.3rem .4rem;
+    }
+    .fact-ticker-label{
+      display:block;
+      font-family:var(--font-mono);
+      font-size:.46rem;
+      font-weight:500;
+      letter-spacing:.05em;
+      text-transform:uppercase;
+      color:var(--ink-soft);
+      margin-bottom:.15rem;
+    }
+    .fact-ticker-text{
+      display:block;
+      font-size:.6rem;
+      line-height:1.15;
+      color:var(--ink);
+      overflow:hidden;
+      text-overflow:ellipsis;
+      display:-webkit-box;
+      -webkit-line-clamp:2;
+      -webkit-box-orient:vertical;
+    }
+    .family-ticker{
+      display:block;
+      margin-top:.4rem;
+      background:var(--surface-2);
+      border:1px solid var(--line);
+      border-radius:8px;
+      padding:.4rem .55rem;
+    }
+    .family-ticker-label{
+      display:block;
+      font-family:var(--font-mono);
+      font-size:.48rem;
+      font-weight:500;
+      letter-spacing:.05em;
+      text-transform:uppercase;
+      color:var(--ink-soft);
+      margin-bottom:.18rem;
+    }
+    .family-ticker-text{
+      display:block;
+      font-size:.7rem;
+      line-height:1.3;
+      color:var(--ink);
+      overflow:hidden;
+      text-overflow:ellipsis;
+      display:-webkit-box;
+      -webkit-line-clamp:2;
+      -webkit-box-orient:vertical;
+    }
+    .where-list{ gap:.18rem; margin-top:.35rem; padding-top:.3rem; }
+    .where-row{ padding:.08rem .15rem; gap:.3rem; }
+    .where-row.is-today{ padding:.15rem .3rem; margin:0 -.15rem; }
+    .where-day{ font-size:.46rem; width:1.6rem; }
+    .where-emoji{ font-size:.8rem; }
+    .where-place{ font-size:.6rem; }
+    .weekly-cards{ gap:.35rem; margin-top:.35rem; }
+    .weekly-card{ padding:.3rem .3rem .25rem; border-radius:7px; }
+    .weekly-card-label{ font-size:.44rem; }
+    .weekly-card-value{ font-size:1.1rem; }
+    .agenda-day{ font-size:.46rem; padding:.35rem 0 .2rem; }
+    .agenda .row{ grid-template-columns:2.6rem .55rem 1fr; gap:.1rem .3rem; padding:.25rem 0; font-size:.6rem; }
+    .row-time{ font-size:.56rem; }
+    .row-title{ font-size:.6rem; line-height:1.3; }
+    .row-who{ font-size:.48rem; }
+    .row-loc{ font-size:.54rem; }
+    .row-more{ font-size:.5rem; padding-top:.3rem; }
+    .row-placeholder{ font-size:.6rem; padding:.35rem 0; }
+    .gtk{ display:none; }
+    .bin-pill{ font-size:.54rem; padding:.16rem .35rem .16rem .25rem; }
+    .bin-pill svg{ width:.8rem; height:.8rem; }
+    .bin-next-list{ gap:.2rem; margin-top:.3rem; padding-top:.3rem; }
+    .bin-next-row{ font-size:.54rem; gap:.3rem; }
+    .bin-next-row svg{ width:.75rem; height:.75rem; }
+    .chip-alert{ font-size:.44rem; }
+    .foot{ margin-top:.3rem; padding-top:.3rem; font-size:.46rem; }
+    .refresh-btn{ padding:.18rem .35rem; font-size:.46rem; }
+  }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <h1>Langley Household</h1>
+      <span class="sub">Kitchen board</span>
+    </div>
+    <div class="ticker" id="ticker">
+      <div class="ticker-item">
+        <span class="ticker-icon" id="tickerIcon">&#128465;&#65039;</span>
+        <span class="ticker-text" id="tickerText">Loading&hellip;</span>
+      </div>
+      <div class="ticker-item">
+        <span class="ticker-icon" id="tickerIcon2">&#127860;</span>
+        <span class="ticker-text" id="tickerText2">Loading&hellip;</span>
+      </div>
+    </div>
+    <div class="now">
+      <div class="clock" id="clock">--:--</div>
+      <div class="date">
+        <span class="date-day" id="dateDay">&nbsp;</span>
+        <span class="date-rest" id="dateRest">&nbsp;</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="nextup" id="nextUp"><span class="lbl">NEXT</span>connecting&hellip;</div>
+  <div class="status-banner" id="statusBanner" hidden></div>
+
+  <section class="people">
+    <article class="person" data-p="francis">
+      <h2>Francis <span class="badge" id="francisBadge">School day</span></h2>
+      <div class="rows">
+        <div class="row bus" id="busCard">
+          <span class="label">School bus</span>
+          <span class="value"><b id="busMain">Loading&hellip;</b><span class="vsub" id="busSub">&nbsp;</span></span>
+        </div>
+        <div class="row">
+          <span class="label">Next</span>
+          <span class="value" id="francisRows"><span class="mini-empty">Loading&hellip;</span></span>
+        </div>
+        <div class="fact-box">
+          <span class="fact-label">This week in history</span>
+          <span class="fact-value" id="historyFact">Loading&hellip;</span>
+        </div>
+        <div class="fact-box">
+          <span class="fact-label">German word</span>
+          <span class="fact-value"><b id="germanWord">?</b><span class="pron" id="germanPron"></span><span class="vsub" id="germanMeaning"></span></span>
+        </div>
+        <div class="fact-ticker" id="factTicker">
+          <span class="fact-ticker-label" id="factTickerLabel">This week in history</span>
+          <span class="fact-ticker-text" id="factTickerText">Loading&hellip;</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="person" data-p="mathilda">
+      <h2>Mathilda <span class="badge" id="mathildaBadge">Nursery week</span></h2>
+      <div class="rows">
+        <div class="row">
+          <span class="label">Topic</span>
+          <span class="value">
+            <span class="vsub"><span class="i" id="topicIcon"></span><span id="weeklyTopic">ask Mum to fill this in!</span></span>
+          </span>
+        </div>
+        <div class="row">
+          <span class="label">Next</span>
+          <span class="value" id="mathildaRows"><span class="mini-empty">Loading&hellip;</span></span>
+        </div>
+      </div>
+      <div class="where-list" id="mathildaWhere"></div>
+      <div class="weekly-cards">
+        <div class="weekly-card">
+          <span class="weekly-card-label">Letter</span>
+          <span class="weekly-card-value" id="weeklyLetter">?</span>
+        </div>
+        <div class="weekly-card">
+          <span class="weekly-card-label">Number</span>
+          <span class="weekly-card-value" id="weeklyNumber">?</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="person" data-p="mum">
+      <h2>Mum <span class="badge" id="mumBadge">Evening 30</span></h2>
+      <div class="rows">
+        <div class="row">
+          <span class="label"><span class="i" id="mumIcon"></span>Today&rsquo;s 30</span>
+          <span class="value"><b id="mumMain">Loading&hellip;</b><span class="vsub" id="mumSub">&nbsp;</span></span>
+        </div>
+        <div class="row">
+          <span class="label">Reading</span>
+          <span class="value sub" id="mumBook">Loading&hellip;</span>
+        </div>
+        <div class="row">
+          <span class="label">Next</span>
+          <span class="value" id="mumRows"><span class="mini-empty">Loading&hellip;</span></span>
+        </div>
+      </div>
+    </article>
+
+    <article class="person" data-p="dad">
+      <h2>Dad <span class="badge" id="dadBadge">Alex</span></h2>
+      <div class="rows">
+        <div class="row">
+          <span class="label">Next away</span>
+          <span class="value" id="dadNextAway">&hellip;</span>
+        </div>
+        <div class="row">
+          <span class="label">Next leave</span>
+          <span class="value" id="dadNextLeave">&hellip;</span>
+        </div>
+        <div class="row">
+          <span class="label">Next on</span>
+          <span class="value" id="dadRows"><span class="mini-empty">Loading&hellip;</span></span>
+        </div>
+        <div class="fact-ticker" id="dadFactTicker">
+          <span class="fact-ticker-label">The Poachers</span>
+          <span class="fact-ticker-text" id="dadFactText">Loading&hellip;</span>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="cards2">
+    <article class="card">
+      <h3>Around the house</h3>
+      <div class="rows">
+        <div class="row" id="teaCard">
+          <span class="label"><span class="i" id="teaHeadIcon"></span>Tea today</span>
+          <span class="value">
+            <span id="teaMain" class="tea-main">Loading&hellip;</span>
+            <span class="vsub" id="teaNote">&nbsp;</span>
+            <span id="teaFoot" class="tea-foot">&nbsp;</span>
+          </span>
+        </div>
+        <div class="row" id="binCard">
+          <span class="label"><span class="i" id="binHeadIcon"></span>Bins</span>
+          <span class="value">
+            <b id="binMain">Loading&hellip;</b>
+            <span class="vsub" id="binWhenDate">&nbsp;</span>
+            <span class="bin-out" id="binOut"></span>
+            <span class="bin-next-list" id="binNextList"></span>
+            <span class="vsub foot" id="binFoot">&nbsp;</span>
+          </span>
+        </div>
+        <div class="row">
+          <span class="label">Weather</span>
+          <span class="value">
+            <span class="wx"><span class="wxicon" id="weatherIcon"></span><b id="weatherMain">Loading&hellip;</b></span>
+            <span class="vsub" id="weatherSub">&nbsp;</span>
+          </span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <h3>Family diary <span class="hsub">next 9 days</span></h3>
+      <div class="agenda" id="familyRows"><div class="row-placeholder">Loading calendar&hellip;</div></div>
+      <div class="gtk">
+        <h4>Good to know</h4>
+        <div class="rows">
+          <div class="row">
+            <span class="label">Arsenal</span>
+            <span class="value"><b id="arsenalMain">Loading&hellip;</b><span class="vsub" id="arsenalSub">&nbsp;</span></span>
+          </div>
+          <div class="row">
+            <span class="label"><span class="i" id="dadIcon"></span>The Poachers</span>
+            <span class="value sub" id="regimentFact">Loading&hellip;</span>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <div class="family-ticker" id="familyTicker">
+    <span class="family-ticker-label">Coming up</span>
+    <span class="family-ticker-text" id="familyTickerText">Loading&hellip;</span>
+  </div>
+
+  <footer class="foot">
+    <span id="lastUpdated">Connecting to Google Calendar&hellip;</span>
+    <button id="refreshBtn" class="refresh-btn" type="button">&#8635; Refresh</button>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var CAL_ID = 'jesslangley4@gmail.com';
+  var FRANCIS_KEYWORDS = ['hockey','goalkeep','goalie','qehs','humber','trial'];
+  var MATHILDA_KEYWORDS = ['gymnastic','swim','nursery','happy days','allegro','emmerson'];
+  var WINDOW_DAYS = 9;
+  var REFETCH_MS = 15 * 60 * 1000;
+  var ARSENAL_CAL_ID = 'gdashegr416v3j8ram03ti568g@group.calendar.google.com';
+  var ALEX_CAL_ID = 'alex.langley90@gmail.com';
+  var ALEX_WINDOW_DAYS = 56; // ~8 weeks — Jessica only wants near-term visibility for Alex
+
+  /* Alex's own calendar colour legend (confirmed by Jessica):
+     colorId 6 (Tangerine, red-orange) = away from home/his normal workplace.
+     colorId 5 (Banana, gold) = "Leave" — home and not working (not part of the away/course scale).
+     Anything else: shown plainly, not called out as away or leave. */
+  var ALEX_AWAY_COLOR_ID = '6';
+  var ALEX_LEAVE_COLOR_ID = '5';
+  var GOOGLE_EVENT_COLORS = {
+    '1':'#7986cb','2':'#33b679','3':'#8e24aa','4':'#e67c73','5':'#f6c026',
+    '6':'#f5511d','7':'#039be5','8':'#616161','9':'#3f51b5','10':'#0b8043','11':'#d60000'
+  };
+
+  /* WEATHER_SNAPSHOT — updated by a scheduled daily refresh (web search), not live.
+     icon: one of 'sun' | 'partly' | 'cloud' | 'rain' | 'storm' | 'snow' | 'fog' */
+  var WEATHER_SNAPSHOT = {
+    tempC: 18,
+    condition: 'Mostly cloudy',
+    high: 23,
+    low: 17,
+    icon: 'cloud',
+    alert: null,
+    updatedISO: '2026-09-07T05:40:13Z'
+  };
+
+  /* WEEK_MEAL_PLAN — this week's dinner plan, given to Claude directly in chat
+     by Jessica. Claude.ai's own meal-plan memory (/areas/meal-plan.md) isn't
+     reachable from this scheduled task's environment, so the plan is copied
+     here instead — this board is now the source of truth the daily task reads
+     from. Keyed by ISO date (YYYY-MM-DD); a new plan replaces this object each
+     Thursday ~18:00 UK, per the plan's own refresh cadence.
+     TEA_TONIGHT (below) is derived from whichever entry matches today's local
+     date — if today isn't in the map, it falls back to '' (nothing planned)
+     rather than showing a stale day. */
+  var WEEK_MEAL_PLAN = {
+    '2026-08-30': { meal: 'Baked Salmon & New Potatoes', note: '' },
+    '2026-08-31': { meal: 'Tuna Pasta Salad', note: '' },
+    '2026-09-01': { meal: 'Eating out', note: '' },
+    '2026-09-02': { meal: 'Veggie Bean Chilli', note: '' },
+    '2026-09-03': { meal: 'Pasta Bake', note: "Francis's first day of Year 7 at QEHS" },
+    '2026-09-04': { meal: 'Veggie fajitas', note: '' },
+    '2026-09-05': { meal: 'Veggie pizza night', note: 'Kids build their own' },
+    '2026-09-06': { meal: 'Slow-cooker chicken casserole', note: 'The one meat night — start it ~9am before Francis’s hockey camp' },
+    '2026-09-07': { meal: 'Frozen fishcakes with mash & peas', note: '' },
+    '2026-09-08': { meal: 'Veggie chickpea & spinach curry with rice', note: '' },
+    '2026-09-09': { meal: 'Lentil bolognese with spaghetti', note: 'Double batch, freezing extra' },
+    '2026-09-10': { meal: 'Jacket potatoes, tuna mayo or cheese & beans', note: '' }
+  };
+  var WEEK_MEAL_PLAN_UPDATED = '2026-09-04T09:36:11+01:00';
+
+  var TEA_TONIGHT = (function(){
+    var todayISO = ymdLocal(new Date());
+    var entry = WEEK_MEAL_PLAN[todayISO];
+    return {
+      meal: entry ? entry.meal : '',
+      note: entry ? (entry.note || '') : '',
+      forISO: todayISO,
+      updatedISO: WEEK_MEAL_PLAN_UPDATED
+    };
+  })();
+
+  var TEA_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18h18"/><path d="M5 18a7 7 0 0 1 14 0"/><path d="M12 6.4V5"/><path d="M9 21h6"/></svg>';
+
+  /* MATHILDA_WEEKLY — Mathilda's nursery letter/number/topic of the week.
+     Updated weekly from Jessica's reply to the Sunday check-in prompt. */
+  var MATHILDA_WEEKLY = {
+    letter: 'P',
+    number: '4',
+    topic: 'Fairies and Castles',
+    topicIcon: 'castle',
+    updatedISO: '2026-08-30T13:00:00Z'
+  };
+
+  /* MATHILDA_WEEK_PLACES — where Mathilda is on each weekday, for a simple
+     child-friendly "where am I today" strip. dow matches Date.getDay()
+     (1 = Monday ... 5 = Friday). Weekends aren't shown — she's always home. */
+  var MATHILDA_WEEK_PLACES = [
+    { day: 'Mon', dow: 1, emoji: '\u{1F41E}', place: 'Nursery' },
+    { day: 'Tue', dow: 2, emoji: '\u{1F475}', place: 'Grandma’s house' },
+    { day: 'Wed', dow: 3, emoji: '\u{1F41E}', place: 'Nursery' },
+    { day: 'Thu', dow: 4, emoji: '\u{1F41E}', place: 'Nursery' },
+    { day: 'Fri', dow: 5, emoji: '\u{1F938}\u{1F3CA}', place: 'Gymnastics & swimming with Mummy' }
+  ];
+
+  /* TOPIC_ICONS — small library for Mathilda's weekly nursery topic.
+     Pick the closest match; fall back to 'star' when nothing fits.
+     To add a new one: drop an SVG (viewBox 0 0 24 24, stroke=currentColor) in here. */
+  var TOPIC_ICONS = {
+    castle: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M4 21V11h2V9h2v2h2V8h2V6h2v2h2v3h2v2h2V11h2v10H4z"/><path d="M9 21v-4a3 3 0 0 1 6 0v4"/><path d="M12 2.6l.55 1.3L14 4.5l-1.3.55L12 6.4l-.55-1.3L10 4.5l1.3-.6z" fill="currentColor" stroke="none"/></svg>',
+    star: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 3l2.2 5.8L20 10l-4.6 3.9L16.9 20 12 16.6 7.1 20l1.5-6.1L4 10l5.8-1.2L12 3z"/></svg>',
+    sun: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>',
+    rainbow: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 19a9 9 0 0 1 18 0"/><path d="M6.5 19a5.5 5.5 0 0 1 11 0"/></svg>',
+    paw: '<svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><circle cx="7" cy="9" r="1.6"/><circle cx="11" cy="6.5" r="1.6"/><circle cx="15" cy="6.5" r="1.6"/><circle cx="18" cy="9.5" r="1.6"/><path d="M12 11c-3 0-6 2.2-6 5 0 1.8 1.6 3 3.5 3 1 0 1.6-.4 2.5-.4s1.5.4 2.5.4c1.9 0 3.5-1.2 3.5-3 0-2.8-3-5-6-5z"/></svg>',
+    leaf: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c8-1 12-6 13-13-8 1-12 5-13 13z"/><path d="M6 18c3-3 5-6 6-10"/></svg>',
+    heart: '<svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 20s-7-4.6-9.5-9C.8 7.6 2.4 4.5 5.5 4c2-.3 3.6.7 4.5 2.2C10.9 4.7 12.5 3.7 14.5 4c3.1.5 4.7 3.6 3 7-2.5 4.4-9.5 9-9.5 9z"/></svg>'
+  };
+
+  /* BUS_INFO — Francis's school bus (Stagecoach East Midlands routes 101/601).
+     Assumption: the 601 @ 08:15 from Blyton Primary School, arriving QEHS 08:25 —
+     the 101 @ 06:42 also passes but is far too early for a normal school start.
+     Timetable: https://tiscon-maps-stagecoachbus.s3.amazonaws.com/Timetables/East%20Midlands/Scunthorpe/SC_101_601%20010925.pdf */
+  var BUS_INFO = {
+    route: '601',
+    stopName: 'Blyton Primary School',
+    busTime: '08:15',
+    arrivalNote: 'QEHS 08:25',
+    leaveBufferMin: 5
+  };
+
+  /* FRANCIS_WEEKLY — history fact + German word of the week.
+     Refreshed weekly by a scheduled task (no reply needed, self-generated). */
+  var FRANCIS_WEEKLY = {
+    historyFact: 'On 6 September 1522, the ship Victoria sailed into port in Spain, becoming the first vessel ever to sail all the way around the world. It had set off with explorer Ferdinand Magellan three years earlier — but he didn’t survive the journey, so it was his crew who finished it.',
+    germanWord: 'der Igel',
+    germanPron: 'dair EE-gul',
+    germanMeaning: '"hedgehog" — the spiky little visitor you might spot snuffling round the garden at night.',
+    updatedISO: '2026-09-06T16:14:51Z'
+  };
+
+  var WEATHER_ICONS = {
+    sun: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>',
+    partly: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8.5" cy="9" r="3.3"/><path d="M8.5 3.4v1.8M3.7 9h1.8M4.9 4.9l1.3 1.3" stroke-linecap="round"/><path d="M9.5 19h8a3.7 3.7 0 0 0 .6-7.35A5 5 0 0 0 8.7 13.1 3.3 3.3 0 0 0 9.5 19z"/></svg>',
+    cloud: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 18h10a3.8 3.8 0 0 0 .6-7.55A5.2 5.2 0 0 0 6.9 12.2 3.4 3.4 0 0 0 7 18z"/></svg>',
+    rain: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 15h9.5a3.6 3.6 0 0 0 .6-7.15A5 5 0 0 0 7.4 9.3 3.2 3.2 0 0 0 7 15z"/><path d="M8.5 18.5l-1 2M12.5 18.5l-1 2M16.5 18.5l-1 2"/></svg>',
+    storm: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 13h9.5a3.6 3.6 0 0 0 .6-7.15A5 5 0 0 0 7.4 7.3 3.2 3.2 0 0 0 7 13z"/><path d="M12.5 13l-2.5 5h3l-2 4.5"/></svg>',
+    snow: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 14h9.5a3.6 3.6 0 0 0 .6-7.15A5 5 0 0 0 7.4 8.3 3.2 3.2 0 0 0 7 14z"/><path d="M9 18v3M12 17.5v4M15 18v3M8 19.5l2-1M10 21.5l2-1M13 19.5l2 1M16 21.5l-2-1"/></svg>',
+    fog: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 12h9.5a3.6 3.6 0 0 0 .6-7.15A5 5 0 0 0 7.4 5.3"/><path d="M4 16h16M6 19h12"/></svg>'
+  };
+
+  /* DAD_WEEKLY — Royal Anglian Regiment / "the Poachers" fact of the week.
+     Refreshed weekly by a scheduled task (no reply needed, self-generated). */
+  var DAD_WEEKLY = {
+    regimentFact: 'The 2nd Battalion, Royal Anglian Regiment carries the nickname "the Poachers" — inherited from the Royal Lincolnshire Regiment (10th Foot), whose regimental quick march was the old folk song "The Lincolnshire Poacher".',
+    updatedISO: '2026-08-30T13:00:00Z'
+  };
+
+  var REGIMENT_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M4 18h16l-1.4-8-4.1 3.2L12 7.5l-2.5 5.7-4.1-3.2L4 18z"/><path d="M4 18v2.2h16V18"/><circle cx="4" cy="8.2" r="1.1" fill="currentColor" stroke="none"/><circle cx="12" cy="6.2" r="1.1" fill="currentColor" stroke="none"/><circle cx="20" cy="8.2" r="1.1" fill="currentColor" stroke="none"/></svg>';
+
+  /* CURRENT_BOOK — whatever Jessica's currently reading. No fixed refresh —
+     just ask Claude to update it (title/author/updatedISO) when she starts a new one. */
+  var CURRENT_BOOK = {
+    title: 'Where the Crawdads Sing',
+    author: 'Delia Owens',
+    updatedISO: '2026-08-30T14:30:00Z'
+  };
+
+  var STOPWATCH_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 13V9"/><path d="M9 3h6"/><path d="M12 3v2"/></svg>';
+
+  /* Mum's evening 30 minutes: run on Sun/Tue/Thu, pilates or strength the rest — 19:30-20:00. */
+  var MUM_SESSION_START = '19:30';
+  var MUM_SESSION_END = '20:00';
+  function mumSessionFor(date){
+    var dow = date.getDay();
+    return (dow === 0 || dow === 2 || dow === 4) ? 'Run' : 'Pilates or Strength';
+  }
+
+  /* BIN_SCHEDULE — West Lindsey District Council kerbside collections for
+     DN21 3NJ (Gainsborough Road, Blyton — collection block 435, usual day
+     Monday). Checked against the council's own bin-day checker on 30 Aug 2026.
+     Each stream is stored as an anchor date + repeat interval in days, so the
+     board rolls the schedule forward itself and never goes stale. Bank-holiday
+     weeks can shift a collection by a day — the council calendar is the final word.
+       purple  glass, cans & plastics   every 4 weeks
+       food    food waste caddy         weekly
+       green   garden waste             fortnightly
+       black   general waste            fortnightly
+       blue    paper & card             every 4 weeks (opposite fortnight to purple) */
+  var BIN_SCHEDULE = {
+    council: 'West Lindsey D.C.',
+    area: 'Blyton · DN21 3NJ',
+    streams: [
+      { key:'purple', name:'Purple-lidded', colour:'#a274ff', anchor:'2026-08-31', everyDays:28 },
+      { key:'food',   name:'Food waste',    colour:'#ff8a3d', anchor:'2026-08-31', everyDays:7  },
+      { key:'green',  name:'Green',         colour:'#57c85f', anchor:'2026-08-31', everyDays:14 },
+      { key:'black',  name:'Black',         colour:'#4a5059', anchor:'2026-09-07', everyDays:14 },
+      { key:'blue',   name:'Blue',          colour:'#4f9ff0', anchor:'2026-09-14', everyDays:28 }
+    ]
+  };
+
+  var BIN_HEAD_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 8h13l-1 11.2a1.6 1.6 0 0 1-1.6 1.3H8.1a1.6 1.6 0 0 1-1.6-1.3L5.5 8z"/><path d="M3.6 6.4h16.8"/><path d="M9.6 4.4h4.8"/><path d="M10 11.2v6M14 11.2v6"/></svg>';
+
+  function binSvg(colour){
+    return '<svg viewBox="0 0 24 24" aria-hidden="true">' +
+      '<rect x="5" y="7.8" width="14" height="12.4" rx="1.6" fill="' + colour + '" stroke="rgba(244,233,220,.35)" stroke-width="0.7"/>' +
+      '<rect x="3.5" y="5.2" width="17" height="2.9" rx="1.45" fill="' + colour + '" stroke="rgba(244,233,220,.35)" stroke-width="0.7"/>' +
+      '<rect x="10.3" y="3.1" width="3.4" height="2.6" rx="1" fill="' + colour + '"/>' +
+      '<line x1="9.4" y1="10.2" x2="9.4" y2="17.8" stroke="rgba(0,0,0,.32)" stroke-width="1.2"/>' +
+      '<line x1="14.6" y1="10.2" x2="14.6" y2="17.8" stroke="rgba(0,0,0,.32)" stroke-width="1.2"/>' +
+      '</svg>';
+  }
+
+  function binParseYMD(s){
+    var p = String(s).split('-');
+    return new Date(+p[0], (+p[1]) - 1, +p[2]);
+  }
+  // First collection on or after `from` for a stream anchored at `anchorYMD`.
+  function binNext(anchorYMD, everyDays, from){
+    var anchor = binParseYMD(anchorYMD);
+    var step = everyDays > 0 ? everyDays : 14;
+    var diff = Math.round((from - anchor) / 86400000);
+    if (diff <= 0) return anchor;
+    var rem = diff % step;
+    return new Date(anchor.getTime() + (diff + (rem === 0 ? 0 : step - rem)) * 86400000);
+  }
+  function binDayWord(d){
+    var today = new Date(); today.setHours(0,0,0,0);
+    var diff = Math.round((d - today) / 86400000);
+    if (diff === 0) return 'TODAY';
+    if (diff === 1) return 'TOMORROW';
+    if (diff < 7) return d.toLocaleDateString('en-GB', { weekday:'long' }).toUpperCase();
+    return d.toLocaleDateString('en-GB', { weekday:'short', day:'numeric', month:'short' }).toUpperCase();
+  }
+  function binDateLine(d){
+    return d.toLocaleDateString('en-GB', { weekday:'long', day:'numeric', month:'long' }).toUpperCase();
+  }
+
+  function renderBins(){
+    var card = document.getElementById('binCard');
+    if (!card) return;
+    document.getElementById('binHeadIcon').innerHTML = BIN_HEAD_ICON;
+
+    var today = new Date(); today.setHours(0,0,0,0);
+    var rows = BIN_SCHEDULE.streams.map(function(s){
+      return { s:s, next:binNext(s.anchor, s.everyDays, today) };
+    });
+    var minTime = Math.min.apply(null, rows.map(function(r){ return r.next.getTime(); }));
+    var nextDate = new Date(minTime);
+    var soonDiff = Math.round((nextDate - today) / 86400000);
+
+    card.className = 'row' + (soonDiff <= 1 ? ' bin-soon' : '');
+    document.getElementById('binMain').textContent = binDayWord(nextDate);
+    document.getElementById('binWhenDate').textContent = binDateLine(nextDate);
+
+    var goingOut = rows.filter(function(r){ return r.next.getTime() === minTime; });
+    document.getElementById('binOut').innerHTML = goingOut.map(function(r){
+      return '<span class="bin-pill">' + binSvg(r.s.colour) + esc(r.s.name) + '</span>';
+    }).join('');
+
+    var upcoming = rows.map(function(r){
+      var d = r.next.getTime() === minTime
+        ? binNext(r.s.anchor, r.s.everyDays, new Date(minTime + 86400000))
+        : r.next;
+      return { s:r.s, d:d };
+    }).sort(function(a, b){ return a.d - b.d; }).slice(0, 4);
+
+    document.getElementById('binNextList').innerHTML = upcoming.map(function(u){
+      return '<div class="bin-next-row">' + binSvg(u.s.colour) +
+        '<span class="bin-next-name">' + esc(u.s.name) + '</span>' +
+        '<span class="bin-next-when">' + esc(binDayWord(u.d)) + '</span></div>';
+    }).join('');
+
+    document.getElementById('binFoot').textContent =
+      BIN_SCHEDULE.area + ' · ' + BIN_SCHEDULE.council + ' · dates roll forward automatically';
+  }
+
+  // Standalone copy of the "which bin(s), how soon" lookup used by the
+  // header ticker on the kiosk screen — kept separate from renderBins()
+  // above so that function's tested DOM-writing logic is untouched.
+  function nextBinsInfo(){
+    var today = new Date(); today.setHours(0,0,0,0);
+    var rows = BIN_SCHEDULE.streams.map(function(s){
+      return { s:s, next:binNext(s.anchor, s.everyDays, today) };
+    });
+    var minTime = Math.min.apply(null, rows.map(function(r){ return r.next.getTime(); }));
+    var nextDate = new Date(minTime);
+    var goingOut = rows.filter(function(r){ return r.next.getTime() === minTime; });
+    return { nextDate: nextDate, names: goingOut.map(function(r){ return r.s.name; }) };
+  }
+
+  var TICKER_WEATHER_EMOJI = {
+    sun:'☀️', partly:'⛅', cloud:'☁️', rain:'🌧️',
+    storm:'⛈️', snow:'❄️', fog:'🌫️'
+  };
+  var TICKER_ROTATE_MS = 8000;
+  var tickerIndex = 0;
+  var tickerElapsedMs = 0;
+  var TICKER_PAIR_COUNT = 2;
+
+  function tickerBinText(){
+    var info = nextBinsInfo();
+    var names = info.names.join(' & ');
+    return names + (info.names.length > 1 ? ' bins' : ' bin') + ' — ' + binDayWord(info.nextDate);
+  }
+
+  function tickerArsenalText(){
+    if (lastGoodFixtures && lastGoodFixtures.length){
+      var next = lastGoodFixtures[0];
+      return next.summary + ' · ' + fmtFixtureWhen(next);
+    }
+    return 'No Arsenal fixture in the next 6 weeks';
+  }
+
+  function tickerWeatherText(){
+    return WEATHER_SNAPSHOT.tempC + '°C — ' + WEATHER_SNAPSHOT.condition +
+      ' (H' + WEATHER_SNAPSHOT.high + '°/L' + WEATHER_SNAPSHOT.low + '°)';
+  }
+
+  function tickerTeaText(){
+    if (TEA_TONIGHT && TEA_TONIGHT.meal) return TEA_TONIGHT.meal;
+    return 'Nothing planned yet';
+  }
+
+  // Cycles the header ticker through tea / bins / Arsenal / weather every
+  // TICKER_ROTATE_MS, showing two items side by side at once (so the wide
+  // kiosk header doesn't sit half-empty). Recomputes text from live state
+  // each call, so it always shows the latest bin date, fixture, weather and
+  // meal even though the rotation itself only advances every few seconds.
+  function renderTicker(){
+    var iconEl = document.getElementById('tickerIcon');
+    var textEl = document.getElementById('tickerText');
+    var iconEl2 = document.getElementById('tickerIcon2');
+    var textEl2 = document.getElementById('tickerText2');
+    if (!iconEl || !textEl || !iconEl2 || !textEl2) return;
+    var items = [
+      { icon: '🍽️', text: tickerTeaText() },
+      { icon: '🗑️', text: tickerBinText() },
+      { icon: '⚽', text: tickerArsenalText() },
+      { icon: TICKER_WEATHER_EMOJI[WEATHER_SNAPSHOT.icon] || '⛅', text: tickerWeatherText() }
+    ];
+    var pairIndex = tickerIndex % TICKER_PAIR_COUNT;
+    var first = items[(pairIndex * 2) % items.length];
+    var second = items[(pairIndex * 2 + 1) % items.length];
+    iconEl.textContent = first.icon;
+    textEl.textContent = first.text;
+    iconEl2.textContent = second.icon;
+    textEl2.textContent = second.text;
+  }
+
+  // Same idea as the header ticker, but for Francis's card: alternates
+  // "this week in history" and the German word, since the kiosk screen
+  // doesn't have room to show both fact-boxes at once.
+  var FRANCIS_TICKER_ROTATE_MS = 5000;
+  var francisTickerIndex = 0;
+  var francisTickerElapsedMs = 0;
+
+  function renderFrancisTicker(){
+    var labelEl = document.getElementById('factTickerLabel');
+    var textEl = document.getElementById('factTickerText');
+    if (!labelEl || !textEl) return;
+    var germanText = FRANCIS_WEEKLY.germanWord +
+      (FRANCIS_WEEKLY.germanPron ? ' (' + FRANCIS_WEEKLY.germanPron + ')' : '') +
+      (FRANCIS_WEEKLY.germanMeaning ? ' — ' + FRANCIS_WEEKLY.germanMeaning : '');
+    var items = [
+      { label: 'This week in history', text: FRANCIS_WEEKLY.historyFact },
+      { label: 'German word', text: germanText }
+    ];
+    var cur = items[francisTickerIndex % items.length];
+    labelEl.textContent = cur.label;
+    textEl.textContent = cur.text;
+  }
+
+  // Kiosk-only "coming up" ticker — replaces the Around-the-house and Family
+  // diary cards on the small screen (bins/tea/weather already rotate through
+  // the header ticker, and there isn't room for a full agenda list too).
+  // Pulls from its own longer-range calendar fetch (see FAMILY_TICKER_WINDOW_DAYS
+  // below) so this can look a few weeks ahead without changing the 9-day
+  // window every other section on the board uses. Jessica's own exercise
+  // sessions are filtered out by keyword — see EXERCISE_KEYWORDS_RE — since
+  // this ticker is meant as a family-wide preview, not her personal schedule.
+  var FAMILY_TICKER_WINDOW_DAYS = 21;
+  var FAMILY_TICKER_ROTATE_MS = 7000;
+  var familyTickerIndex = 0;
+  var familyTickerElapsedMs = 0;
+  var EXERCISE_KEYWORDS_RE = /\b(run|running|parkrun|pilates|strength|yoga|gym|workout|exercise)\b/i;
+
+  function isExerciseEvent(ev){
+    var text = (ev.summary || '') + ' ' + (ev.location || '');
+    return EXERCISE_KEYWORDS_RE.test(text);
+  }
+
+  function familyTickerItems(){
+    var now = new Date();
+    return (lastGoodFamilyTickerEvents || [])
+      .filter(function(ev){ return ev.status !== 'cancelled'; })
+      .filter(function(ev){ return !isExerciseEvent(ev); })
+      .filter(function(ev){ return evDate(ev).getTime() + (isAllDay(ev) ? 86400000 : 0) >= now.getTime(); })
+      .sort(function(a, b){ return evDate(a) - evDate(b); });
+  }
+
+  function renderFamilyTicker(){
+    var textEl = document.getElementById('familyTickerText');
+    if (!textEl) return;
+    var items = familyTickerItems();
+    if (!items.length){
+      textEl.textContent = lastGoodFamilyTickerEvents ? 'Nothing on the family calendar for the next few weeks' : 'Loading…';
+      return;
+    }
+    var cur = items[familyTickerIndex % items.length];
+    var person = classify(cur);
+    var who = (person === 'francis' || person === 'mathilda') ? (personLabel(person) + ' — ') : '';
+    textEl.textContent = who + (cur.summary || 'Event') + ' — ' + dayHeader(cur) +
+      (isAllDay(cur) ? '' : ' ' + fmtTime(cur)) + (cur.location ? ' — ' + cur.location : '');
+  }
+
+  var lastGoodEvents = null;
+  var lastGoodFixtures = null;
+  var lastGoodAlexEvents = null;
+  var lastGoodFamilyTickerEvents = null;
+  var mcp = null;
+
+  function esc(s){
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+
+  function classify(ev){
+    if (ev._isAlex) return 'alex';
+    var text = ((ev.summary || '') + ' ' + (ev.location || '')).toLowerCase();
+    for (var i = 0; i < FRANCIS_KEYWORDS.length; i++) if (text.indexOf(FRANCIS_KEYWORDS[i]) !== -1) return 'francis';
+    for (var j = 0; j < MATHILDA_KEYWORDS.length; j++) if (text.indexOf(MATHILDA_KEYWORDS[j]) !== -1) return 'mathilda';
+    return 'family';
+  }
+
+  function personLabel(p){
+    return p === 'francis' ? 'Francis' : p === 'mathilda' ? 'Mathilda' : p === 'alex' ? 'Alex' : 'Family';
+  }
+
+  function alexStatus(ev){
+    if (ev.colorId === ALEX_AWAY_COLOR_ID) return 'away';
+    if (ev.colorId === ALEX_LEAVE_COLOR_ID) return 'leave';
+    return 'other';
+  }
+
+  function evDate(ev){
+    if (ev.start && ev.start.dateTime) return new Date(ev.start.dateTime);
+    if (ev.start && ev.start.date) {
+      // All-day events sometimes come back as a bare "YYYY-MM-DD" and
+      // sometimes as a full ISO timestamp ("2026-09-03T00:00:00Z") —
+      // handle both rather than blindly appending a time part.
+      var d = ev.start.date;
+      return new Date(d.indexOf('T') !== -1 ? d : d + 'T00:00:00');
+    }
+    return new Date(0);
+  }
+
+  function isAllDay(ev){ return !!(ev.start && ev.start.date && !ev.start.dateTime); }
+
+  function evEndDate(ev){
+    if (ev.end && ev.end.dateTime) return new Date(ev.end.dateTime);
+    if (ev.end && ev.end.date) {
+      var d = ev.end.date;
+      return new Date(d.indexOf('T') !== -1 ? d : d + 'T00:00:00');
+    }
+    return null;
+  }
+
+  function timeToday(hhmm){
+    var parts = hhmm.split(':');
+    var d = new Date();
+    d.setHours(parseInt(parts[0], 10), parseInt(parts[1], 10), 0, 0);
+    return d;
+  }
+
+  function fmtCountdown(ms){
+    if (ms < 0) ms = 0;
+    var totalSec = Math.floor(ms / 1000);
+    var h = Math.floor(totalSec / 3600);
+    var m = Math.floor((totalSec % 3600) / 60);
+    var s = totalSec % 60;
+    if (h > 0) return h + 'h ' + m + 'm';
+    if (m > 0) return m + 'm ' + s + 's';
+    return s + 's';
+  }
+
+  function isSchoolClosedToday(events){
+    var today = new Date(); today.setHours(0,0,0,0);
+    return (events || []).some(function(ev){
+      if (!/school closed/i.test(ev.summary || '')) return false;
+      var s = evDate(ev); s.setHours(0,0,0,0);
+      var e = evEndDate(ev);
+      if (!e) return false;
+      e.setHours(0,0,0,0);
+      return today.getTime() >= s.getTime() && today.getTime() < e.getTime();
+    });
+  }
+
+  function renderBusTimer(){
+    var cardEl = document.getElementById('busCard');
+    var mainEl = document.getElementById('busMain');
+    var subEl = document.getElementById('busSub');
+    if (!cardEl) return;
+
+    var now = new Date();
+    var dow = now.getDay();
+    var isWeekday = dow >= 1 && dow <= 5;
+    var closed = isWeekday && isSchoolClosedToday(lastGoodEvents);
+
+    if (!isWeekday || closed){
+      cardEl.className = 'row bus bus-quiet';
+      mainEl.textContent = 'No school today';
+      subEl.textContent = 'Route ' + BUS_INFO.route + ' from ' + BUS_INFO.stopName + ' runs school days only';
+      return;
+    }
+
+    var busAt = timeToday(BUS_INFO.busTime);
+    var leaveBy = new Date(busAt.getTime() - BUS_INFO.leaveBufferMin * 60000);
+
+    if (now < leaveBy){
+      cardEl.className = 'row bus';
+      mainEl.textContent = 'Leave by ' + leaveBy.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+      subEl.textContent = fmtCountdown(leaveBy - now) + ' left — bus ' + BUS_INFO.route + ' at ' + BUS_INFO.busTime + ' from ' + BUS_INFO.stopName + ' (' + BUS_INFO.arrivalNote + ')';
+    } else if (now < busAt){
+      cardEl.className = 'row bus bus-urgent';
+      mainEl.textContent = 'GO NOW — bus in ' + fmtCountdown(busAt - now);
+      subEl.textContent = 'Route ' + BUS_INFO.route + ' from ' + BUS_INFO.stopName + ' at ' + BUS_INFO.busTime;
+    } else {
+      cardEl.className = 'row bus bus-quiet';
+      mainEl.textContent = 'Bus gone for today';
+      subEl.textContent = 'Next one tomorrow at ' + BUS_INFO.busTime + ' (school days)';
+    }
+  }
+
+  function fmtTime(ev){
+    if (isAllDay(ev)) return 'ALL DAY';
+    return evDate(ev).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+  }
+
+  function dayHeader(ev){
+    var now = new Date(); now.setHours(0,0,0,0);
+    var d = evDate(ev); var dOnly = new Date(d); dOnly.setHours(0,0,0,0);
+    var diff = Math.round((dOnly - now) / 86400000);
+    var dateStr = d.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' }).toUpperCase();
+    if (diff === 0) return 'TODAY · ' + dateStr;
+    if (diff === 1) return 'TOMORROW · ' + dateStr;
+    return dateStr;
+  }
+
+  function dayKey(ev){
+    var d = evDate(ev);
+    return d.getFullYear() + '-' + d.getMonth() + '-' + d.getDate();
+  }
+
+  function startOfTodayISO(){
+    var d = new Date(); d.setHours(0,0,0,0); return d.toISOString();
+  }
+  function endWindowISO(days){
+    var d = new Date(); d.setDate(d.getDate() + days); d.setHours(23,59,59,999); return d.toISOString();
+  }
+
+  function renderWeather(){
+    var icon = document.getElementById('weatherIcon');
+    icon.innerHTML = WEATHER_ICONS[WEATHER_SNAPSHOT.icon] || WEATHER_ICONS.partly;
+    document.getElementById('weatherMain').textContent = WEATHER_SNAPSHOT.tempC + '°C — ' + WEATHER_SNAPSHOT.condition;
+    var subEl = document.getElementById('weatherSub');
+    var subText = 'H ' + WEATHER_SNAPSHOT.high + '° / L ' + WEATHER_SNAPSHOT.low + '°';
+    subEl.innerHTML = esc(subText) + (WEATHER_SNAPSHOT.alert ? '<br><span class="chip-alert">' + esc(WEATHER_SNAPSHOT.alert) + '</span>' : '');
+  }
+
+  function renderMathildaWeekly(){
+    document.getElementById('weeklyLetter').textContent = MATHILDA_WEEKLY.letter || '?';
+    document.getElementById('weeklyNumber').textContent = MATHILDA_WEEKLY.number || '?';
+    document.getElementById('weeklyTopic').textContent = MATHILDA_WEEKLY.topic || 'ask Mum to fill this in!';
+    var iconEl = document.getElementById('topicIcon');
+    iconEl.innerHTML = TOPIC_ICONS[MATHILDA_WEEKLY.topicIcon] || TOPIC_ICONS.star;
+  }
+
+  function whereRowHtml(d, isToday){
+    return '<div class="where-row' + (isToday ? ' is-today' : '') + '">' +
+      '<span class="where-day">' + esc(d.day) + '</span>' +
+      '<span class="where-emoji">' + d.emoji + '</span>' +
+      '<span class="where-place">' + esc(d.place) + '</span>' +
+      '</div>';
+  }
+
+  function renderMathildaWhere(){
+    var el = document.getElementById('mathildaWhere');
+    if (!el) return;
+    var todayDow = new Date().getDay();
+
+    // On the kiosk screen there's only room for today, not the whole week.
+    if (IS_KIOSK){
+      var todayEntry = MATHILDA_WEEK_PLACES.filter(function(d){ return d.dow === todayDow; })[0];
+      el.innerHTML = todayEntry
+        ? whereRowHtml(todayEntry, true)
+        : whereRowHtml({ day: 'Today', emoji: '\u{1F3E0}', place: 'Home' }, true);
+      return;
+    }
+
+    el.innerHTML = MATHILDA_WEEK_PLACES.map(function(d){
+      return whereRowHtml(d, d.dow === todayDow);
+    }).join('');
+  }
+
+  function ymdLocal(d){
+    function p(n){ return (n < 10 ? '0' : '') + n; }
+    return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate());
+  }
+
+  function renderTea(){
+    var card = document.getElementById('teaCard');
+    if (!card) return;
+    document.getElementById('teaHeadIcon').innerHTML = TEA_ICON;
+
+    var mainEl = document.getElementById('teaMain');
+    var noteEl = document.getElementById('teaNote');
+    var footEl = document.getElementById('teaFoot');
+
+    var meal = (TEA_TONIGHT && TEA_TONIGHT.meal) ? String(TEA_TONIGHT.meal).trim() : '';
+    if (!meal){
+      mainEl.className = 'tea-main tea-empty';
+      mainEl.textContent = 'Nothing planned yet';
+      noteEl.style.display = '';
+      noteEl.textContent = 'Add tonight to the meal plan and it’ll show up here.';
+      footEl.className = 'tea-foot';
+      footEl.textContent = '';
+      return;
+    }
+
+    mainEl.className = 'tea-main';
+    mainEl.textContent = meal;
+
+    var note = TEA_TONIGHT.note ? String(TEA_TONIGHT.note).trim() : '';
+    noteEl.textContent = note;
+    noteEl.style.display = note ? '' : 'none';
+
+    var isToday = TEA_TONIGHT.forISO === ymdLocal(new Date());
+    footEl.className = 'tea-foot' + (isToday ? '' : ' tea-stale');
+    footEl.textContent = isToday
+      ? 'From this week’s meal plan'
+      : 'Last set for ' + esc(String(TEA_TONIGHT.forISO || '—')) + ' — may be out of date';
+  }
+
+  function renderFrancisWeekly(){
+    document.getElementById('historyFact').textContent = FRANCIS_WEEKLY.historyFact;
+    document.getElementById('germanWord').textContent = FRANCIS_WEEKLY.germanWord;
+    document.getElementById('germanPron').textContent = FRANCIS_WEEKLY.germanPron ? '(' + FRANCIS_WEEKLY.germanPron + ')' : '';
+    document.getElementById('germanMeaning').textContent = FRANCIS_WEEKLY.germanMeaning || '';
+  }
+
+  function renderDadFact(){
+    document.getElementById('dadIcon').innerHTML = REGIMENT_ICON;
+    document.getElementById('regimentFact').textContent = DAD_WEEKLY.regimentFact;
+    var kioskFactEl = document.getElementById('dadFactText');
+    if (kioskFactEl) kioskFactEl.textContent = DAD_WEEKLY.regimentFact;
+  }
+
+  function fmtDateRange(ev){
+    var s = evDate(ev);
+    var e = evEndDate(ev);
+    var endInclusive = e ? new Date(e.getTime() - 86400000) : s;
+    var sStr = s.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+    var eStr = endInclusive.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+    return sStr === eStr ? sStr : (sStr + '–' + eStr);
+  }
+
+  function renderDadStatus(){
+    var awayEl = document.getElementById('dadNextAway');
+    var leaveEl = document.getElementById('dadNextLeave');
+    var events = lastGoodAlexEvents;
+    if (!events){
+      awayEl.textContent = 'calendar unavailable';
+      leaveEl.textContent = 'calendar unavailable';
+      return;
+    }
+    var now = new Date();
+    var upcoming = events
+      .filter(function(ev){ return ev.status !== 'cancelled'; })
+      .filter(function(ev){
+        var e = evEndDate(ev);
+        return e ? e.getTime() > now.getTime() : evDate(ev).getTime() >= now.getTime();
+      })
+      .sort(function(a, b){ return evDate(a) - evDate(b); });
+
+    var nextAway = upcoming.filter(function(ev){ return alexStatus(ev) === 'away'; })[0];
+    var nextLeave = upcoming.filter(function(ev){ return alexStatus(ev) === 'leave'; })[0];
+
+    awayEl.textContent = nextAway ? fmtDateRange(nextAway) + ' (' + (nextAway.summary || 'away') + ')' : 'Home all week';
+    leaveEl.textContent = nextLeave ? fmtDateRange(nextLeave) : 'None booked';
+  }
+
+  function renderMumBook(){
+    var el = document.getElementById('mumBook');
+    el.textContent = CURRENT_BOOK.title ? (CURRENT_BOOK.title + (CURRENT_BOOK.author ? ' — ' + CURRENT_BOOK.author : '')) : 'Tell Claude what you’re reading!';
+  }
+
+  function renderMumTimer(){
+    var iconEl = document.getElementById('mumIcon');
+    if (!iconEl) return;
+    iconEl.innerHTML = STOPWATCH_ICON;
+
+    var mainEl = document.getElementById('mumMain');
+    var subEl = document.getElementById('mumSub');
+    var now = new Date();
+    var start = timeToday(MUM_SESSION_START);
+    var end = timeToday(MUM_SESSION_END);
+    var session = mumSessionFor(now);
+
+    if (now < start){
+      mainEl.textContent = session + ' at ' + MUM_SESSION_START;
+      subEl.textContent = fmtCountdown(start - now) + ' to go — 30 minutes, just for you';
+    } else if (now < end){
+      mainEl.textContent = 'In progress — ' + session;
+      subEl.textContent = 'Back at ' + MUM_SESSION_END;
+    } else {
+      var tomorrow = new Date(now.getTime() + 86400000);
+      mainEl.textContent = 'Done for today';
+      subEl.textContent = 'Next: ' + mumSessionFor(tomorrow) + ' tomorrow at ' + MUM_SESSION_START;
+    }
+  }
+
+  function handleAlexError(err){
+    var retracting = ['needs_reauth','server_not_connected','blocked_by_policy','approval_required','not_granted','selection_required'].indexOf(err.code) !== -1;
+    if (retracting){
+      lastGoodAlexEvents = null;
+      renderCombined();
+      renderDadStatus();
+    } else if (lastGoodAlexEvents){
+      renderCombined();
+      renderDadStatus();
+    }
+  }
+
+  function handleAlexWatch(ev){
+    if (ev.type === 'data'){
+      var events = (ev.result && ev.result.payload && ev.result.payload.events) || [];
+      lastGoodAlexEvents = events;
+      renderCombined();
+      renderDadStatus();
+    } else {
+      handleAlexError(ev.error);
+    }
+  }
+
+  function renderCombined(){
+    var alexTagged = (lastGoodAlexEvents || []).map(function(ev){ ev._isAlex = true; return ev; });
+    render((lastGoodEvents || []).concat(alexTagged));
+  }
+
+  function isFixture(ev){
+    var s = ev.summary || '';
+    return (/\(H\)|\(A\)/.test(s)) && !/ticket/i.test(s);
+  }
+
+  function competitionOf(ev){
+    var d = ev.description || '';
+    var first = d.split('|')[0];
+    return first.replace(/[\u{1F300}-\u{1FAFF}]/gu, '').trim();
+  }
+
+  function fmtFixtureWhen(ev){
+    var d = evDate(ev);
+    var dateStr = d.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' });
+    var timeStr = d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+    return dateStr + ', ' + timeStr;
+  }
+
+  function renderArsenal(list){
+    var mainEl = document.getElementById('arsenalMain');
+    var subEl = document.getElementById('arsenalSub');
+    if (!list.length){
+      mainEl.textContent = 'No fixture in the next 6 weeks';
+      subEl.textContent = '';
+      return;
+    }
+    var next = list[0];
+    mainEl.textContent = next.summary;
+    var comp = competitionOf(next);
+    subEl.textContent = fmtFixtureWhen(next) + (next.location ? ' — ' + next.location : '') + (comp ? ' — ' + comp : '');
+  }
+
+  function handleArsenalError(err){
+    var retracting = ['needs_reauth','server_not_connected','blocked_by_policy','approval_required','not_granted','selection_required'].indexOf(err.code) !== -1;
+    if (retracting){
+      lastGoodFixtures = null;
+      document.getElementById('arsenalMain').textContent = 'Fixtures unavailable';
+      document.getElementById('arsenalSub').textContent = 'Reconnect Google Calendar in claude.ai Settings';
+    } else if (lastGoodFixtures){
+      renderArsenal(lastGoodFixtures);
+    } else {
+      document.getElementById('arsenalMain').textContent = 'Fixtures unavailable';
+      document.getElementById('arsenalSub').textContent = 'Having trouble reaching the calendar';
+    }
+  }
+
+  function handleArsenalWatch(ev){
+    if (ev.type === 'data'){
+      var events = (ev.result && ev.result.payload && ev.result.payload.events) || [];
+      var fixtures = events.filter(isFixture).sort(function(a, b){ return evDate(a) - evDate(b); });
+      var now = new Date();
+      fixtures = fixtures.filter(function(f){ return evDate(f).getTime() >= now.getTime() - 3 * 3600000; });
+      lastGoodFixtures = fixtures;
+      renderArsenal(fixtures);
+    } else {
+      handleArsenalError(ev.error);
+    }
+  }
+
+  // Feeds the kiosk-only "coming up" ticker (see FAMILY_TICKER_WINDOW_DAYS
+  // above) — kept quiet on error since it's just a nice-to-have preview and
+  // the board already has a status banner for the main calendar feed.
+  function handleFamilyTickerWatch(ev){
+    if (ev.type === 'data'){
+      lastGoodFamilyTickerEvents = (ev.result && ev.result.payload && ev.result.payload.events) || [];
+      renderFamilyTicker();
+    }
+  }
+
+  // Keep the calendar sections short and glanceable — the board is a
+  // "what's next" summary, not the whole calendar. These caps are the main
+  // lever for that; raise them if the board ever feels too sparse.
+  // On the 7" kiosk screen (see the matching CSS breakpoint above) there's
+  // only room for a couple of agenda rows, so trim it there.
+  var IS_KIOSK = (function(){
+    try { return window.matchMedia('(max-width:900px) and (max-height:560px)').matches; }
+    catch (e) { return false; }
+  })();
+  var PERSON_ROW_LIMIT = 4;
+  var AGENDA_ROW_LIMIT = IS_KIOSK ? 2 : 7;
+
+  function moreRow(hidden){
+    return '<div class="row-more">+ ' + hidden + ' more in the next ' + WINDOW_DAYS + ' days</div>';
+  }
+
+  // Compact "what's next" summary for a person card — up to 2 items.
+  function renderMini(id, list, emptyText){
+    var el = document.getElementById(id);
+    if (!el) return;
+    if (!list.length){
+      el.innerHTML = '<span class="mini-empty">' + esc(emptyText) + '</span>';
+      return;
+    }
+    var today = new Date(); today.setHours(0,0,0,0);
+    el.innerHTML = list.slice(0, 2).map(function(ev){
+      var d = evDate(ev);
+      var dOnly = new Date(d); dOnly.setHours(0,0,0,0);
+      var diff = Math.round((dOnly - today) / 86400000);
+      var day = diff === 0 ? 'Today' : diff === 1 ? 'Tomorrow'
+        : d.toLocaleDateString('en-GB', { weekday:'short', day:'numeric', month:'short' });
+      var t = isAllDay(ev) ? 'all day' : fmtTime(ev);
+      return '<span class="mini"><span class="mini-when">' + esc(day) + ' &middot; ' + esc(t) +
+        '</span>' + esc(ev.summary || 'Event') + '</span>';
+    }).join('');
+  }
+
+  function renderFamilyAgenda(id, list){
+    var el = document.getElementById(id);
+    if (!list.length){
+      el.innerHTML = '<div class="row-placeholder">Nothing scheduled in the next ' + WINDOW_DAYS + ' days.</div>';
+      return;
+    }
+    var html = '';
+    var lastKey = null;
+    list.slice(0, AGENDA_ROW_LIMIT).forEach(function(ev){
+      var k = dayKey(ev);
+      if (k !== lastKey){
+        html += '<div class="agenda-day">' + esc(dayHeader(ev)) + '</div>';
+        lastKey = k;
+      }
+      var person = ev._person;
+      var dotStyle = person === 'alex' ? ' style="background:' + (GOOGLE_EVENT_COLORS[ev.colorId] || 'var(--ink-dim)') + '"' : '';
+      var who = '';
+      if (person === 'alex'){
+        var st = alexStatus(ev);
+        who = '<span class="row-who">Alex' + (st === 'away' ? ' &middot; away' : st === 'leave' ? ' &middot; leave' : '') + '</span>';
+      } else if (person !== 'family'){
+        who = '<span class="row-who">' + esc(personLabel(person)) + '</span>';
+      }
+      html += '<div class="row">' +
+        '<div class="row-time">' + esc(fmtTime(ev)) + '</div>' +
+        '<div class="dot ' + (person === 'alex' ? '' : person) + '"' + dotStyle + '></div>' +
+        '<div class="row-body">' +
+          '<div class="row-title">' + esc(ev.summary || 'Untitled event') + who + '</div>' +
+          (ev.location ? '<div class="row-loc">' + esc(ev.location) + '</div>' : '') +
+        '</div>' +
+      '</div>';
+    });
+    if (list.length > AGENDA_ROW_LIMIT) html += moreRow(list.length - AGENDA_ROW_LIMIT);
+    el.innerHTML = html;
+  }
+
+  function renderNextUp(list){
+    var el = document.getElementById('nextUp');
+    var now = new Date();
+    var next = list.filter(function(ev){ return evDate(ev).getTime() + (isAllDay(ev) ? 86400000 : 0) >= now.getTime(); })[0];
+    if (!next){
+      el.innerHTML = '<span class="lbl">NEXT</span>nothing on the board';
+      return;
+    }
+    el.innerHTML = '<span class="lbl">NEXT</span>' + esc(personLabel(next._person)) + ' — ' + esc(next.summary || 'Event') +
+      ' — ' + esc(dayHeader(next)) + (isAllDay(next) ? '' : ' ' + esc(fmtTime(next))) +
+      (next.location ? ' — ' + esc(next.location) : '');
+  }
+
+  function render(events){
+    var upcoming = (events || [])
+      .filter(function(ev){ return ev.status !== 'cancelled'; })
+      .map(function(ev){ ev._person = classify(ev); return ev; })
+      .sort(function(a, b){ return evDate(a) - evDate(b); });
+
+    renderMini('francisRows', upcoming.filter(function(e){ return e._person === 'francis'; }), 'Nothing extra on');
+    renderMini('mathildaRows', upcoming.filter(function(e){ return e._person === 'mathilda'; }), 'Normal routine');
+    renderMini('mumRows', upcoming.filter(function(e){ return e._person === 'family'; }), 'Nothing family-wide');
+    renderMini('dadRows', upcoming.filter(function(e){ return e._person === 'alex'; }), 'Nothing on his calendar');
+    renderFamilyAgenda('familyRows', upcoming);
+    renderNextUp(upcoming);
+  }
+
+  function clearLoadingPlaceholders(){
+    ['francisRows','mathildaRows','mumRows','dadRows'].forEach(function(id){
+      var el = document.getElementById(id);
+      if (el) el.innerHTML = '<span class="mini-empty">Live calendar unavailable</span>';
+    });
+    var fam = document.getElementById('familyRows');
+    if (fam) fam.innerHTML = '<div class="row-placeholder">Live calendar unavailable.</div>';
+  }
+
+  function showStatus(msg, kind){
+    var el = document.getElementById('statusBanner');
+    el.textContent = msg;
+    el.className = 'status-banner ' + kind;
+    el.hidden = false;
+  }
+  function hideStatus(){
+    var el = document.getElementById('statusBanner');
+    el.hidden = true;
+  }
+
+  function setLastUpdated(date, revalidating){
+    var el = document.getElementById('lastUpdated');
+    var t = date.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+    el.textContent = 'CALENDAR UPDATED ' + t + (revalidating ? ' (refreshing…)' : '');
+  }
+
+  function handleError(err){
+    var retracting = ['needs_reauth','server_not_connected','blocked_by_policy','approval_required','not_granted','selection_required'].indexOf(err.code) !== -1;
+    var msgs = {
+      needs_reauth: 'Google Calendar needs reconnecting — open claude.ai Settings → Connectors.',
+      server_not_connected: 'Google Calendar isn’t connected on this account — add it in claude.ai Settings → Connectors.',
+      selection_required: 'Choose which Google account this board should use, then reload.',
+      blocked_by_policy: 'Calendar access is blocked by an organization policy.',
+      approval_required: 'Calendar access needs approval before this board can show live events.',
+      not_granted: 'This board wasn’t granted calendar access when it loaded — try reopening it.'
+    };
+    if (retracting){
+      lastGoodEvents = null;
+      renderCombined();
+      showStatus(msgs[err.code] || 'Calendar access unavailable.', 'error');
+      document.getElementById('lastUpdated').textContent = 'CALENDAR NOT CONNECTED';
+    } else {
+      showStatus('Having trouble reaching Google Calendar — showing the last update.', 'warn');
+      if (lastGoodEvents) renderCombined();
+    }
+  }
+
+  function handleWatch(ev){
+    if (ev.type === 'data'){
+      hideStatus();
+      var events = (ev.result && ev.result.payload && ev.result.payload.events) || [];
+      lastGoodEvents = events;
+      renderCombined();
+      var stamp = (ev.result.cache && ev.result.cache.storedAt) ? new Date(ev.result.cache.storedAt) : new Date();
+      setLastUpdated(stamp, !!(ev.result.cache && ev.result.cache.revalidating));
+    } else {
+      handleError(ev.error);
+    }
+  }
+
+  function badgeSet(id, text){
+    var el = document.getElementById(id);
+    if (el) el.textContent = text;
+  }
+  // Small live status pill on each person card. Fully defensive — never
+  // let a bad read here break the once-a-second tick.
+  function renderBadges(){
+    try {
+      var now = new Date();
+      var dow = now.getDay();
+      var weekday = dow >= 1 && dow <= 5;
+      var closed = weekday && isSchoolClosedToday(lastGoodEvents);
+      badgeSet('francisBadge', (!weekday || closed) ? 'No school today' : 'School day');
+      badgeSet('mathildaBadge', dow === 5 ? 'Gym & swim' : (dow >= 1 && dow <= 4) ? 'Nursery week' : 'Home day');
+      badgeSet('mumBadge', mumSessionFor(now) === 'Run' ? 'Run tonight' : 'Strength tonight');
+      if (lastGoodAlexEvents){
+        var t = new Date(); t.setHours(0,0,0,0);
+        var away = lastGoodAlexEvents.some(function(ev){
+          if (alexStatus(ev) !== 'away') return false;
+          var s = evDate(ev); s.setHours(0,0,0,0);
+          var e = evEndDate(ev); if (!e) return false; e.setHours(0,0,0,0);
+          return t.getTime() >= s.getTime() && t.getTime() < e.getTime();
+        });
+        badgeSet('dadBadge', away ? 'Away' : 'Home this week');
+      }
+    } catch (e) {}
+  }
+
+  function startClock(){
+    function tick(){
+      var now = new Date();
+      document.getElementById('clock').textContent = now.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+      document.getElementById('dateDay').textContent = now.toLocaleDateString('en-GB', { weekday: 'long' });
+      document.getElementById('dateRest').textContent = now.toLocaleDateString('en-GB', { day: 'numeric', month: 'long' }).toUpperCase();
+      renderBusTimer();
+      renderMumTimer();
+      renderBins();
+      renderTea();
+      renderBadges();
+      renderMathildaWhere();
+      tickerElapsedMs += 1000;
+      if (tickerElapsedMs >= TICKER_ROTATE_MS){
+        tickerElapsedMs = 0;
+        tickerIndex = (tickerIndex + 1) % TICKER_PAIR_COUNT;
+      }
+      renderTicker();
+      francisTickerElapsedMs += 1000;
+      if (francisTickerElapsedMs >= FRANCIS_TICKER_ROTATE_MS){
+        francisTickerElapsedMs = 0;
+        francisTickerIndex = (francisTickerIndex + 1) % 2;
+      }
+      renderFrancisTicker();
+      familyTickerElapsedMs += 1000;
+      if (familyTickerElapsedMs >= FAMILY_TICKER_ROTATE_MS){
+        familyTickerElapsedMs = 0;
+        var itemCount = familyTickerItems().length;
+        familyTickerIndex = itemCount ? (familyTickerIndex + 1) % itemCount : 0;
+      }
+      renderFamilyTicker();
+    }
+    tick();
+    setInterval(tick, 1000);
+  }
+
+  async function init(){
+    startClock();
+    renderWeather();
+    renderTea();
+    renderMathildaWeekly();
+    renderFrancisWeekly();
+    renderDadFact();
+    renderMumBook();
+    renderBins();
+
+    try {
+      mcp = (window.claude && window.claude.use) ? await window.claude.use('mcp') : null;
+    } catch (e) {
+      mcp = null;
+    }
+
+    if (!mcp){
+      showStatus('Live calendar isn’t available in this view — showing routines only. Open this board signed in to your Claude account with Google Calendar connected.', 'warn');
+      clearLoadingPlaceholders();
+      document.getElementById('lastUpdated').textContent = 'CALENDAR NOT AVAILABLE';
+      document.getElementById('arsenalMain').textContent = 'Fixtures unavailable';
+      document.getElementById('arsenalSub').textContent = '';
+      document.getElementById('dadNextAway').textContent = 'calendar unavailable';
+      document.getElementById('dadNextLeave').textContent = 'calendar unavailable';
+      return;
+    }
+
+    var input = {
+      calendarId: CAL_ID,
+      startTime: startOfTodayISO(),
+      endTime: endWindowISO(WINDOW_DAYS),
+      orderBy: 'startTime',
+      pageSize: 50
+    };
+    mcp.watchTool('Google Calendar', 'list_events', input, handleWatch, { refetchInterval: REFETCH_MS });
+
+    var arsenalInput = {
+      calendarId: ARSENAL_CAL_ID,
+      startTime: startOfTodayISO(),
+      endTime: endWindowISO(45),
+      orderBy: 'startTime',
+      pageSize: 20
+    };
+    mcp.watchTool('Google Calendar', 'list_events', arsenalInput, handleArsenalWatch, { refetchInterval: REFETCH_MS });
+
+    var alexInput = {
+      calendarId: ALEX_CAL_ID,
+      startTime: startOfTodayISO(),
+      endTime: endWindowISO(ALEX_WINDOW_DAYS),
+      orderBy: 'startTime',
+      pageSize: 50
+    };
+    mcp.watchTool('Google Calendar', 'list_events', alexInput, handleAlexWatch, { refetchInterval: REFETCH_MS });
+
+    // Kiosk-only, longer-range fetch for the "coming up" ticker — skipped on
+    // phone/desktop, where that ticker is hidden and the full Family diary
+    // agenda (fed by `input` above) covers this instead.
+    if (IS_KIOSK){
+      var familyTickerInput = {
+        calendarId: CAL_ID,
+        startTime: startOfTodayISO(),
+        endTime: endWindowISO(FAMILY_TICKER_WINDOW_DAYS),
+        orderBy: 'startTime',
+        pageSize: 50
+      };
+      mcp.watchTool('Google Calendar', 'list_events', familyTickerInput, handleFamilyTickerWatch, { refetchInterval: REFETCH_MS });
+    }
+
+    document.getElementById('refreshBtn').addEventListener('click', function(){
+      mcp.invalidate('Google Calendar', 'list_events').catch(function(){});
+    });
+  }
+
+  init();
+})();
+</script>
+
+
+
+
+</body></html>
