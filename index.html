@@ -602,7 +602,7 @@
      don't scale on their own (column counts, section spacing, and trimming
      the least essential content so the board fits without scrolling). */
   @media (max-width:900px) and (max-height:560px){
-    :root{ font-size:13px; }
+    :root{ font-size:14px; }
     body{ padding:.3rem .35rem .35rem; }
     .wrap{ max-width:100%; }
     header{ padding-bottom:.4rem; align-items:center; }
@@ -940,7 +940,7 @@
      The board reads this instead of calling window.claude / MCP, so it renders
      on a plain browser (the kitchen Raspberry Pi) with no Claude login. */
   var BAKED = {
-    "generatedISO": "2026-09-06T20:42:04.166Z",
+    "generatedISO": "2026-09-07T05:55:16.861Z",
     "primary": [
       {
         "summary": "Hockey goalkeeper camp",
@@ -1929,13 +1929,13 @@
   /* WEATHER_SNAPSHOT — updated by a scheduled daily refresh (web search), not live.
      icon: one of 'sun' | 'partly' | 'cloud' | 'rain' | 'storm' | 'snow' | 'fog' */
   var WEATHER_SNAPSHOT = {
-    tempC: 12,
-    condition: 'Sunny intervals',
+    tempC: 18,
+    condition: 'Mostly cloudy',
     high: 23,
-    low: 12,
-    icon: 'partly',
+    low: 17,
+    icon: 'cloud',
     alert: null,
-    updatedISO: '2026-09-06T05:40:01Z'
+    updatedISO: '2026-09-07T05:40:13Z'
   };
 
   /* WEEK_MEAL_PLAN — this week's dinner plan, given to Claude directly in chat
@@ -2963,6 +2963,7 @@
   setTimeout(function(){ try { location.reload(); } catch (e) {} }, 20 * 60 * 1000);
 })();
 </script>
+
 
 
 
