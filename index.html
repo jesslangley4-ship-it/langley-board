@@ -940,33 +940,8 @@
      The board reads this instead of calling window.claude / MCP, so it renders
      on a plain browser (the kitchen Raspberry Pi) with no Claude login. */
   var BAKED = {
-    "generatedISO": "2026-10-06T15:09:48.906Z",
+    "generatedISO": "2026-10-07T07:09:46.108Z",
     "primary": [
-      {
-        "summary": "Francis: Flu vaccination (in school)",
-        "start": {
-          "date": "2026-10-06T00:00:00Z"
-        },
-        "end": {
-          "date": "2026-10-07T00:00:00Z"
-        },
-        "status": "confirmed",
-        "description": "NHS School Aged Immunisation Service (SAIS) session at QEHS. Consent already given (nasal spray, or injected if nasal spray not suitable). Fallback date if missed: Tuesday 8 December. School will confirm once vaccinated. Contact: Lincolnshire SAIS, lhnt.sais@nhs.net, 01522 572950."
-      },
-      {
-        "summary": "Francis - Hull Hockey Training",
-        "start": {
-          "dateTime": "2026-10-06T18:00:00+01:00",
-          "timeZone": "Europe/London"
-        },
-        "end": {
-          "dateTime": "2026-10-06T19:00:00+01:00",
-          "timeZone": "Europe/London"
-        },
-        "status": "confirmed",
-        "location": "Hymers College, Hymers Avenue, Hull HU3 1LW",
-        "description": "Kingston upon Hull Hockey Club training."
-      },
       {
         "summary": "Francis: MidYis baseline test (Period 1, Room 28)",
         "start": {
@@ -1124,31 +1099,6 @@
       }
     ],
     "familyTicker": [
-      {
-        "summary": "Francis: Flu vaccination (in school)",
-        "start": {
-          "date": "2026-10-06T00:00:00Z"
-        },
-        "end": {
-          "date": "2026-10-07T00:00:00Z"
-        },
-        "status": "confirmed",
-        "description": "NHS School Aged Immunisation Service (SAIS) session at QEHS. Consent already given (nasal spray, or injected if nasal spray not suitable). Fallback date if missed: Tuesday 8 December. School will confirm once vaccinated. Contact: Lincolnshire SAIS, lhnt.sais@nhs.net, 01522 572950."
-      },
-      {
-        "summary": "Francis - Hull Hockey Training",
-        "start": {
-          "dateTime": "2026-10-06T18:00:00+01:00",
-          "timeZone": "Europe/London"
-        },
-        "end": {
-          "dateTime": "2026-10-06T19:00:00+01:00",
-          "timeZone": "Europe/London"
-        },
-        "status": "confirmed",
-        "location": "Hymers College, Hymers Avenue, Hull HU3 1LW",
-        "description": "Kingston upon Hull Hockey Club training."
-      },
       {
         "summary": "Francis: MidYis baseline test (Period 1, Room 28)",
         "start": {
@@ -1516,23 +1466,23 @@
           "timeZone": "Europe/London"
         },
         "status": "confirmed"
-      }
-    ],
-    "alex": [
+      },
       {
-        "summary": "Meeting",
+        "summary": "Francis - Hull Hockey Training",
         "start": {
-          "dateTime": "2026-10-06T09:00:00+01:00",
+          "dateTime": "2026-10-27T18:00:00Z",
           "timeZone": "Europe/London"
         },
         "end": {
-          "dateTime": "2026-10-06T10:00:00+01:00",
+          "dateTime": "2026-10-27T19:00:00Z",
           "timeZone": "Europe/London"
         },
         "status": "confirmed",
-        "location": "RAF Digby",
-        "colorId": "11"
-      },
+        "location": "Hymers College, Hymers Avenue, Hull HU3 1LW",
+        "description": "Kingston upon Hull Hockey Club training."
+      }
+    ],
+    "alex": [
       {
         "summary": "SPTA RECCE",
         "start": {
@@ -1869,11 +1819,10 @@
      date — if today isn't in the map, it falls back to '' (nothing planned)
      rather than showing a stale day. */
   var WEEK_MEAL_PLAN = {
-    "2026-10-06": { meal: "Reheat: Monday's lentil bolognese with spaghetti", note: "Hull hockey training 6-7pm (Hymers College) plus travel \u2014 tea ready for whoever's not driving, kept warm for the rest" },
     "2026-10-07": { meal: "Air-fryer veggie sausages with crispy potato wedges & beans", note: "Hockey Academy Night 6:15-7:45pm (The Lindum) \u2014 air fryer gets tea done fast either side of the run" },
     "2026-10-08": { meal: "Fish finger pitta pockets with slaw", note: "Moved from Monday. Early, quick tea before Francis's parents' evening appointment at 7:05pm" }
   };
-  var WEEK_MEAL_PLAN_UPDATED = '2026-10-06T15:09:43Z';
+  var WEEK_MEAL_PLAN_UPDATED = '2026-10-07T07:09:41Z';
 
   var TEA_TONIGHT = (function(){
     var todayISO = ymdLocal(new Date());
