@@ -940,22 +940,8 @@
      The board reads this instead of calling window.claude / MCP, so it renders
      on a plain browser (the kitchen Raspberry Pi) with no Claude login. */
   var BAKED = {
-    "generatedISO": "2026-10-08T15:10:01.980Z",
+    "generatedISO": "2026-10-09T07:09:35.324Z",
     "primary": [
-      {
-        "summary": "Francis: Y7 Tutor Parents' Evening appointment (Miss L Melbourne, Class 7E)",
-        "start": {
-          "dateTime": "2026-10-08T19:05:00+01:00",
-          "timeZone": "Europe/London"
-        },
-        "end": {
-          "dateTime": "2026-10-08T19:10:00+01:00",
-          "timeZone": "Europe/London"
-        },
-        "status": "confirmed",
-        "location": "QEHS (Queen Elizabeth's High School, Gainsborough)",
-        "description": "5-minute appointment with Miss L Melbourne (Class 7E). Arrive promptly - appointments are back to back. Francis should attend with you. Mrs Wood (Head of Year 7) and Miss Bradshaw (SENDCO) also available on the evening for questions. Booking confirmed via SchoolCloud."
-      },
       {
         "summary": "Gymnastics",
         "start": {
@@ -1138,23 +1124,20 @@
         "status": "confirmed",
         "location": "Oakwood High School, S60 2UH",
         "description": "Yorkshire Development League (South), Years 7 & 8 — Week 6. Chapeltown vs Lindum."
+      },
+      {
+        "summary": "Francis - U12 Boys Hockey Fixture (Time TBC)",
+        "start": {
+          "date": "2026-10-18T00:00:00Z"
+        },
+        "end": {
+          "date": "2026-10-19T00:00:00Z"
+        },
+        "status": "confirmed",
+        "description": "YYHL League — Kingston upon Hull HC U12 Boys. Time and venue TBC."
       }
     ],
     "familyTicker": [
-      {
-        "summary": "Francis: Y7 Tutor Parents' Evening appointment (Miss L Melbourne, Class 7E)",
-        "start": {
-          "dateTime": "2026-10-08T19:05:00+01:00",
-          "timeZone": "Europe/London"
-        },
-        "end": {
-          "dateTime": "2026-10-08T19:10:00+01:00",
-          "timeZone": "Europe/London"
-        },
-        "status": "confirmed",
-        "location": "QEHS (Queen Elizabeth's High School, Gainsborough)",
-        "description": "5-minute appointment with Miss L Melbourne (Class 7E). Arrive promptly - appointments are back to back. Francis should attend with you. Mrs Wood (Head of Year 7) and Miss Bradshaw (SENDCO) also available on the evening for questions. Booking confirmed via SchoolCloud."
-      },
       {
         "summary": "Gymnastics",
         "start": {
@@ -1511,6 +1494,19 @@
         },
         "status": "confirmed",
         "location": "The Lindum"
+      },
+      {
+        "summary": "Mathilda: Hospital eye test appointment",
+        "start": {
+          "dateTime": "2026-10-29T14:20:00Z",
+          "timeZone": "Europe/London"
+        },
+        "end": {
+          "dateTime": "2026-10-29T15:20:00Z",
+          "timeZone": "Europe/London"
+        },
+        "status": "confirmed",
+        "description": "Hospital eye test (dilating drops possible - may be unsettled after). Jess picking her up from Happy Days nursery ~1:30pm beforehand and keeping her afterward. Hospital/clinic location not stated in the appointment letter."
       }
     ],
     "alex": [
@@ -1826,6 +1822,20 @@
         "status": "confirmed",
         "location": "St. James' Park, Newcastle",
         "description": "Premier League | Matchweek 11 | Watch live on UK - Sky Sports. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com"
+      },
+      {
+        "summary": "Arsenal Women vs West Ham United Women (H)",
+        "start": {
+          "dateTime": "2026-11-22T14:30:00Z",
+          "timeZone": "Europe/London"
+        },
+        "end": {
+          "dateTime": "2026-11-22T16:30:00Z",
+          "timeZone": "Europe/London"
+        },
+        "status": "confirmed",
+        "location": "Emirates Stadium, London",
+        "description": "Barclays WSL | Join in @ArsenalFCW"
       }
     ]
   };
@@ -1864,15 +1874,15 @@
      date — if today isn't in the map, it falls back to '' (nothing planned)
      rather than showing a stale day. */
   var WEEK_MEAL_PLAN = {
-    "2026-10-08": { meal: "Fish finger pitta pockets with slaw", note: "Moved from Monday. Early, quick tea before Francis's parents' evening appointment at 7:05pm" },
     "2026-10-09": { meal: "Slow-cooker veggie bean chilli with rice", note: "Mathilda's gymnastics 9:30am & swimming 1:30pm today \u2014 slow cooker on before we leave so tea's ready, with extra to freeze for Tuesday's Hull hockey night" },
     "2026-10-10": { meal: "Air-fryer breaded fish fillets with mash, peas & sweetcorn", note: "Free evening after this morning's hockey session & home match \u2014 family favourite" },
     "2026-10-11": { meal: "Slow-cooker gammon with parsley sauce, mash & peas", note: "This week's one meat night. On before U12 Yorks Performance training (12-2:30pm) so it's ready for tea. Alex may be away for work over the next few days (PO Visit) \u2014 keep a portion aside for him to reheat." },
     "2026-10-12": { meal: "Sweet potato & spinach dhal with rice", note: "Free evening \u2014 good day to batch cook extra for Wednesday's Hockey Academy Night" },
     "2026-10-13": { meal: "Reheat: Friday's veggie bean chilli with rice", note: "Hull hockey training 6-7pm (Hymers College) plus travel \u2014 tea ready for whoever's not driving, kept warm for the rest" },
-    "2026-10-14": { meal: "Reheat: Monday's sweet potato & spinach dhal with rice", note: "Hockey Academy Night 6:15-7:45pm (The Lindum) \u2014 quick reheat gets tea done either side of the run" }
+    "2026-10-14": { meal: "Reheat: Monday's sweet potato & spinach dhal with rice", note: "Hockey Academy Night 6:15-7:45pm (The Lindum) \u2014 quick reheat gets tea done either side of the run" },
+    "2026-10-15": { meal: "Garlic butter baked haddock with crushed new potatoes & peas", note: "Normal evening, nothing on for tea" }
   };
-  var WEEK_MEAL_PLAN_UPDATED = '2026-10-08T15:09:56Z';
+  var WEEK_MEAL_PLAN_UPDATED = '2026-10-09T07:09:29Z';
 
   var TEA_TONIGHT = (function(){
     var todayISO = ymdLocal(new Date());
