@@ -940,19 +940,8 @@
      The board reads this instead of calling window.claude / MCP, so it renders
      on a plain browser (the kitchen Raspberry Pi) with no Claude login. */
   var BAKED = {
-    "generatedISO": "2026-10-18T15:07:27.627Z",
+    "generatedISO": "2026-10-19T07:07:19.116Z",
     "primary": [
-      {
-        "summary": "Francis - U12 Boys Hockey Fixture (Time TBC)",
-        "start": {
-          "date": "2026-10-18T00:00:00Z"
-        },
-        "end": {
-          "date": "2026-10-19T00:00:00Z"
-        },
-        "status": "confirmed",
-        "description": "YYHL League — Kingston upon Hull HC U12 Boys. Time and venue TBC."
-      },
       {
         "summary": "Water the plants",
         "start": {
@@ -1146,20 +1135,23 @@
           "timeZone": "Europe/London"
         },
         "status": "confirmed"
+      },
+      {
+        "summary": "Francis - Hull Hockey Training",
+        "start": {
+          "dateTime": "2026-10-27T18:00:00Z",
+          "timeZone": "Europe/London"
+        },
+        "end": {
+          "dateTime": "2026-10-27T19:00:00Z",
+          "timeZone": "Europe/London"
+        },
+        "status": "confirmed",
+        "location": "Hymers College, Hymers Avenue, Hull HU3 1LW",
+        "description": "Kingston upon Hull Hockey Club training."
       }
     ],
     "familyTicker": [
-      {
-        "summary": "Francis - U12 Boys Hockey Fixture (Time TBC)",
-        "start": {
-          "date": "2026-10-18T00:00:00Z"
-        },
-        "end": {
-          "date": "2026-10-19T00:00:00Z"
-        },
-        "status": "confirmed",
-        "description": "YYHL League — Kingston upon Hull HC U12 Boys. Time and venue TBC."
-      },
       {
         "summary": "Water the plants",
         "start": {
@@ -1621,6 +1613,17 @@
         },
         "status": "confirmed",
         "description": "Me time — Saturday off before Francis's Hull Sunday match. Someone to have the kids (see TickTick). Set after Francis's Lindum home match vs Rotherham (10:30, Yarborough Leisure Centre)."
+      },
+      {
+        "summary": "Francis - U12 Boys Hockey Fixture (Time TBC)",
+        "start": {
+          "date": "2026-11-08T00:00:00Z"
+        },
+        "end": {
+          "date": "2026-11-09T00:00:00Z"
+        },
+        "status": "confirmed",
+        "description": "YYHL League — Kingston upon Hull HC U12 Boys. Time and venue TBC."
       }
     ],
     "alex": [
@@ -1707,20 +1710,6 @@
       }
     ],
     "arsenal": [
-      {
-        "summary": "Nottingham Forest vs Arsenal (A)",
-        "start": {
-          "dateTime": "2026-10-18T16:30:00+01:00",
-          "timeZone": "Europe/London"
-        },
-        "end": {
-          "dateTime": "2026-10-18T18:30:00+01:00",
-          "timeZone": "Europe/London"
-        },
-        "status": "confirmed",
-        "location": "The City Ground, Nottingham",
-        "description": "Premier League | Matchweek 7 | Watch live on UK - Sky Sports"
-      },
       {
         "summary": "Bayern München vs Arsenal (A)",
         "start": {
@@ -1958,6 +1947,20 @@
         "status": "confirmed",
         "location": "Emirates Stadium, London",
         "description": "Premier League | Matchweek 12 | Watch live on UK - Sky Sports. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com"
+      },
+      {
+        "summary": "Brentford vs Arsenal (A)",
+        "start": {
+          "dateTime": "2026-12-02T20:00:00Z",
+          "timeZone": "Europe/London"
+        },
+        "end": {
+          "dateTime": "2026-12-02T22:00:00Z",
+          "timeZone": "Europe/London"
+        },
+        "status": "confirmed",
+        "location": "Gtech Community Stadium, Brentford",
+        "description": "Premier League | Matchweek 13 | Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com"
       }
     ]
   };
@@ -1996,13 +1999,12 @@
      date — if today isn't in the map, it falls back to '' (nothing planned)
      rather than showing a stale day. */
   var WEEK_MEAL_PLAN = {
-    "2026-10-18": { meal: "Bolognese from the freezer with spaghetti", note: "Using the bolognese in the freezer. Move it to the fridge on Saturday night. Quick to have ready whenever you're back from Hull (fixture time still TBC)" },
     "2026-10-19": { meal: "Veggie chickpea & spinach curry with rice", note: "Free evening \u2014 good day to batch-cook extra for Tuesday's busy night after Hull hockey training" },
     "2026-10-20": { meal: "Reheat: Monday's chickpea & spinach curry with rice", note: "Hull Hockey Training 6\u20137pm (Hymers College) plus travel \u2014 tea ready for whoever's not driving, kept warm for the rest" },
     "2026-10-21": { meal: "Frozen fishcakes with mash & peas", note: "Hockey Academy Night 6:15\u20137:45pm (The Lindum) \u2014 air fryer gets tea done fast either side of the run" },
     "2026-10-22": { meal: "Tuna Pasta Salad", note: "Free evening, nothing on for tea" }
   };
-  var WEEK_MEAL_PLAN_UPDATED = '2026-10-18T15:07:22Z';
+  var WEEK_MEAL_PLAN_UPDATED = '2026-10-19T07:07:13Z';
 
   var TEA_TONIGHT = (function(){
     var todayISO = ymdLocal(new Date());
