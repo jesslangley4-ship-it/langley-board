@@ -940,7 +940,7 @@
      The board reads this instead of calling window.claude / MCP, so it renders
      on a plain browser (the kitchen Raspberry Pi) with no Claude login. */
   var BAKED = {
-    "generatedISO": "2026-10-20T07:07:49.857Z",
+    "generatedISO": "2026-10-20T15:07:47.788Z",
     "primary": [
       {
         "summary": "Francis - Hull Hockey Training",
@@ -1123,6 +1123,19 @@
         },
         "status": "confirmed",
         "location": "The Lindum"
+      },
+      {
+        "summary": "Mathilda: Hospital eye test appointment",
+        "start": {
+          "dateTime": "2026-10-29T14:20:00Z",
+          "timeZone": "Europe/London"
+        },
+        "end": {
+          "dateTime": "2026-10-29T15:20:00Z",
+          "timeZone": "Europe/London"
+        },
+        "status": "confirmed",
+        "description": "Hospital eye test (dilating drops possible - may be unsettled after). Jess picking her up from Happy Days nursery ~1:30pm beforehand and keeping her afterward. Hospital/clinic location not stated in the appointment letter."
       }
     ],
     "familyTicker": [
@@ -1598,23 +1611,48 @@
         "status": "confirmed"
       },
       {
+        "summary": "Tyre fitting",
+        "start": {
+          "dateTime": "2026-10-24T08:30:00+01:00",
+          "timeZone": "Europe/London"
+        },
+        "end": {
+          "dateTime": "2026-10-24T09:30:00+01:00",
+          "timeZone": "Europe/London"
+        },
+        "status": "confirmed"
+      },
+      {
         "summary": "Leave",
         "start": {
           "date": "2026-11-07T00:00:00Z"
         },
         "end": {
-          "date": "2026-11-10T00:00:00Z"
+          "date": "2026-11-09T00:00:00Z"
         },
         "status": "confirmed",
         "colorId": "5"
       },
       {
-        "summary": "CYCLONE",
+        "summary": "Major Service",
         "start": {
-          "date": "2026-11-10T00:00:00Z"
+          "dateTime": "2026-11-07T10:00:00Z",
+          "timeZone": "Europe/London"
         },
         "end": {
-          "date": "2026-12-02T00:00:00Z"
+          "dateTime": "2026-11-07T12:00:00Z",
+          "timeZone": "Europe/London"
+        },
+        "status": "confirmed",
+        "location": "Horton Škoda"
+      },
+      {
+        "summary": "CYCLONE",
+        "start": {
+          "date": "2026-11-09T00:00:00Z"
+        },
+        "end": {
+          "date": "2026-11-28T00:00:00Z"
         },
         "status": "confirmed",
         "location": "Salisbury",
@@ -1959,11 +1997,11 @@
      date — if today isn't in the map, it falls back to '' (nothing planned)
      rather than showing a stale day. */
   var WEEK_MEAL_PLAN = {
-    "2026-10-20": { meal: "Reheat: Monday's chickpea & spinach curry with rice", note: "Hull Hockey Training 6\u201377pm (Hymers College) plus travel \u2014 tea ready for whoever's not driving, kept warm for the rest" },
+    "2026-10-20": { meal: "Reheat: Monday's chickpea & spinach curry with rice", note: "Hull Hockey Training 6\u20137pm (Hymers College) plus travel \u2014 tea ready for whoever's not driving, kept warm for the rest" },
     "2026-10-21": { meal: "Frozen fishcakes with mash & peas", note: "Hockey Academy Night 6:15\u20137:45pm (The Lindum) \u2014 air fryer gets tea done fast either side of the run" },
     "2026-10-22": { meal: "Tuna Pasta Salad", note: "Free evening, nothing on for tea" }
   };
-  var WEEK_MEAL_PLAN_UPDATED = '2026-10-20T07:07:46Z';
+  var WEEK_MEAL_PLAN_UPDATED = '2026-10-20T15:07:44Z';
 
   var TEA_TONIGHT = (function(){
     var todayISO = ymdLocal(new Date());
