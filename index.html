@@ -940,22 +940,8 @@
      The board reads this instead of calling window.claude / MCP, so it renders
      on a plain browser (the kitchen Raspberry Pi) with no Claude login. */
   var BAKED = {
-    "generatedISO": "2026-10-20T15:07:47.788Z",
+    "generatedISO": "2026-10-21T07:08:09.452Z",
     "primary": [
-      {
-        "summary": "Francis - Hull Hockey Training",
-        "start": {
-          "dateTime": "2026-10-20T18:00:00+01:00",
-          "timeZone": "Europe/London"
-        },
-        "end": {
-          "dateTime": "2026-10-20T19:00:00+01:00",
-          "timeZone": "Europe/London"
-        },
-        "status": "confirmed",
-        "location": "Hymers College, Hymers Avenue, Hull HU3 1LW",
-        "description": "Kingston upon Hull Hockey Club training."
-      },
       {
         "summary": "Francis - Hockey Academy Night (U10/U12)",
         "start": {
@@ -1136,23 +1122,20 @@
         },
         "status": "confirmed",
         "description": "Hospital eye test (dilating drops possible - may be unsettled after). Jess picking her up from Happy Days nursery ~1:30pm beforehand and keeping her afterward. Hospital/clinic location not stated in the appointment letter."
+      },
+      {
+        "summary": "Halloween Party (nursery – party food & games)",
+        "start": {
+          "date": "2026-10-30T00:00:00Z"
+        },
+        "end": {
+          "date": "2026-10-31T00:00:00Z"
+        },
+        "status": "confirmed",
+        "description": "Happy Days Nursery Halloween party. (Source: Sept–Dec 2026 newsletter)"
       }
     ],
     "familyTicker": [
-      {
-        "summary": "Francis - Hull Hockey Training",
-        "start": {
-          "dateTime": "2026-10-20T18:00:00+01:00",
-          "timeZone": "Europe/London"
-        },
-        "end": {
-          "dateTime": "2026-10-20T19:00:00+01:00",
-          "timeZone": "Europe/London"
-        },
-        "status": "confirmed",
-        "location": "Hymers College, Hymers Avenue, Hull HU3 1LW",
-        "description": "Kingston upon Hull Hockey Club training."
-      },
       {
         "summary": "Francis - Hockey Academy Night (U10/U12)",
         "start": {
@@ -1434,7 +1417,7 @@
         "status": "confirmed"
       },
       {
-        "summary": "Mathilda: Allegro Halloween Disco (tots &amp; under 5s)",
+        "summary": "Mathilda: Allegro Halloween Disco (tots & under 5s)",
         "start": {
           "dateTime": "2026-11-01T14:00:00Z",
           "timeZone": "Europe/London"
@@ -1597,6 +1580,20 @@
         },
         "status": "confirmed",
         "description": "Hospital eye test - Mathilda kept off nursery, Jess will bring her in once appointment is done. Hospital/clinic location not stated in the appointment letter."
+      },
+      {
+        "summary": "Francis - Hull Hockey Training",
+        "start": {
+          "dateTime": "2026-11-10T18:00:00Z",
+          "timeZone": "Europe/London"
+        },
+        "end": {
+          "dateTime": "2026-11-10T19:00:00Z",
+          "timeZone": "Europe/London"
+        },
+        "status": "confirmed",
+        "location": "Hymers College, Hymers Avenue, Hull HU3 1LW",
+        "description": "Kingston upon Hull Hockey Club training."
       }
     ],
     "alex": [
@@ -1661,7 +1658,7 @@
       {
         "summary": "Christmas Leave",
         "start": {
-          "date": "2026-12-02T00:00:00Z"
+          "date": "2026-11-28T00:00:00Z"
         },
         "end": {
           "date": "2027-01-04T00:00:00Z"
@@ -1997,11 +1994,10 @@
      date — if today isn't in the map, it falls back to '' (nothing planned)
      rather than showing a stale day. */
   var WEEK_MEAL_PLAN = {
-    "2026-10-20": { meal: "Reheat: Monday's chickpea & spinach curry with rice", note: "Hull Hockey Training 6\u20137pm (Hymers College) plus travel \u2014 tea ready for whoever's not driving, kept warm for the rest" },
     "2026-10-21": { meal: "Frozen fishcakes with mash & peas", note: "Hockey Academy Night 6:15\u20137:45pm (The Lindum) \u2014 air fryer gets tea done fast either side of the run" },
     "2026-10-22": { meal: "Tuna Pasta Salad", note: "Free evening, nothing on for tea" }
   };
-  var WEEK_MEAL_PLAN_UPDATED = '2026-10-20T15:07:44Z';
+  var WEEK_MEAL_PLAN_UPDATED = '2026-10-21T07:08:06Z';
 
   var TEA_TONIGHT = (function(){
     var todayISO = ymdLocal(new Date());
