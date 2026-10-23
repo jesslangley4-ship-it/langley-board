@@ -940,19 +940,8 @@
      The board reads this instead of calling window.claude / MCP, so it renders
      on a plain browser (the kitchen Raspberry Pi) with no Claude login. */
   var BAKED = {
-    "generatedISO": "2026-10-22T15:08:28.762Z",
+    "generatedISO": "2026-10-23T07:08:24.240Z",
     "primary": [
-      {
-        "summary": "Francis: Complete Year 7 Parental Survey (deadline)",
-        "start": {
-          "date": "2026-10-22T00:00:00Z"
-        },
-        "end": {
-          "date": "2026-10-23T00:00:00Z"
-        },
-        "status": "confirmed",
-        "description": "QEHS parent feedback survey (link in email from 9254065@sims-communications.co.uk, reminder sent 15 Oct). Deadline Thursday 22 October."
-      },
       {
         "summary": "Francis: 'Smashed Live' programme (Y7/8, in-school)",
         "start": {
@@ -1198,20 +1187,19 @@
         "status": "confirmed",
         "location": "Westfield Sports Centre, S20 1HQ",
         "description": "Yorkshire Development League (South), Years 7 & 8 — Week 7. Sheffield vs Lindum."
+      },
+      {
+        "summary": "Going to see arsenal ladies",
+        "start": {
+          "date": "2026-11-01T00:00:00Z"
+        },
+        "end": {
+          "date": "2026-11-02T00:00:00Z"
+        },
+        "status": "confirmed"
       }
     ],
     "familyTicker": [
-      {
-        "summary": "Francis: Complete Year 7 Parental Survey (deadline)",
-        "start": {
-          "date": "2026-10-22T00:00:00Z"
-        },
-        "end": {
-          "date": "2026-10-23T00:00:00Z"
-        },
-        "status": "confirmed",
-        "description": "QEHS parent feedback survey (link in email from 9254065@sims-communications.co.uk, reminder sent 15 Oct). Deadline Thursday 22 October."
-      },
       {
         "summary": "Francis: 'Smashed Live' programme (Y7/8, in-school)",
         "start": {
@@ -1659,6 +1647,20 @@
         },
         "status": "confirmed",
         "location": "The Lindum"
+      },
+      {
+        "summary": "Mathilda: Scotter Primary Open Day (morning session)",
+        "start": {
+          "dateTime": "2026-11-12T09:30:00Z",
+          "timeZone": "Europe/London"
+        },
+        "end": {
+          "dateTime": "2026-11-12T11:30:00Z",
+          "timeZone": "Europe/London"
+        },
+        "status": "confirmed",
+        "location": "Scotter Primary School, High Street, Scotter, Gainsborough DN21 3RY",
+        "description": "Foundation Stage open day for Reception Sept 2027. Two sessions: 9:30–11:30am and 1:30–3:00pm — no need to book. Bring Mathilda. Tel 01724 762 259, enquiries@scotter.lincs.sch.uk"
       }
     ],
     "alex": [
@@ -1842,7 +1844,7 @@
         },
         "status": "confirmed",
         "location": "Anfield, Liverpool",
-        "description": "Premier League | Matchweek 9 | Watch live on UK - Sky Sports. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com"
+        "description": "Premier League | Matchweek 9 | Watch live on UK - Sky Sports"
       },
       {
         "summary": "Slavia Prague vs Arsenal (A)",
@@ -1997,6 +1999,20 @@
         "status": "confirmed",
         "location": "Gtech Community Stadium, Brentford",
         "description": "Premier League | Matchweek 13 | Watch live on UK - Sky Sports. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com"
+      },
+      {
+        "summary": "Tottenham Hotspur vs Arsenal (A)",
+        "start": {
+          "dateTime": "2026-12-06T16:30:00Z",
+          "timeZone": "Europe/London"
+        },
+        "end": {
+          "dateTime": "2026-12-06T18:30:00Z",
+          "timeZone": "Europe/London"
+        },
+        "status": "confirmed",
+        "location": "Tottenham Hotspur Stadium, London",
+        "description": "Premier League | Matchweek 14 | Watch live on UK - Sky Sports. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com"
       }
     ]
   };
@@ -2035,15 +2051,15 @@
      date — if today isn't in the map, it falls back to '' (nothing planned)
      rather than showing a stale day. */
   var WEEK_MEAL_PLAN = {
-    "2026-10-22": { meal: "Tuna Pasta Salad", note: "Free evening, nothing on for tea" },
-    "2026-10-23": { meal: "Air-fryer veggie sausages with crispy potato wedges & beans", note: "Normal evening \u2014 gymnastics & swimming earlier today, nothing on for tea" },
+    "2026-10-23": { meal: "Baked salmon & new potatoes", note: "Swapped in from Monday. Gymnastics & swimming earlier today, nothing on for tea" },
     "2026-10-24": { meal: "Slow-cooker chicken casserole", note: "This week's one meat night. Francis at the nerd convention, Jess & Mathilda seeing cousins today \u2014 slow cooker on before you head out so tea's ready whenever everyone's back" },
     "2026-10-25": { meal: "Lentil bolognese with spaghetti", note: "Free day \u2014 good one for batch cooking. Make extra to reheat on Tuesday after Hull hockey training" },
-    "2026-10-26": { meal: "Baked salmon & new potatoes", note: "Half term starts today \u2014 evening's free, nothing on for tea" },
+    "2026-10-26": { meal: "Air-fryer veggie sausages with crispy potato wedges & beans", note: "Swapped from Friday. Half term starts today, evening's free" },
     "2026-10-27": { meal: "Reheat: Sunday's lentil bolognese with spaghetti", note: "Hull hockey training 6-7pm (Hymers College) plus travel \u2014 tea ready for whoever's not driving, kept warm for the rest" },
-    "2026-10-28": { meal: "Baked cod with lemon & herb crumb, new potatoes & green beans", note: "Hockey Academy Night 6:15-7:45pm (The Lindum) \u2014 air fryer gets tea done fast either side of the run" }
+    "2026-10-28": { meal: "Baked cod with lemon & herb crumb, new potatoes & green beans", note: "Hockey Academy Night 6:15-7:45pm (The Lindum) \u2014 air fryer gets tea done fast either side of the run" },
+    "2026-10-29": { meal: "Jacket potatoes, tuna mayo or cheese & beans", note: "Mathilda's hospital eye test is at 2:20pm (dilating drops \u2014 she may be unsettled after) \u2014 keeping tea simple and familiar tonight" }
   };
-  var WEEK_MEAL_PLAN_UPDATED = '2026-10-22T15:08:25Z';
+  var WEEK_MEAL_PLAN_UPDATED = '2026-10-23T07:08:21Z';
 
   var TEA_TONIGHT = (function(){
     var todayISO = ymdLocal(new Date());
