@@ -1,58 +1,6 @@
 {
  "events": [
   {
-   "summary": "Francis: 'Smashed Live' programme (Y7/8, in-school)",
-   "start": {
-    "date": "2026-10-23T00:00:00Z"
-   },
-   "end": {
-    "date": "2026-10-24T00:00:00Z"
-   },
-   "status": "confirmed",
-   "eventType": "DEFAULT"
-  },
-  {
-   "summary": "Gymnastics",
-   "start": {
-    "dateTime": "2026-10-23T09:30:00+01:00",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-10-23T10:30:00+01:00",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "location": "Allegro Gymnastics Academy",
-   "eventType": "DEFAULT"
-  },
-  {
-   "summary": "Swimming",
-   "start": {
-    "dateTime": "2026-10-23T13:30:00+01:00",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-10-23T14:30:00+01:00",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "location": "Emmerson Pool Hire",
-   "eventType": "DEFAULT"
-  },
-  {
-   "summary": "Jessica: Bath",
-   "start": {
-    "dateTime": "2026-10-23T15:00:00+01:00",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-10-23T16:00:00+01:00",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "eventType": "DEFAULT"
-  },
-  {
    "summary": "Frank and nerd convention",
    "start": {
     "date": "2026-10-24T00:00:00Z"
@@ -478,6 +426,58 @@
    },
    "status": "confirmed",
    "location": "Scotter Primary School, High Street, Scotter, Gainsborough DN21 3RY",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Children in Need Day – nursery party celebration",
+   "start": {
+    "date": "2026-11-13T00:00:00Z"
+   },
+   "end": {
+    "date": "2026-11-14T00:00:00Z"
+   },
+   "status": "confirmed",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Gymnastics",
+   "start": {
+    "dateTime": "2026-11-13T09:30:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-11-13T10:30:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "location": "Allegro Gymnastics Academy",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Swimming",
+   "start": {
+    "dateTime": "2026-11-13T13:30:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-11-13T14:30:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "location": "Emmerson Pool Hire",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Jessica: Bath",
+   "start": {
+    "dateTime": "2026-11-13T15:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-11-13T16:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
    "eventType": "DEFAULT"
   }
  ]

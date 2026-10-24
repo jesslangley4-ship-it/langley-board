@@ -103,6 +103,18 @@
    "status": "confirmed",
    "colorId": "4",
    "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Dune 3 release",
+   "start": {
+    "date": "2026-12-18T00:00:00Z"
+   },
+   "end": {
+    "date": "2026-12-19T00:00:00Z"
+   },
+   "status": "confirmed",
+   "colorId": "4",
+   "eventType": "DEFAULT"
   }
  ]
 }
