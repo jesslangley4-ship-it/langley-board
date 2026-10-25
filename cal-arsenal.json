@@ -1,36 +1,6 @@
 {
  "events": [
   {
-   "summary": "Tottenham Hotspur Women vs Arsenal Women (A)",
-   "start": {
-    "dateTime": "2026-10-24T12:45:00+01:00",
-    "timeZone": "UTC"
-   },
-   "end": {
-    "dateTime": "2026-10-24T14:45:00+01:00",
-    "timeZone": "UTC"
-   },
-   "status": "confirmed",
-   "location": "Tottenham Hotspur Stadium, London",
-   "eventType": "DEFAULT",
-   "description": "Barclays WSL | Join in @ArsenalFCW"
-  },
-  {
-   "summary": "Arsenal vs Everton (H)",
-   "start": {
-    "dateTime": "2026-10-24T15:00:00+01:00",
-    "timeZone": "UTC"
-   },
-   "end": {
-    "dateTime": "2026-10-24T17:00:00+01:00",
-    "timeZone": "UTC"
-   },
-   "status": "confirmed",
-   "location": "Emirates Stadium, London",
-   "eventType": "DEFAULT",
-   "description": "Premier League | Matchweek 8 | Listen live on BBC Radio 5 Live. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com | Join In #ARSEVE"
-  },
-  {
    "summary": "Fleetwood Town vs Arsenal (A)",
    "start": {
     "dateTime": "2026-10-27T20:00:00Z",

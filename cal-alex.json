@@ -1,19 +1,6 @@
 {
  "events": [
   {
-   "summary": "Tyre fitting",
-   "start": {
-    "dateTime": "2026-10-24T08:30:00+01:00",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-10-24T09:30:00+01:00",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "eventType": "DEFAULT"
-  },
-  {
    "summary": "Leave",
    "start": {
     "date": "2026-11-07T00:00:00Z"

@@ -1,42 +1,6 @@
 {
  "events": [
   {
-   "summary": "Frank and nerd convention",
-   "start": {
-    "date": "2026-10-24T00:00:00Z"
-   },
-   "end": {
-    "date": "2026-10-25T00:00:00Z"
-   },
-   "status": "confirmed",
-   "eventType": "DEFAULT"
-  },
-  {
-   "summary": "Jess and Thils with cousins",
-   "start": {
-    "date": "2026-10-24T00:00:00Z"
-   },
-   "end": {
-    "date": "2026-10-25T00:00:00Z"
-   },
-   "status": "confirmed",
-   "eventType": "DEFAULT"
-  },
-  {
-   "summary": "Francis - Hockey U10/U12 Open Session",
-   "start": {
-    "dateTime": "2026-10-24T09:15:00+01:00",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-10-24T10:15:00+01:00",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "location": "The Lindum",
-   "eventType": "DEFAULT"
-  },
-  {
    "summary": "Halloween costume week (Mathilda can wear costume to nursery)",
    "start": {
     "date": "2026-10-26T00:00:00Z"
@@ -478,6 +442,31 @@
     "timeZone": "Europe/London"
    },
    "status": "confirmed",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Girls day",
+   "start": {
+    "date": "2026-11-14T00:00:00Z"
+   },
+   "end": {
+    "date": "2026-11-15T00:00:00Z"
+   },
+   "status": "confirmed",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Francis - Hockey U10/U12 Open Session",
+   "start": {
+    "dateTime": "2026-11-14T09:15:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-11-14T10:15:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "location": "The Lindum",
    "eventType": "DEFAULT"
   }
  ]
