@@ -284,6 +284,21 @@
    "location": "Tottenham Hotspur Stadium, London",
    "eventType": "DEFAULT",
    "description": "Premier League | Matchweek 14 | Watch live on UK - Sky Sports. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com | Join In #TOTARS"
+  },
+  {
+   "summary": "Arsenal vs Real Madrid (H)",
+   "start": {
+    "dateTime": "2026-12-09T20:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-12-09T22:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "location": "Emirates Stadium, London",
+   "eventType": "DEFAULT",
+   "description": "UEFA Champions League | Matchweek 6 | TV: Check local guides. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com | Join In #ARS"
   }
  ]
 }
