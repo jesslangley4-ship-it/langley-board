@@ -23,19 +23,6 @@
    "eventType": "DEFAULT"
   },
   {
-   "summary": "Water the plants",
-   "start": {
-    "dateTime": "2026-10-26T08:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-10-26T08:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "eventType": "DEFAULT"
-  },
-  {
    "summary": "Francis - Hull Hockey Training",
    "start": {
     "dateTime": "2026-10-27T18:00:00Z",
@@ -467,6 +454,32 @@
    },
    "status": "confirmed",
    "location": "The Lindum",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Water the plants",
+   "start": {
+    "dateTime": "2026-11-16T08:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-11-16T08:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Mathilda allergy appointment",
+   "start": {
+    "dateTime": "2026-11-16T10:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-11-16T11:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
    "eventType": "DEFAULT"
   }
  ]

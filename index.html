@@ -940,7 +940,7 @@
      The board reads this instead of calling window.claude / MCP, so it renders
      on a plain browser (the kitchen Raspberry Pi) with no Claude login. */
   var BAKED = {
-    "generatedISO": "2026-10-26T15:06:48.783Z",
+    "generatedISO": "2026-10-27T07:09:20.340Z",
     "primary": [
       {
         "summary": "Halloween costume week (Mathilda can wear costume to nursery)",
@@ -959,18 +959,6 @@
         },
         "end": {
           "date": "2026-10-31T00:00:00Z"
-        },
-        "status": "confirmed"
-      },
-      {
-        "summary": "Water the plants",
-        "start": {
-          "dateTime": "2026-10-26T08:00:00Z",
-          "timeZone": "Europe/London"
-        },
-        "end": {
-          "dateTime": "2026-10-26T08:00:00Z",
-          "timeZone": "Europe/London"
         },
         "status": "confirmed"
       },
@@ -1154,6 +1142,19 @@
         },
         "status": "confirmed",
         "location": "Hymers College, Hymers Avenue, Hull HU3 1LW"
+      },
+      {
+        "summary": "Francis - Hockey Academy Night (U10/U12)",
+        "start": {
+          "dateTime": "2026-11-04T18:15:00Z",
+          "timeZone": "Europe/London"
+        },
+        "end": {
+          "dateTime": "2026-11-04T19:45:00Z",
+          "timeZone": "Europe/London"
+        },
+        "status": "confirmed",
+        "location": "The Lindum"
       }
     ],
     "familyTicker": [
@@ -1174,18 +1175,6 @@
         },
         "end": {
           "date": "2026-10-31T00:00:00Z"
-        },
-        "status": "confirmed"
-      },
-      {
-        "summary": "Water the plants",
-        "start": {
-          "dateTime": "2026-10-26T08:00:00Z",
-          "timeZone": "Europe/London"
-        },
-        "end": {
-          "dateTime": "2026-10-26T08:00:00Z",
-          "timeZone": "Europe/London"
         },
         "status": "confirmed"
       },
@@ -1589,6 +1578,30 @@
         },
         "status": "confirmed",
         "location": "The Lindum"
+      },
+      {
+        "summary": "Water the plants",
+        "start": {
+          "dateTime": "2026-11-16T08:00:00Z",
+          "timeZone": "Europe/London"
+        },
+        "end": {
+          "dateTime": "2026-11-16T08:00:00Z",
+          "timeZone": "Europe/London"
+        },
+        "status": "confirmed"
+      },
+      {
+        "summary": "Mathilda allergy appointment",
+        "start": {
+          "dateTime": "2026-11-16T10:00:00Z",
+          "timeZone": "Europe/London"
+        },
+        "end": {
+          "dateTime": "2026-11-16T11:00:00Z",
+          "timeZone": "Europe/London"
+        },
+        "status": "confirmed"
       }
     ],
     "alex": [
@@ -1964,15 +1977,15 @@
      date — if today isn't in the map, it falls back to '' (nothing planned)
      rather than showing a stale day. */
   var WEEK_MEAL_PLAN = {
-    "2026-10-26": { meal: "Air-fryer veggie sausages with crispy potato wedges & beans", note: "Swapped from Friday. Half term starts today, evening's free" },
     "2026-10-27": { meal: "Reheat: Sunday's cheesy veggie pasta bake", note: "Hull hockey training 6-7pm (Hymers College) plus travel. Tea ready for whoever's not driving, kept warm for the rest" },
     "2026-10-28": { meal: "Baked cod with lemon & herb crumb, new potatoes & green beans", note: "Hockey Academy Night 6:15-7:45pm (The Lindum) \u2014 air fryer gets tea done fast either side of the run" },
     "2026-10-29": { meal: "Jacket potatoes, tuna mayo or cheese & beans", note: "Mathilda's hospital eye test is at 2:20pm (dilating drops \u2014 she may be unsettled after) \u2014 keeping tea simple and familiar tonight" },
     "2026-10-30": { meal: "", note: "" },
     "2026-10-31": { meal: "", note: "" },
-    "2026-11-01": { meal: "", note: "" }
+    "2026-11-01": { meal: "", note: "" },
+    "2026-11-02": { meal: "", note: "" }
   };
-  var WEEK_MEAL_PLAN_UPDATED = '2026-10-26T15:06:45Z';
+  var WEEK_MEAL_PLAN_UPDATED = '2026-10-27T07:09:17Z';
 
   var TEA_TONIGHT = (function(){
     var todayISO = ymdLocal(new Date());
