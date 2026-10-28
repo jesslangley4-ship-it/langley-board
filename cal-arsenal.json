@@ -1,21 +1,6 @@
 {
  "events": [
   {
-   "summary": "Fleetwood Town vs Arsenal (A)",
-   "start": {
-    "dateTime": "2026-10-27T20:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-10-27T22:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "location": "Highbury Stadium, Fleetwood",
-   "eventType": "DEFAULT",
-   "description": "English League Cup | Matchweek 5 | TV: Check local guides. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com | Join In #ARS"
-  },
-  {
    "summary": "Arsenal Women vs Benfica Women (H) | UEFA Women's Champions League",
    "start": {
     "dateTime": "2026-10-28T20:00:00Z",
