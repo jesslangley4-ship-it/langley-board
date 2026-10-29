@@ -1,21 +1,6 @@
 {
  "events": [
   {
-   "summary": "Arsenal Women vs Benfica Women (H) | UEFA Women's Champions League",
-   "start": {
-    "dateTime": "2026-10-28T20:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-10-28T22:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "location": "Meadow Park, Borehamwood",
-   "eventType": "DEFAULT",
-   "description": "UEFA Women's Champions League | Join in @ArsenalFCW"
-  },
-  {
    "summary": "Arsenal Women vs Aston Villa Women (H)",
    "start": {
     "dateTime": "2026-11-01T12:00:00Z",
@@ -284,6 +269,21 @@
    "location": "Emirates Stadium, London",
    "eventType": "DEFAULT",
    "description": "UEFA Champions League | Matchweek 6 | TV: Check local guides. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com | Join In #ARS"
+  },
+  {
+   "summary": "Everton Women vs Arsenal Women (A)",
+   "start": {
+    "dateTime": "2026-12-12T12:30:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-12-12T14:30:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "location": "Goodison Park, Liverpool",
+   "eventType": "DEFAULT",
+   "description": "Barclays WSL | Join in @ArsenalFCW"
   }
  ]
 }
