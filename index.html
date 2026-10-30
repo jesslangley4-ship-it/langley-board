@@ -940,7 +940,7 @@
      The board reads this instead of calling window.claude / MCP, so it renders
      on a plain browser (the kitchen Raspberry Pi) with no Claude login. */
   var BAKED = {
-    "generatedISO": "2026-10-29T15:34:34.150Z",
+    "generatedISO": "2026-10-30T07:11:22.649Z",
     "primary": [
       {
         "summary": "Halloween costume week (Mathilda can wear costume to nursery)",
@@ -959,18 +959,6 @@
         },
         "end": {
           "date": "2026-10-31T00:00:00Z"
-        },
-        "status": "confirmed"
-      },
-      {
-        "summary": "Mathilda: Hospital eye test appointment",
-        "start": {
-          "dateTime": "2026-10-29T14:20:00Z",
-          "timeZone": "Europe/London"
-        },
-        "end": {
-          "dateTime": "2026-10-29T15:20:00Z",
-          "timeZone": "Europe/London"
         },
         "status": "confirmed"
       },
@@ -1192,6 +1180,16 @@
           "timeZone": "Europe/London"
         },
         "status": "confirmed"
+      },
+      {
+        "summary": "Francis - U12 Boys Hockey Fixture (Time TBC)",
+        "start": {
+          "date": "2026-11-08T00:00:00Z"
+        },
+        "end": {
+          "date": "2026-11-09T00:00:00Z"
+        },
+        "status": "confirmed"
       }
     ],
     "familyTicker": [
@@ -1212,18 +1210,6 @@
         },
         "end": {
           "date": "2026-10-31T00:00:00Z"
-        },
-        "status": "confirmed"
-      },
-      {
-        "summary": "Mathilda: Hospital eye test appointment",
-        "start": {
-          "dateTime": "2026-10-29T14:20:00Z",
-          "timeZone": "Europe/London"
-        },
-        "end": {
-          "dateTime": "2026-10-29T15:20:00Z",
-          "timeZone": "Europe/London"
         },
         "status": "confirmed"
       },
@@ -1977,16 +1963,30 @@
       {
         "summary": "Everton Women vs Arsenal Women (A)",
         "start": {
-          "dateTime": "2026-12-12T12:30:00Z",
+          "dateTime": "2026-12-11T19:00:00Z",
           "timeZone": "Europe/London"
         },
         "end": {
-          "dateTime": "2026-12-12T14:30:00Z",
+          "dateTime": "2026-12-11T21:00:00Z",
           "timeZone": "Europe/London"
         },
         "status": "confirmed",
         "location": "Goodison Park, Liverpool",
         "description": "Barclays WSL | Join in @ArsenalFCW"
+      },
+      {
+        "summary": "Arsenal vs Bournemouth (H)",
+        "start": {
+          "dateTime": "2026-12-13T14:00:00Z",
+          "timeZone": "Europe/London"
+        },
+        "end": {
+          "dateTime": "2026-12-13T16:00:00Z",
+          "timeZone": "Europe/London"
+        },
+        "status": "confirmed",
+        "location": "Emirates Stadium, London",
+        "description": "Premier League | Matchweek 15 | Watch live on UK - Sky Sports. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com"
       }
     ]
   };
@@ -2025,15 +2025,15 @@
      date — if today isn't in the map, it falls back to '' (nothing planned)
      rather than showing a stale day. */
   var WEEK_MEAL_PLAN = {
-    "2026-10-29": { meal: "Jacket potatoes, tuna mayo or cheese & beans", note: "Mathilda's hospital eye test is at 2:20pm (dilating drops \u2014 she may be unsettled after) \u2014 keeping tea simple and familiar tonight" },
     "2026-10-30": { meal: "Air-fryer breaded fish fillets with mash, peas & sweetcorn", note: "Half-term starts and Mathilda's had the nursery Halloween party today after gymnastics (9:30am) and swimming (1:30pm) \u2014 keeping tea quick, familiar and not too rich." },
     "2026-10-31": { meal: "Slow-cooker chicken casserole", note: "This week's one meat night. Hockey open session 9:15-10:15am, then the away match at Sheffield (12-1pm) \u2014 a long round trip, plus trick-or-treating this evening. Slow cooker on by 9am so tea's ready whenever we're back." },
     "2026-11-01": { meal: "Veggie fajitas", note: "Mathilda's Halloween disco 2-3pm at Allegro. Alex away at the Arsenal Ladies match today \u2014 keep a labelled portion aside for him to reheat when he's back. A free evening otherwise, so a good day to batch: extra for Tuesday (fridge) and Wednesday (freezer)." },
     "2026-11-02": { meal: "Creamy salmon & pea pasta", note: "Free evening, nothing on for tea tonight \u2014 a new one to try." },
     "2026-11-03": { meal: "Reheat: Sunday's fajita filling", note: "Hull hockey training 6-7pm (Hymers College) plus travel \u2014 tea ready for whoever's not driving, kept warm for the rest." },
-    "2026-11-04": { meal: "Reheat: Sunday's frozen fajita filling", note: "Hockey Academy Night 6:15-7:45pm (The Lindum) \u2014 reheat gets tea done fast either side of the run. Filling was moved to the fridge on Monday night to defrost." }
+    "2026-11-04": { meal: "Reheat: Sunday's frozen fajita filling", note: "Hockey Academy Night 6:15-7:45pm (The Lindum) \u2014 reheat gets tea done fast either side of the run. Filling was moved to the fridge on Monday night to defrost." },
+    "2026-11-05": { meal: "Mediterranean baked cod with cherry tomatoes, olives & couscous", note: "Free evening, nothing on for tea tonight \u2014 a new one to try." }
   };
-  var WEEK_MEAL_PLAN_UPDATED = '2026-10-29T15:34:30Z';
+  var WEEK_MEAL_PLAN_UPDATED = '2026-10-30T07:11:18Z';
 
   var TEA_TONIGHT = (function(){
     var todayISO = ymdLocal(new Date());

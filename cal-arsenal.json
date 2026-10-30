@@ -273,17 +273,32 @@
   {
    "summary": "Everton Women vs Arsenal Women (A)",
    "start": {
-    "dateTime": "2026-12-12T12:30:00Z",
+    "dateTime": "2026-12-11T19:00:00Z",
     "timeZone": "Europe/London"
    },
    "end": {
-    "dateTime": "2026-12-12T14:30:00Z",
+    "dateTime": "2026-12-11T21:00:00Z",
     "timeZone": "Europe/London"
    },
    "status": "confirmed",
    "location": "Goodison Park, Liverpool",
    "eventType": "DEFAULT",
    "description": "Barclays WSL | Join in @ArsenalFCW"
+  },
+  {
+   "summary": "Arsenal vs Bournemouth (H)",
+   "start": {
+    "dateTime": "2026-12-13T14:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-12-13T16:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "location": "Emirates Stadium, London",
+   "eventType": "DEFAULT",
+   "description": "Premier League | Matchweek 15 | Watch live on UK - Sky Sports. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com | Join In #ARSBOU"
   }
  ]
 }

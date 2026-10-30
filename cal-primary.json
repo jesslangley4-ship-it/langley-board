@@ -23,19 +23,6 @@
    "eventType": "DEFAULT"
   },
   {
-   "summary": "Mathilda: Hospital eye test appointment",
-   "start": {
-    "dateTime": "2026-10-29T14:20:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-10-29T15:20:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "eventType": "DEFAULT"
-  },
-  {
    "summary": "Halloween Party (nursery – party food & games)",
    "start": {
     "date": "2026-10-30T00:00:00Z"
