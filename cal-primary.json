@@ -1,80 +1,6 @@
 {
  "events": [
   {
-   "summary": "Halloween costume week (Mathilda can wear costume to nursery)",
-   "start": {
-    "date": "2026-10-26T00:00:00Z"
-   },
-   "end": {
-    "date": "2026-10-31T00:00:00Z"
-   },
-   "status": "confirmed",
-   "eventType": "DEFAULT"
-  },
-  {
-   "summary": "QEHS: October half-term (school closed)",
-   "start": {
-    "date": "2026-10-26T00:00:00Z"
-   },
-   "end": {
-    "date": "2026-10-31T00:00:00Z"
-   },
-   "status": "confirmed",
-   "eventType": "DEFAULT"
-  },
-  {
-   "summary": "Halloween Party (nursery – party food & games)",
-   "start": {
-    "date": "2026-10-30T00:00:00Z"
-   },
-   "end": {
-    "date": "2026-10-31T00:00:00Z"
-   },
-   "status": "confirmed",
-   "eventType": "DEFAULT"
-  },
-  {
-   "summary": "Gymnastics",
-   "start": {
-    "dateTime": "2026-10-30T09:30:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-10-30T10:30:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "location": "Allegro Gymnastics Academy",
-   "eventType": "DEFAULT"
-  },
-  {
-   "summary": "Swimming",
-   "start": {
-    "dateTime": "2026-10-30T13:30:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-10-30T14:30:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "location": "Emmerson Pool Hire",
-   "eventType": "DEFAULT"
-  },
-  {
-   "summary": "Jessica: Bath",
-   "start": {
-    "dateTime": "2026-10-30T15:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-10-30T16:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "eventType": "DEFAULT"
-  },
-  {
    "summary": "Francis - Hockey U10/U12 Open Session",
    "start": {
     "dateTime": "2026-10-31T09:15:00Z",
@@ -494,6 +420,47 @@
    },
    "status": "confirmed",
    "location": "The Lindum",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Gymnastics",
+   "start": {
+    "dateTime": "2026-11-20T09:30:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-11-20T10:30:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "location": "Allegro Gymnastics Academy",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Swimming",
+   "start": {
+    "dateTime": "2026-11-20T13:30:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-11-20T14:30:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "location": "Emmerson Pool Hire",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Jessica: Bath",
+   "start": {
+    "dateTime": "2026-11-20T15:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-11-20T16:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
    "eventType": "DEFAULT"
   }
  ]
