@@ -226,6 +226,21 @@
    "description": "Premier League | Matchweek 12 | Watch live on UK - Sky Sports. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com | Join In #ARSMCI"
   },
   {
+   "summary": "Brentford vs Arsenal (A)",
+   "start": {
+    "dateTime": "2026-12-02T20:15:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-12-02T22:15:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "location": "Gtech Community Stadium, Brentford",
+   "eventType": "DEFAULT",
+   "description": "Premier League | Matchweek 13 | Watch live on UK - Sky Sports. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com | Join In #BREARS"
+  },
+  {
    "summary": "Tottenham Hotspur vs Arsenal (A)",
    "start": {
     "dateTime": "2026-12-06T16:30:00Z",
