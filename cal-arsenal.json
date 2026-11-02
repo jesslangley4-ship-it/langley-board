@@ -1,36 +1,6 @@
 {
  "events": [
   {
-   "summary": "Arsenal Women vs Aston Villa Women (H)",
-   "start": {
-    "dateTime": "2026-11-01T12:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-11-01T14:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "location": "Emirates Stadium, London",
-   "eventType": "DEFAULT",
-   "description": "Barclays WSL | Join in @ArsenalFCW"
-  },
-  {
-   "summary": "Liverpool vs Arsenal (A)",
-   "start": {
-    "dateTime": "2026-11-01T16:30:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-11-01T18:30:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "location": "Anfield, Liverpool",
-   "eventType": "DEFAULT",
-   "description": "Premier League | Matchweek 9 | Watch live on UK - Sky Sports | BBC Radio 5 Live. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com | Join In #LIVARS"
-  },
-  {
    "summary": "Slavia Prague vs Arsenal (A)",
    "start": {
     "dateTime": "2026-11-04T20:00:00Z",
@@ -103,7 +73,7 @@
    "status": "confirmed",
    "location": "See Details 👇",
    "eventType": "DEFAULT",
-   "description": "Tickets for the North London derby at Emirates Stadium are now on-sale; a clash you won't want to miss. "
+   "description": "Tickets for the North London derby at Emirates Stadium are now on-sale; a clash you won't want to miss."
   },
   {
    "summary": "Barcelona Women vs Arsenal Women (A) | UEFA Women's Champions League",
@@ -299,6 +269,21 @@
    "location": "Emirates Stadium, London",
    "eventType": "DEFAULT",
    "description": "Premier League | Matchweek 15 | Watch live on UK - Sky Sports. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com | Join In #ARSBOU"
+  },
+  {
+   "summary": "Inter Women vs Arsenal Women (A) | UEFA Women's Champions League",
+   "start": {
+    "dateTime": "2026-12-16T20:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-12-16T22:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "location": "Brianteo, Monza",
+   "eventType": "DEFAULT",
+   "description": "UEFA Women's Champions League | Join in @ArsenalFCW"
   }
  ]
 }
