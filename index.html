@@ -940,30 +940,8 @@
      The board reads this instead of calling window.claude / MCP, so it renders
      on a plain browser (the kitchen Raspberry Pi) with no Claude login. */
   var BAKED = {
-    "generatedISO": "2026-11-02T15:18:24.761Z",
+    "generatedISO": "2026-11-03T07:07:19.601Z",
     "primary": [
-      {
-        "summary": "Nativity tickets go on sale (£1 each)",
-        "start": {
-          "date": "2026-11-02T00:00:00Z"
-        },
-        "end": {
-          "date": "2026-11-03T00:00:00Z"
-        },
-        "status": "confirmed"
-      },
-      {
-        "summary": "Water the plants",
-        "start": {
-          "dateTime": "2026-11-02T08:00:00Z",
-          "timeZone": "Europe/London"
-        },
-        "end": {
-          "dateTime": "2026-11-02T08:00:00Z",
-          "timeZone": "Europe/London"
-        },
-        "status": "confirmed"
-      },
       {
         "summary": "Francis - Hull Hockey Training",
         "start": {
@@ -1099,31 +1077,22 @@
         },
         "status": "confirmed",
         "location": "Hymers College, Hymers Avenue, Hull HU3 1LW"
+      },
+      {
+        "summary": "Francis - Hockey Academy Night (U10/U12)",
+        "start": {
+          "dateTime": "2026-11-11T18:15:00Z",
+          "timeZone": "Europe/London"
+        },
+        "end": {
+          "dateTime": "2026-11-11T19:45:00Z",
+          "timeZone": "Europe/London"
+        },
+        "status": "confirmed",
+        "location": "The Lindum"
       }
     ],
     "familyTicker": [
-      {
-        "summary": "Nativity tickets go on sale (£1 each)",
-        "start": {
-          "date": "2026-11-02T00:00:00Z"
-        },
-        "end": {
-          "date": "2026-11-03T00:00:00Z"
-        },
-        "status": "confirmed"
-      },
-      {
-        "summary": "Water the plants",
-        "start": {
-          "dateTime": "2026-11-02T08:00:00Z",
-          "timeZone": "Europe/London"
-        },
-        "end": {
-          "dateTime": "2026-11-02T08:00:00Z",
-          "timeZone": "Europe/London"
-        },
-        "status": "confirmed"
-      },
       {
         "summary": "Francis - Hull Hockey Training",
         "start": {
@@ -1495,6 +1464,28 @@
         },
         "status": "confirmed",
         "location": "St Mary's RC High School, S41 8AG"
+      },
+      {
+        "summary": "Nursery Photo Day (Eddie Nolan photographer)",
+        "start": {
+          "date": "2026-11-23T00:00:00Z"
+        },
+        "end": {
+          "date": "2026-11-24T00:00:00Z"
+        },
+        "status": "confirmed"
+      },
+      {
+        "summary": "Water the plants",
+        "start": {
+          "dateTime": "2026-11-23T08:00:00Z",
+          "timeZone": "Europe/London"
+        },
+        "end": {
+          "dateTime": "2026-11-23T08:00:00Z",
+          "timeZone": "Europe/London"
+        },
+        "status": "confirmed"
       }
     ],
     "alex": [
@@ -1856,12 +1847,11 @@
      date — if today isn't in the map, it falls back to '' (nothing planned)
      rather than showing a stale day. */
   var WEEK_MEAL_PLAN = {
-    "2026-11-02": { meal: "Veggie fajitas (plus a fajita bowl for Jess's lunch tomorrow)", note: "Moved from Sunday. Make one extra portion for Jess's work lunch on Tuesday as a fajita bowl." },
     "2026-11-03": { meal: "Leftover curry from the freezer, with rice", note: "Using up the frozen curry. Move it from the freezer to the fridge tonight so it's defrosted by teatime. Hull hockey training 6\u20137pm (Hymers College)." },
     "2026-11-04": { meal: "Creamy prawn & tomato orzo", note: "Hockey Academy night 6:15\u20137:45pm (The Lindum). One pan, about 20 minutes." },
     "2026-11-05": { meal: "Fish & chips (or another takeaway treat)", note: "Bonfire night, out to watch the fireworks. A chippy tea as a treat, no cooking." }
   };
-  var WEEK_MEAL_PLAN_UPDATED = '2026-11-02T15:18:20Z';
+  var WEEK_MEAL_PLAN_UPDATED = '2026-11-03T07:07:16Z';
 
   var TEA_TONIGHT = (function(){
     var todayISO = ymdLocal(new Date());
