@@ -1,20 +1,6 @@
 {
  "events": [
   {
-   "summary": "Francis - Hull Hockey Training",
-   "start": {
-    "dateTime": "2026-11-03T18:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-11-03T19:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "location": "Hymers College, Hymers Avenue, Hull HU3 1LW",
-   "eventType": "DEFAULT"
-  },
-  {
    "summary": "Francis - Hockey Academy Night (U10/U12)",
    "start": {
     "dateTime": "2026-11-04T18:15:00Z",
@@ -424,6 +410,31 @@
     "timeZone": "Europe/London"
    },
    "status": "confirmed",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Grandma's birthday",
+   "start": {
+    "date": "2026-11-24T00:00:00Z"
+   },
+   "end": {
+    "date": "2026-11-25T00:00:00Z"
+   },
+   "status": "confirmed",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Francis - Hull Hockey Training",
+   "start": {
+    "dateTime": "2026-11-24T18:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-11-24T19:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "location": "Hymers College, Hymers Avenue, Hull HU3 1LW",
    "eventType": "DEFAULT"
   }
  ]

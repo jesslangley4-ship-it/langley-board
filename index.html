@@ -940,21 +940,8 @@
      The board reads this instead of calling window.claude / MCP, so it renders
      on a plain browser (the kitchen Raspberry Pi) with no Claude login. */
   var BAKED = {
-    "generatedISO": "2026-11-03T15:07:17.042Z",
+    "generatedISO": "2026-11-04T07:07:15.905Z",
     "primary": [
-      {
-        "summary": "Francis - Hull Hockey Training",
-        "start": {
-          "dateTime": "2026-11-03T18:00:00Z",
-          "timeZone": "Europe/London"
-        },
-        "end": {
-          "dateTime": "2026-11-03T19:00:00Z",
-          "timeZone": "Europe/London"
-        },
-        "status": "confirmed",
-        "location": "Hymers College, Hymers Avenue, Hull HU3 1LW"
-      },
       {
         "summary": "Francis - Hockey Academy Night (U10/U12)",
         "start": {
@@ -1103,22 +1090,19 @@
         },
         "status": "confirmed",
         "location": "Scotter Primary School, High Street, Scotter, Gainsborough DN21 3RY"
+      },
+      {
+        "summary": "Children in Need Day – nursery party celebration",
+        "start": {
+          "date": "2026-11-13T00:00:00Z"
+        },
+        "end": {
+          "date": "2026-11-14T00:00:00Z"
+        },
+        "status": "confirmed"
       }
     ],
     "familyTicker": [
-      {
-        "summary": "Francis - Hull Hockey Training",
-        "start": {
-          "dateTime": "2026-11-03T18:00:00Z",
-          "timeZone": "Europe/London"
-        },
-        "end": {
-          "dateTime": "2026-11-03T19:00:00Z",
-          "timeZone": "Europe/London"
-        },
-        "status": "confirmed",
-        "location": "Hymers College, Hymers Avenue, Hull HU3 1LW"
-      },
       {
         "summary": "Francis - Hockey Academy Night (U10/U12)",
         "start": {
@@ -1499,6 +1483,29 @@
           "timeZone": "Europe/London"
         },
         "status": "confirmed"
+      },
+      {
+        "summary": "Grandma's birthday",
+        "start": {
+          "date": "2026-11-24T00:00:00Z"
+        },
+        "end": {
+          "date": "2026-11-25T00:00:00Z"
+        },
+        "status": "confirmed"
+      },
+      {
+        "summary": "Francis - Hull Hockey Training",
+        "start": {
+          "dateTime": "2026-11-24T18:00:00Z",
+          "timeZone": "Europe/London"
+        },
+        "end": {
+          "dateTime": "2026-11-24T19:00:00Z",
+          "timeZone": "Europe/London"
+        },
+        "status": "confirmed",
+        "location": "Hymers College, Hymers Avenue, Hull HU3 1LW"
       }
     ],
     "alex": [
@@ -1860,15 +1867,10 @@
      date — if today isn't in the map, it falls back to '' (nothing planned)
      rather than showing a stale day. */
   var WEEK_MEAL_PLAN = {
-    "2026-11-03": { meal: "Leftover curry from the freezer, with rice", note: "Using up the frozen curry. Move it from the freezer to the fridge tonight so it's defrosted by teatime. Hull hockey training 6\u20137pm (Hymers College)." },
     "2026-11-04": { meal: "Creamy prawn & tomato orzo", note: "Hockey Academy night 6:15\u20137:45pm (The Lindum). One pan, about 20 minutes." },
-    "2026-11-05": { meal: "Fish & chips (or another takeaway treat)", note: "Bonfire night, out to watch the fireworks. A chippy tea as a treat, no cooking." },
-    "2026-11-06": { meal: "", note: "" },
-    "2026-11-07": { meal: "", note: "" },
-    "2026-11-08": { meal: "", note: "" },
-    "2026-11-09": { meal: "", note: "" }
+    "2026-11-05": { meal: "Fish & chips (or another takeaway treat)", note: "Bonfire night, out to watch the fireworks. A chippy tea as a treat, no cooking." }
   };
-  var WEEK_MEAL_PLAN_UPDATED = '2026-11-03T15:07:12Z';
+  var WEEK_MEAL_PLAN_UPDATED = '2026-11-04T07:07:11Z';
 
   var TEA_TONIGHT = (function(){
     var todayISO = ymdLocal(new Date());
