@@ -85,10 +85,10 @@
   {
    "summary": "Francis - U12 Boys Hockey Fixture (Time TBC)",
    "start": {
-    "date": "2026-11-08T00:00:00Z"
+    "date": "2026-11-08"
    },
    "end": {
-    "date": "2026-11-09T00:00:00Z"
+    "date": "2026-11-09"
    },
    "status": "confirmed",
    "eventType": "DEFAULT"
@@ -164,10 +164,10 @@
   {
    "summary": "Children in Need Day – nursery party celebration",
    "start": {
-    "date": "2026-11-13T00:00:00Z"
+    "date": "2026-11-13"
    },
    "end": {
-    "date": "2026-11-14T00:00:00Z"
+    "date": "2026-11-14"
    },
    "status": "confirmed",
    "eventType": "DEFAULT"
@@ -216,10 +216,10 @@
   {
    "summary": "Girls day",
    "start": {
-    "date": "2026-11-14T00:00:00Z"
+    "date": "2026-11-14"
    },
    "end": {
-    "date": "2026-11-15T00:00:00Z"
+    "date": "2026-11-15"
    },
    "status": "confirmed",
    "eventType": "DEFAULT"
@@ -391,10 +391,10 @@
   {
    "summary": "Nursery Photo Day (Eddie Nolan photographer)",
    "start": {
-    "date": "2026-11-23T00:00:00Z"
+    "date": "2026-11-23"
    },
    "end": {
-    "date": "2026-11-24T00:00:00Z"
+    "date": "2026-11-24"
    },
    "status": "confirmed",
    "eventType": "DEFAULT"
@@ -413,12 +413,12 @@
    "eventType": "DEFAULT"
   },
   {
-   "summary": "Grandma's birthday",
+   "summary": "Grandma’s birthday",
    "start": {
-    "date": "2026-11-24T00:00:00Z"
+    "date": "2026-11-24"
    },
    "end": {
-    "date": "2026-11-25T00:00:00Z"
+    "date": "2026-11-25"
    },
    "status": "confirmed",
    "eventType": "DEFAULT"

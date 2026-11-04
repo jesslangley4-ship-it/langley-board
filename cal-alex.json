@@ -3,10 +3,10 @@
   {
    "summary": "Leave",
    "start": {
-    "date": "2026-11-07T00:00:00Z"
+    "date": "2026-11-07"
    },
    "end": {
-    "date": "2026-11-09T00:00:00Z"
+    "date": "2026-11-09"
    },
    "status": "confirmed",
    "colorId": "5",
@@ -29,10 +29,10 @@
   {
    "summary": "CYCLONE",
    "start": {
-    "date": "2026-11-09T00:00:00Z"
+    "date": "2026-11-09"
    },
    "end": {
-    "date": "2026-11-28T00:00:00Z"
+    "date": "2026-11-28"
    },
    "status": "confirmed",
    "colorId": "11",
@@ -42,10 +42,10 @@
   {
    "summary": "Christmas Leave",
    "start": {
-    "date": "2026-11-28T00:00:00Z"
+    "date": "2026-11-28"
    },
    "end": {
-    "date": "2027-01-04T00:00:00Z"
+    "date": "2027-01-04"
    },
    "status": "confirmed",
    "colorId": "5",
@@ -69,10 +69,10 @@
   {
    "summary": "Holy Mountain",
    "start": {
-    "date": "2026-12-10T00:00:00Z"
+    "date": "2026-12-10"
    },
    "end": {
-    "date": "2026-12-11T00:00:00Z"
+    "date": "2026-12-11"
    },
    "status": "confirmed",
    "eventType": "DEFAULT"
@@ -94,10 +94,10 @@
   {
    "summary": "Dune 3 release",
    "start": {
-    "date": "2026-12-18T00:00:00Z"
+    "date": "2026-12-18"
    },
    "end": {
-    "date": "2026-12-19T00:00:00Z"
+    "date": "2026-12-19"
    },
    "status": "confirmed",
    "colorId": "4",
