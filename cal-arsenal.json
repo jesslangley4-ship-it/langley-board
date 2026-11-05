@@ -1,21 +1,6 @@
 {
  "events": [
   {
-   "summary": "Slavia Prague vs Arsenal (A)",
-   "start": {
-    "dateTime": "2026-11-04T20:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-11-04T22:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "location": "Fortuna Arena, Prague",
-   "eventType": "DEFAULT",
-   "description": "UEFA Champions League | Matchweek 4 | TV: Check local guides. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com | Join In #ARS"
-  },
-  {
    "summary": "Arsenal v Ipswich Town ballot open ",
    "start": {
     "dateTime": "2026-11-06T12:00:00Z",
