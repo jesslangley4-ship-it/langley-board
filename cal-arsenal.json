@@ -269,6 +269,36 @@
    "location": "Brianteo, Monza",
    "eventType": "DEFAULT",
    "description": "UEFA Women's Champions League | Join in @ArsenalFCW"
+  },
+  {
+   "summary": "Charlton Athletic Women vs Arsenal Women (A)",
+   "start": {
+    "dateTime": "2026-12-20T12:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-12-20T14:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "location": "The Valley, London",
+   "eventType": "DEFAULT",
+   "description": "Barclays WSL | Join in @ArsenalFCW"
+  },
+  {
+   "summary": "Arsenal vs Manchester United (H)",
+   "start": {
+    "dateTime": "2026-12-20T16:30:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-12-20T18:30:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "location": "Emirates Stadium, London",
+   "eventType": "DEFAULT",
+   "description": "Premier League | Matchweek 16 | Watch live on UK - Sky Sports. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com | Join In #ARSMUN"
   }
  ]
 }
