@@ -13,20 +13,6 @@
    "eventType": "DEFAULT"
   },
   {
-   "summary": "Major Service",
-   "start": {
-    "dateTime": "2026-11-07T10:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-11-07T12:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "location": "Horton Škoda",
-   "eventType": "DEFAULT"
-  },
-  {
    "summary": "CYCLONE",
    "start": {
     "date": "2026-11-09"

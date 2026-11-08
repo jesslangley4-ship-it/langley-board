@@ -1,47 +1,6 @@
 {
  "events": [
   {
-   "summary": "Francis: Lindum Hockey vs Rotherham (Home)",
-   "start": {
-    "dateTime": "2026-11-07T10:30:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-11-07T11:30:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "location": "Yarborough Leisure Centre, LN1 3SP",
-   "eventType": "DEFAULT"
-  },
-  {
-   "summary": "Jessica: Me-time",
-   "start": {
-    "dateTime": "2026-11-07T12:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-11-07T15:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "eventType": "DEFAULT"
-  },
-  {
-   "summary": "Filip party",
-   "start": {
-    "dateTime": "2026-11-07T14:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-11-07T17:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "location": "KLASSIC Park",
-   "eventType": "DEFAULT"
-  },
-  {
    "summary": "Francis - U12 Boys Hockey Fixture (Time TBC)",
    "start": {
     "date": "2026-11-08"
@@ -436,6 +395,46 @@
    },
    "status": "confirmed",
    "location": "Emmerson Pool Hire",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Jessica: Me-time",
+   "start": {
+    "dateTime": "2026-11-28T09:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-11-28T12:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Francis: Lindum Hockey vs Wakefield (Away)",
+   "start": {
+    "dateTime": "2026-11-28T16:50:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-11-28T17:50:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "location": "old green pitch, Wakefield Sports Club, WF1 3RR",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Sarah engagement party",
+   "start": {
+    "dateTime": "2026-11-28T18:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-11-28T19:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
    "eventType": "DEFAULT"
   }
  ]
