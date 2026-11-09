@@ -1,18 +1,6 @@
 {
  "events": [
   {
-   "summary": "Leave",
-   "start": {
-    "date": "2026-11-07"
-   },
-   "end": {
-    "date": "2026-11-09"
-   },
-   "status": "confirmed",
-   "colorId": "5",
-   "eventType": "DEFAULT"
-  },
-  {
    "summary": "CYCLONE",
    "start": {
     "date": "2026-11-09"

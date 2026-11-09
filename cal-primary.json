@@ -1,17 +1,6 @@
 {
  "events": [
   {
-   "summary": "Francis - U12 Boys Hockey Fixture (Time TBC)",
-   "start": {
-    "date": "2026-11-08"
-   },
-   "end": {
-    "date": "2026-11-09"
-   },
-   "status": "confirmed",
-   "eventType": "DEFAULT"
-  },
-  {
    "summary": "Water the plants",
    "start": {
     "dateTime": "2026-11-09T08:00:00Z",
@@ -433,6 +422,17 @@
    "end": {
     "dateTime": "2026-11-28T19:00:00Z",
     "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Francis - U12 Boys Hockey Fixture (Time TBC)",
+   "start": {
+    "date": "2026-11-29"
+   },
+   "end": {
+    "date": "2026-11-30"
    },
    "status": "confirmed",
    "eventType": "DEFAULT"

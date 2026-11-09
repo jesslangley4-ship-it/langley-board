@@ -1,21 +1,6 @@
 {
  "events": [
   {
-   "summary": "Liverpool Women vs Arsenal Women (A)",
-   "start": {
-    "dateTime": "2026-11-08T12:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-11-08T14:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "location": "Anfield, Liverpool",
-   "eventType": "DEFAULT",
-   "description": "Barclays WSL | Join in @ArsenalFCW"
-  },
-  {
    "summary": "🎫 Arsenal Women v Tottenham Hotspur on-sale",
    "start": {
     "dateTime": "2026-11-10T14:00:00Z",
@@ -103,7 +88,7 @@
    "status": "confirmed",
    "location": "St. James' Park, Newcastle",
    "eventType": "DEFAULT",
-   "description": "Premier League | Matchweek 11 | Watch live on UK - Sky Sports. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com | Join In #NEWARS"
+   "description": "Premier League | Matchweek 11 | Watch live on UK - Sky Sports."
   },
   {
    "summary": "Arsenal Women vs West Ham United Women (H)",
@@ -133,7 +118,7 @@
    "status": "confirmed",
    "location": "Emirates Stadium, London",
    "eventType": "DEFAULT",
-   "description": "UEFA Champions League | Matchweek 5 | TV: Check local guides. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com | Join In #ARS"
+   "description": "UEFA Champions League | Matchweek 5 | TV: Check local guides."
   },
   {
    "summary": "Arsenal vs Manchester City (H)",
@@ -148,7 +133,7 @@
    "status": "confirmed",
    "location": "Emirates Stadium, London",
    "eventType": "DEFAULT",
-   "description": "Premier League | Matchweek 12 | Watch live on UK - Sky Sports. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com | Join In #ARSMCI"
+   "description": "Premier League | Matchweek 12 | Watch live on UK - Sky Sports."
   },
   {
    "summary": "Brentford vs Arsenal (A)",
@@ -163,7 +148,7 @@
    "status": "confirmed",
    "location": "Gtech Community Stadium, Brentford",
    "eventType": "DEFAULT",
-   "description": "Premier League | Matchweek 13 | Watch live on UK - Sky Sports. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com | Join In #BREARS"
+   "description": "Premier League | Matchweek 13 | Watch live on UK - Sky Sports."
   },
   {
    "summary": "Tottenham Hotspur vs Arsenal (A)",
@@ -178,7 +163,7 @@
    "status": "confirmed",
    "location": "Tottenham Hotspur Stadium, London",
    "eventType": "DEFAULT",
-   "description": "Premier League | Matchweek 14 | Watch live on UK - Sky Sports. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com | Join In #TOTARS"
+   "description": "Premier League | Matchweek 14 | Watch live on UK - Sky Sports."
   },
   {
    "summary": "Arsenal vs Real Madrid (H)",
@@ -193,7 +178,7 @@
    "status": "confirmed",
    "location": "Emirates Stadium, London",
    "eventType": "DEFAULT",
-   "description": "UEFA Champions League | Matchweek 6 | TV: Check local guides. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com | Join In #ARS"
+   "description": "UEFA Champions League | Matchweek 6 | TV: Check local guides."
   },
   {
    "summary": "Everton Women vs Arsenal Women (A)",
@@ -223,7 +208,7 @@
    "status": "confirmed",
    "location": "Emirates Stadium, London",
    "eventType": "DEFAULT",
-   "description": "Premier League | Matchweek 15 | Watch live on UK - Sky Sports. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com | Join In #ARSBOU"
+   "description": "Premier League | Matchweek 15 | Watch live on UK - Sky Sports."
   },
   {
    "summary": "Inter Women vs Arsenal Women (A) | UEFA Women's Champions League",
@@ -268,7 +253,7 @@
    "status": "confirmed",
    "location": "Emirates Stadium, London",
    "eventType": "DEFAULT",
-   "description": "Premier League | Matchweek 16 | Watch live on UK - Sky Sports. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com | Join In #ARSMUN"
+   "description": "Premier League | Matchweek 16 | Watch live on UK - Sky Sports."
   }
  ]
 }
