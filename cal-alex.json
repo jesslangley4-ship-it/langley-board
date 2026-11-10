@@ -76,6 +76,18 @@
    "status": "confirmed",
    "colorId": "4",
    "eventType": "DEFAULT"
+  },
+  {
+   "summary": "ICSC",
+   "start": {
+    "date": "2027-01-04"
+   },
+   "end": {
+    "date": "2027-07-24"
+   },
+   "status": "confirmed",
+   "colorId": "6",
+   "eventType": "DEFAULT"
   }
  ]
 }

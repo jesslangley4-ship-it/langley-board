@@ -1,32 +1,6 @@
 {
  "events": [
   {
-   "summary": "Water the plants",
-   "start": {
-    "dateTime": "2026-11-09T08:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-11-09T08:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "eventType": "DEFAULT"
-  },
-  {
-   "summary": "Mathilda: Hospital eye test appointment (off nursery)",
-   "start": {
-    "dateTime": "2026-11-09T09:30:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-11-09T10:30:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "eventType": "DEFAULT"
-  },
-  {
    "summary": "Francis - Hull Hockey Training",
    "start": {
     "dateTime": "2026-11-10T18:00:00Z",
@@ -320,7 +294,7 @@
    "eventType": "DEFAULT"
   },
   {
-   "summary": "Grandma's birthday",
+   "summary": "Grandma’s birthday",
    "start": {
     "date": "2026-11-24"
    },
@@ -433,6 +407,32 @@
    },
    "end": {
     "date": "2026-11-30"
+   },
+   "status": "confirmed",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Water the plants",
+   "start": {
+    "dateTime": "2026-11-30T08:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-11-30T08:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Preschool Parents' Evening – CHECK DATE with nursery (book 10-min slot)",
+   "start": {
+    "dateTime": "2026-11-30T18:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-11-30T19:30:00Z",
+    "timeZone": "Europe/London"
    },
    "status": "confirmed",
    "eventType": "DEFAULT"

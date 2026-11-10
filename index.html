@@ -940,32 +940,8 @@
      The board reads this instead of calling window.claude / MCP, so it renders
      on a plain browser (the kitchen Raspberry Pi) with no Claude login. */
   var BAKED = {
-    "generatedISO": "2026-11-09T15:07:14.152Z",
+    "generatedISO": "2026-11-10T07:07:59.975Z",
     "primary": [
-      {
-        "summary": "Water the plants",
-        "start": {
-          "dateTime": "2026-11-09T08:00:00Z",
-          "timeZone": "Europe/London"
-        },
-        "end": {
-          "dateTime": "2026-11-09T08:00:00Z",
-          "timeZone": "Europe/London"
-        },
-        "status": "confirmed"
-      },
-      {
-        "summary": "Mathilda: Hospital eye test appointment (off nursery)",
-        "start": {
-          "dateTime": "2026-11-09T09:30:00Z",
-          "timeZone": "Europe/London"
-        },
-        "end": {
-          "dateTime": "2026-11-09T10:30:00Z",
-          "timeZone": "Europe/London"
-        },
-        "status": "confirmed"
-      },
       {
         "summary": "Francis - Hull Hockey Training",
         "start": {
@@ -1124,33 +1100,35 @@
           "timeZone": "Europe/London"
         },
         "status": "confirmed"
+      },
+      {
+        "summary": "Dentist, me, Frank and Thilda",
+        "start": {
+          "dateTime": "2026-11-18T16:00:00Z",
+          "timeZone": "Europe/London"
+        },
+        "end": {
+          "dateTime": "2026-11-18T17:00:00Z",
+          "timeZone": "Europe/London"
+        },
+        "status": "confirmed",
+        "location": "Blyton Dental"
+      },
+      {
+        "summary": "Francis - Hockey Academy Night (U10/U12)",
+        "start": {
+          "dateTime": "2026-11-18T18:15:00Z",
+          "timeZone": "Europe/London"
+        },
+        "end": {
+          "dateTime": "2026-11-18T19:45:00Z",
+          "timeZone": "Europe/London"
+        },
+        "status": "confirmed",
+        "location": "The Lindum"
       }
     ],
     "familyTicker": [
-      {
-        "summary": "Water the plants",
-        "start": {
-          "dateTime": "2026-11-09T08:00:00Z",
-          "timeZone": "Europe/London"
-        },
-        "end": {
-          "dateTime": "2026-11-09T08:00:00Z",
-          "timeZone": "Europe/London"
-        },
-        "status": "confirmed"
-      },
-      {
-        "summary": "Mathilda: Hospital eye test appointment (off nursery)",
-        "start": {
-          "dateTime": "2026-11-09T09:30:00Z",
-          "timeZone": "Europe/London"
-        },
-        "end": {
-          "dateTime": "2026-11-09T10:30:00Z",
-          "timeZone": "Europe/London"
-        },
-        "status": "confirmed"
-      },
       {
         "summary": "Francis - Hull Hockey Training",
         "start": {
@@ -1423,7 +1401,7 @@
         "status": "confirmed"
       },
       {
-        "summary": "Grandma's birthday",
+        "summary": "Grandma’s birthday",
         "start": {
           "date": "2026-11-24"
         },
@@ -1530,6 +1508,30 @@
           "date": "2026-11-30"
         },
         "status": "confirmed"
+      },
+      {
+        "summary": "Water the plants",
+        "start": {
+          "dateTime": "2026-11-30T08:00:00Z",
+          "timeZone": "Europe/London"
+        },
+        "end": {
+          "dateTime": "2026-11-30T08:00:00Z",
+          "timeZone": "Europe/London"
+        },
+        "status": "confirmed"
+      },
+      {
+        "summary": "Preschool Parents' Evening – CHECK DATE with nursery (book 10-min slot)",
+        "start": {
+          "dateTime": "2026-11-30T18:00:00Z",
+          "timeZone": "Europe/London"
+        },
+        "end": {
+          "dateTime": "2026-11-30T19:30:00Z",
+          "timeZone": "Europe/London"
+        },
+        "status": "confirmed"
       }
     ],
     "alex": [
@@ -1603,6 +1605,17 @@
         },
         "status": "confirmed",
         "colorId": "4"
+      },
+      {
+        "summary": "ICSC",
+        "start": {
+          "date": "2027-01-04"
+        },
+        "end": {
+          "date": "2027-07-24"
+        },
+        "status": "confirmed",
+        "colorId": "6"
       }
     ],
     "arsenal": [
@@ -1853,12 +1866,15 @@
      date — if today isn't in the map, it falls back to '' (nothing planned)
      rather than showing a stale day. */
   var WEEK_MEAL_PLAN = {
-    "2026-11-09": { meal: "Sweet potato & spinach dhal with rice (double batch)", note: "Mathilda's hospital eye test this morning (off nursery) \u2014 a quiet one at home for the rest of the day, so a good evening to batch-cook extra for tomorrow's Hull hockey training. Alex now away for CYCLONE." },
     "2026-11-10": { meal: "Reheat: Monday's sweet potato & spinach dhal with rice", note: "Hull hockey training 6\u20137pm (Hymers College) plus travel \u2014 tea ready for whoever's not driving, kept warm for the rest" },
     "2026-11-11": { meal: "Air-fryer crispy gnocchi with roasted tomatoes, courgette & pesto", note: "Hockey Academy Night 6:15\u20137:45pm (The Lindum). Ready in 20 minutes either side of the run. (Swapped in because there's no Saturday curry in the freezer now.)" },
-    "2026-11-12": { meal: "Creamy salmon & pea pasta", note: "Mathilda's Scotter Primary open day this morning \u2014 evening's free, nothing on for tea" }
+    "2026-11-12": { meal: "Creamy salmon & pea pasta", note: "Mathilda's Scotter Primary open day this morning \u2014 evening's free, nothing on for tea" },
+    "2026-11-13": { meal: "", note: "" },
+    "2026-11-14": { meal: "", note: "" },
+    "2026-11-15": { meal: "", note: "" },
+    "2026-11-16": { meal: "", note: "" }
   };
-  var WEEK_MEAL_PLAN_UPDATED = '2026-11-09T15:07:10Z';
+  var WEEK_MEAL_PLAN_UPDATED = '2026-11-10T07:07:54Z';
 
   var TEA_TONIGHT = (function(){
     var todayISO = ymdLocal(new Date());
