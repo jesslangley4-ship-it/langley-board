@@ -940,7 +940,7 @@
      The board reads this instead of calling window.claude / MCP, so it renders
      on a plain browser (the kitchen Raspberry Pi) with no Claude login. */
   var BAKED = {
-    "generatedISO": "2026-11-11T07:07:19.962Z",
+    "generatedISO": "2026-11-11T15:07:19.166Z",
     "primary": [
       {
         "summary": "Francis - Hockey Academy Night (U10/U12)",
@@ -1113,6 +1113,44 @@
         },
         "status": "confirmed",
         "location": "The Lindum"
+      },
+      {
+        "summary": "Pink pig",
+        "start": {
+          "dateTime": "2026-11-20T09:00:00Z",
+          "timeZone": "Europe/London"
+        },
+        "end": {
+          "dateTime": "2026-11-20T13:00:00Z",
+          "timeZone": "Europe/London"
+        },
+        "status": "confirmed"
+      },
+      {
+        "summary": "Gymnastics",
+        "start": {
+          "dateTime": "2026-11-20T09:30:00Z",
+          "timeZone": "Europe/London"
+        },
+        "end": {
+          "dateTime": "2026-11-20T10:30:00Z",
+          "timeZone": "Europe/London"
+        },
+        "status": "confirmed",
+        "location": "Allegro Gymnastics Academy"
+      },
+      {
+        "summary": "Swimming",
+        "start": {
+          "dateTime": "2026-11-20T13:30:00Z",
+          "timeZone": "Europe/London"
+        },
+        "end": {
+          "dateTime": "2026-11-20T14:30:00Z",
+          "timeZone": "Europe/London"
+        },
+        "status": "confirmed",
+        "location": "Emmerson Pool Hire"
       }
     ],
     "familyTicker": [
@@ -1854,14 +1892,9 @@
      rather than showing a stale day. */
   var WEEK_MEAL_PLAN = {
     "2026-11-11": { meal: "Air-fryer crispy gnocchi with roasted tomatoes, courgette & pesto", note: "Hockey Academy Night 6:15\u20137:45pm (The Lindum). Ready in 20 minutes either side of the run. (Swapped in because there's no Saturday curry in the freezer now.)" },
-    "2026-11-12": { meal: "Creamy salmon & pea pasta", note: "Mathilda's Scotter Primary open day this morning \u2014 evening's free, nothing on for tea" },
-    "2026-11-13": { meal: "", note: "" },
-    "2026-11-14": { meal: "", note: "" },
-    "2026-11-15": { meal: "", note: "" },
-    "2026-11-16": { meal: "", note: "" },
-    "2026-11-17": { meal: "", note: "" }
+    "2026-11-12": { meal: "Creamy salmon & pea pasta", note: "Mathilda's Scotter Primary open day this morning \u2014 evening's free, nothing on for tea" }
   };
-  var WEEK_MEAL_PLAN_UPDATED = '2026-11-11T07:07:16Z';
+  var WEEK_MEAL_PLAN_UPDATED = '2026-11-11T15:07:15Z';
 
   var TEA_TONIGHT = (function(){
     var todayISO = ymdLocal(new Date());
