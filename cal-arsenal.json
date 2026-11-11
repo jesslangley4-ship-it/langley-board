@@ -1,21 +1,6 @@
 {
  "events": [
   {
-   "summary": "🎫 Arsenal Women v Tottenham Hotspur on-sale",
-   "start": {
-    "dateTime": "2026-11-10T14:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-11-10T14:30:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "location": "See Details 👇",
-   "eventType": "DEFAULT",
-   "description": "Tickets for the North London derby at Emirates Stadium are now on-sale; a clash you won't want to miss. "
-  },
-  {
    "summary": "Barcelona Women vs Arsenal Women (A) | UEFA Women's Champions League",
    "start": {
     "dateTime": "2026-11-12T17:45:00Z",
