@@ -187,6 +187,20 @@
    "eventType": "DEFAULT"
   },
   {
+   "summary": "Industry Insider Event: Cyber Careers Uncovered",
+   "start": {
+    "dateTime": "2026-11-19T12:00:00Z",
+    "timeZone": "Europe/Lisbon"
+   },
+   "end": {
+    "dateTime": "2026-11-19T13:00:00Z",
+    "timeZone": "Europe/Lisbon"
+   },
+   "status": "confirmed",
+   "location": "Microsoft Teams Meeting",
+   "eventType": "DEFAULT"
+  },
+  {
    "summary": "Pink pig",
    "start": {
     "dateTime": "2026-11-20T09:00:00Z",
@@ -280,7 +294,7 @@
    "eventType": "DEFAULT"
   },
   {
-   "summary": "Grandma's birthday",
+   "summary": "Grandma’s birthday",
    "start": {
     "date": "2026-11-24"
    },
