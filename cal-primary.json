@@ -1,20 +1,6 @@
 {
  "events": [
   {
-   "summary": "Francis - Hockey Academy Night (U10/U12)",
-   "start": {
-    "dateTime": "2026-11-11T18:15:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-11-11T19:45:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "location": "The Lindum",
-   "eventType": "DEFAULT"
-  },
-  {
    "summary": "Mathilda: Scotter Primary Open Day (morning session)",
    "start": {
     "dateTime": "2026-11-12T09:30:00Z",
@@ -103,6 +89,20 @@
     "timeZone": "Europe/London"
    },
    "status": "confirmed",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Francis: YPH u12 Hockey Session 2",
+   "start": {
+    "dateTime": "2026-11-15T10:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-11-15T12:30:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "location": "Wakefield Tennis Club, QEGS Playing Fields, Blenheim Road, Wakefield, WF1 3JZ",
    "eventType": "DEFAULT"
   },
   {
@@ -280,7 +280,7 @@
    "eventType": "DEFAULT"
   },
   {
-   "summary": "Grandma’s birthday",
+   "summary": "Grandma's birthday",
    "start": {
     "date": "2026-11-24"
    },
@@ -435,6 +435,20 @@
    },
    "status": "confirmed",
    "location": "Hymers College, Hymers Avenue, Hull HU3 1LW",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Francis - Hockey Academy Night (U10/U12)",
+   "start": {
+    "dateTime": "2026-12-02T18:15:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-12-02T19:45:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "location": "The Lindum",
    "eventType": "DEFAULT"
   }
  ]
