@@ -1,20 +1,6 @@
 {
  "events": [
   {
-   "summary": "Mathilda: Scotter Primary Open Day (morning session)",
-   "start": {
-    "dateTime": "2026-11-12T09:30:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-11-12T11:30:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "location": "Scotter Primary School, High Street, Scotter, Gainsborough DN21 3RY",
-   "eventType": "DEFAULT"
-  },
-  {
    "summary": "Children in Need Day – nursery party celebration",
    "start": {
     "date": "2026-11-13"
