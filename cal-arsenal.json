@@ -1,21 +1,6 @@
 {
  "events": [
   {
-   "summary": "Arsenal v Brentford ballot open ",
-   "start": {
-    "dateTime": "2026-11-13T12:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-11-13T12:30:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "location": "Emirates Stadium ",
-   "eventType": "DEFAULT",
-   "description": "This is a reminder that you will be able to register for tickets to this upcoming game via ballot."
-  },
-  {
    "summary": "Arsenal Women vs London City Lionesses Women (H)",
    "start": {
     "dateTime": "2026-11-15T16:30:00Z",

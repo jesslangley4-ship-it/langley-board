@@ -1,45 +1,6 @@
 {
  "events": [
   {
-   "summary": "Children in Need Day – nursery party celebration",
-   "start": {
-    "date": "2026-11-13"
-   },
-   "end": {
-    "date": "2026-11-14"
-   },
-   "status": "confirmed",
-   "eventType": "DEFAULT"
-  },
-  {
-   "summary": "Gymnastics",
-   "start": {
-    "dateTime": "2026-11-13T09:30:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-11-13T10:30:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "location": "Allegro Gymnastics Academy",
-   "eventType": "DEFAULT"
-  },
-  {
-   "summary": "Swimming",
-   "start": {
-    "dateTime": "2026-11-13T13:30:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-11-13T14:30:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "location": "Emmerson Pool Hire",
-   "eventType": "DEFAULT"
-  },
-  {
    "summary": "Girls day",
    "start": {
     "date": "2026-11-14"
@@ -449,6 +410,34 @@
    },
    "status": "confirmed",
    "location": "The Lindum",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Gymnastics",
+   "start": {
+    "dateTime": "2026-12-04T09:30:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-12-04T10:30:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "location": "Allegro Gymnastics Academy",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Swimming",
+   "start": {
+    "dateTime": "2026-12-04T13:30:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-12-04T14:30:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "location": "Emmerson Pool Hire",
    "eventType": "DEFAULT"
   }
  ]
