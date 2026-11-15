@@ -15,6 +15,19 @@
    "eventType": "DEFAULT"
   },
   {
+   "summary": "Franco 4",
+   "start": {
+    "dateTime": "2026-11-15T15:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-11-15T17:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "eventType": "DEFAULT"
+  },
+  {
    "summary": "Water the plants",
    "start": {
     "dateTime": "2026-11-16T08:00:00Z",
