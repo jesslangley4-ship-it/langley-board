@@ -1,44 +1,6 @@
 {
  "events": [
   {
-   "summary": "Girls day",
-   "start": {
-    "date": "2026-11-14"
-   },
-   "end": {
-    "date": "2026-11-15"
-   },
-   "status": "confirmed",
-   "eventType": "DEFAULT"
-  },
-  {
-   "summary": "Francis - Hockey U10/U12 Open Session",
-   "start": {
-    "dateTime": "2026-11-14T09:15:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-11-14T10:15:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "location": "The Lindum",
-   "eventType": "DEFAULT"
-  },
-  {
-   "summary": "Franco 4",
-   "start": {
-    "dateTime": "2026-11-14T15:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-11-14T17:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "eventType": "DEFAULT"
-  },
-  {
    "summary": "Francis: YPH u12 Hockey Session 2",
    "start": {
     "dateTime": "2026-11-15T10:00:00Z",
@@ -438,6 +400,32 @@
    },
    "status": "confirmed",
    "location": "Emmerson Pool Hire",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Francis: Lindum Hockey vs Rotherham (Away) — time TBC",
+   "start": {
+    "date": "2026-12-05"
+   },
+   "end": {
+    "date": "2026-12-06"
+   },
+   "status": "confirmed",
+   "location": "Sheffield Hallam University Sports Park, S9 1UA",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Francis - Hockey U10/U12 Open Session",
+   "start": {
+    "dateTime": "2026-12-05T09:15:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-12-05T10:15:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "location": "The Lindum",
    "eventType": "DEFAULT"
   }
  ]
