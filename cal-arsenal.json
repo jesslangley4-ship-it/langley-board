@@ -1,21 +1,6 @@
 {
  "events": [
   {
-   "summary": "Arsenal Women vs London City Lionesses Women (H)",
-   "start": {
-    "dateTime": "2026-11-15T16:30:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-11-15T18:30:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "location": "Emirates Stadium, London",
-   "eventType": "DEFAULT",
-   "description": "Barclays WSL | Join in @ArsenalFCW"
-  },
-  {
    "summary": "Arsenal Women vs OL Lyonnes Women (H) | UEFA Women's Champions League",
    "start": {
     "dateTime": "2026-11-19T20:00:00Z",
@@ -43,7 +28,7 @@
    "status": "confirmed",
    "location": "St. James' Park, Newcastle",
    "eventType": "DEFAULT",
-   "description": "Premier League | Matchweek 11 | Watch live on UK - Sky Sports. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com | Join In #NEWARS"
+   "description": "Premier League | Matchweek 11 | Watch live on UK - Sky Sports | BBC Radio 5 Live. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com | Join In #NEWARS"
   },
   {
    "summary": "Arsenal Women vs West Ham United Women (H)",
@@ -238,6 +223,21 @@
    "location": "Selhurst Park, London",
    "eventType": "DEFAULT",
    "description": "Premier League | Matchweek 17 | Watch live on UK - Sky Sports. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com | Join In #CRYARS"
+  },
+  {
+   "summary": "Fulham vs Arsenal (A)",
+   "start": {
+    "dateTime": "2026-12-30T19:30:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-12-30T21:30:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "location": "Craven Cottage, London",
+   "eventType": "DEFAULT",
+   "description": "Premier League | Matchweek 18 | Watch live on UK - Sky Sports. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com | Join In #FULARS"
   }
  ]
 }
