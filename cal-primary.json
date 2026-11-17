@@ -1,32 +1,6 @@
 {
  "events": [
   {
-   "summary": "Water the plants",
-   "start": {
-    "dateTime": "2026-11-16T08:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-11-16T08:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "eventType": "DEFAULT"
-  },
-  {
-   "summary": "Mathilda allergy appointment",
-   "start": {
-    "dateTime": "2026-11-16T10:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-11-16T11:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "eventType": "DEFAULT"
-  },
-  {
    "summary": "Francis - Hull Hockey Training",
    "start": {
     "dateTime": "2026-11-17T18:00:00Z",
@@ -422,6 +396,30 @@
    },
    "end": {
     "dateTime": "2026-12-06T12:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Francis: Pay Lincolnshire Music guitar invoice (£240.35) - due by 7 Dec",
+   "start": {
+    "date": "2026-12-07"
+   },
+   "end": {
+    "date": "2026-12-08"
+   },
+   "status": "confirmed",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Water the plants",
+   "start": {
+    "dateTime": "2026-12-07T08:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-12-07T08:00:00Z",
     "timeZone": "Europe/London"
    },
    "status": "confirmed",
