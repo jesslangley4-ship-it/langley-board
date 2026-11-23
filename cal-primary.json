@@ -77,6 +77,20 @@
    "eventType": "DEFAULT"
   },
   {
+   "summary": "Francis: YPH Nutrition Education session (online, players &amp; parents)",
+   "start": {
+    "dateTime": "2026-11-25T19:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-11-25T20:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "location": "Online — Microsoft Teams",
+   "eventType": "DEFAULT"
+  },
+  {
    "summary": "Gymnastics",
    "start": {
     "dateTime": "2026-11-27T09:30:00Z",
@@ -102,33 +116,6 @@
    },
    "status": "confirmed",
    "location": "Emmerson Pool Hire",
-   "eventType": "DEFAULT"
-  },
-  {
-   "summary": "Jessica: Me-time",
-   "start": {
-    "dateTime": "2026-11-28T09:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-11-28T12:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "eventType": "DEFAULT"
-  },
-  {
-   "summary": "Francis: Lindum Hockey vs Wakefield (Away)",
-   "start": {
-    "dateTime": "2026-11-28T16:50:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-11-28T17:50:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "location": "old green pitch, Wakefield Sports Club, WF1 3RR",
    "eventType": "DEFAULT"
   },
   {
@@ -367,6 +354,17 @@
    "eventType": "DEFAULT"
   },
   {
+   "summary": "Jess in office",
+   "start": {
+    "date": "2026-12-11"
+   },
+   "end": {
+    "date": "2026-12-12"
+   },
+   "status": "confirmed",
+   "eventType": "DEFAULT"
+  },
+  {
    "summary": "Gymnastics",
    "start": {
     "dateTime": "2026-12-11T09:30:00Z",
@@ -420,6 +418,28 @@
    },
    "status": "confirmed",
    "location": "Lindum Sports Association, LN2 4PE",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Mathilda: Allegro Gymnastics Showcase (confirm which show)",
+   "start": {
+    "date": "2026-12-13"
+   },
+   "end": {
+    "date": "2026-12-14"
+   },
+   "status": "confirmed",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Francis - U12 Boys Hockey Fixture (Time TBC)",
+   "start": {
+    "date": "2026-12-13"
+   },
+   "end": {
+    "date": "2026-12-14"
+   },
+   "status": "confirmed",
    "eventType": "DEFAULT"
   }
  ]
