@@ -88,6 +88,18 @@
    "status": "confirmed",
    "colorId": "6",
    "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Charlie Sporton BYU",
+   "start": {
+    "date": "2027-01-09"
+   },
+   "end": {
+    "date": "2027-01-10"
+   },
+   "status": "confirmed",
+   "colorId": "4",
+   "eventType": "DEFAULT"
   }
  ]
 }
