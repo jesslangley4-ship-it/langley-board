@@ -66,6 +66,49 @@
    "eventType": "DEFAULT"
   },
   {
+   "summary": "Back in Camp",
+   "start": {
+    "date": "2026-12-17"
+   },
+   "end": {
+    "date": "2026-12-18"
+   },
+   "status": "confirmed",
+   "colorId": "4",
+   "location": "Kendrew Barracks (Cottesmore, Oakham Le15 7Bl, Uk, Cottesmore, LE15 7BL)",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Officers Vs Warrant Officers & Sergeants Football",
+   "start": {
+    "dateTime": "2026-12-17T14:00:00Z",
+    "timeZone": "Europe/Lisbon"
+   },
+   "end": {
+    "dateTime": "2026-12-17T16:00:00Z",
+    "timeZone": "Europe/Lisbon"
+   },
+   "status": "confirmed",
+   "colorId": "4",
+   "location": "Kendrew Barracks (Cottesmore, Oakham Le15 7Bl, Uk, Cottesmore, LE15 7BL)",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "FW: Officers' - Warrant Officers' & Sergeants' Mess Christmas Games Night Curry",
+   "start": {
+    "dateTime": "2026-12-17T17:25:00Z",
+    "timeZone": "Europe/Lisbon"
+   },
+   "end": {
+    "dateTime": "2026-12-17T19:15:00Z",
+    "timeZone": "Europe/Lisbon"
+   },
+   "status": "confirmed",
+   "colorId": "4",
+   "location": "Officers' Mess",
+   "eventType": "DEFAULT"
+  },
+  {
    "summary": "Dune 3 release",
    "start": {
     "date": "2026-12-18"
