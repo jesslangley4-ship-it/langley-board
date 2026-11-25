@@ -1,21 +1,6 @@
 {
  "events": [
   {
-   "summary": "Arsenal vs Borussia Dortmund (H)",
-   "start": {
-    "dateTime": "2026-11-24T20:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-11-24T22:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "location": "Emirates Stadium, London",
-   "eventType": "DEFAULT",
-   "description": "UEFA Champions League | Matchweek 5 | TV: Check local guides. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com | Join In #ARS"
-  },
-  {
    "summary": "Online Nutrition Education Session Wednesday 25th November 7.00pm",
    "start": {
     "dateTime": "2026-11-25T19:00:00Z",

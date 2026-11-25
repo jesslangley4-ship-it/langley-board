@@ -1,28 +1,14 @@
 {
  "events": [
   {
-   "summary": "Grandma’s birthday",
+   "summary": "Mathilda: off nursery (unwell)",
    "start": {
-    "date": "2026-11-24"
-   },
-   "end": {
     "date": "2026-11-25"
    },
-   "status": "confirmed",
-   "eventType": "DEFAULT"
-  },
-  {
-   "summary": "Francis - Hull Hockey Training",
-   "start": {
-    "dateTime": "2026-11-24T18:00:00Z",
-    "timeZone": "Europe/London"
-   },
    "end": {
-    "dateTime": "2026-11-24T19:00:00Z",
-    "timeZone": "Europe/London"
+    "date": "2026-11-26"
    },
    "status": "confirmed",
-   "location": "Hymers College, Hymers Avenue, Hull HU3 1LW",
    "eventType": "DEFAULT"
   },
   {
@@ -440,6 +426,48 @@
     "timeZone": "Europe/London"
    },
    "status": "confirmed",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Nursery Christmas Dinner (12pm) – nursery closes 5:30pm today",
+   "start": {
+    "dateTime": "2026-12-15T12:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-12-15T13:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Pre-school Christmas Nativity – St Andrews Church (Mathilda, 2027 leaver)",
+   "start": {
+    "dateTime": "2026-12-15T18:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-12-15T18:30:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "colorId": "4",
+   "location": "St Andrews Church",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Francis - Hull Hockey Training",
+   "start": {
+    "dateTime": "2026-12-15T18:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-12-15T19:00:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "location": "Hymers College, Hymers Avenue, Hull HU3 1LW",
    "eventType": "DEFAULT"
   }
  ]
