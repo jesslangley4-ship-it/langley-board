@@ -1,20 +1,6 @@
 {
  "events": [
   {
-   "summary": "Online Nutrition Education Session Wednesday 25th November 7.00pm",
-   "start": {
-    "dateTime": "2026-11-25T19:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-11-25T20:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "eventType": "DEFAULT",
-   "description": "** Wednesday 25th November - 7.00pm Online **"
-  },
-  {
    "summary": "Arsenal vs Manchester City (H)",
    "start": {
     "dateTime": "2026-11-29T16:30:00Z",
@@ -27,7 +13,7 @@
    "status": "confirmed",
    "location": "Emirates Stadium, London",
    "eventType": "DEFAULT",
-   "description": "Premier League | Matchweek 12 | Watch live on UK - Sky Sports. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com | Join In #ARSMCI"
+   "description": "Premier League | Matchweek 12 | Watch live on UK - Sky Sports | BBC Radio 5 Live. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com | Join In #ARSMCI"
   },
   {
    "summary": "Brentford vs Arsenal (A)",

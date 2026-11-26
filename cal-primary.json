@@ -1,58 +1,6 @@
 {
  "events": [
   {
-   "summary": "Mathilda: off nursery (unwell)",
-   "start": {
-    "date": "2026-11-25"
-   },
-   "end": {
-    "date": "2026-11-26"
-   },
-   "status": "confirmed",
-   "eventType": "DEFAULT"
-  },
-  {
-   "summary": "Francis: Lunchtime detention (room 33)",
-   "start": {
-    "dateTime": "2026-11-25T12:50:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-11-25T13:20:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "eventType": "DEFAULT"
-  },
-  {
-   "summary": "Francis - Hockey Academy Night (U10/U12)",
-   "start": {
-    "dateTime": "2026-11-25T18:15:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-11-25T19:45:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "location": "The Lindum",
-   "eventType": "DEFAULT"
-  },
-  {
-   "summary": "Francis: YPH Nutrition Education session (online, players & parents)",
-   "start": {
-    "dateTime": "2026-11-25T19:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "end": {
-    "dateTime": "2026-11-25T20:00:00Z",
-    "timeZone": "Europe/London"
-   },
-   "status": "confirmed",
-   "location": "Online — Microsoft Teams",
-   "eventType": "DEFAULT"
-  },
-  {
    "summary": "Gymnastics",
    "start": {
     "dateTime": "2026-11-27T09:30:00Z",
@@ -237,7 +185,7 @@
    "eventType": "DEFAULT"
   },
   {
-   "summary": "Frank James and Alfie's party",
+   "summary": "Frank James and Alfie’s party",
    "start": {
     "dateTime": "2026-12-05T14:00:00Z",
     "timeZone": "Europe/London"
@@ -324,6 +272,7 @@
     "date": "2026-12-12"
    },
    "status": "confirmed",
+   "colorId": "11",
    "eventType": "DEFAULT"
   },
   {
@@ -468,6 +417,31 @@
    },
    "status": "confirmed",
    "location": "Hymers College, Hymers Avenue, Hull HU3 1LW",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Nursery Christmas Party",
+   "start": {
+    "date": "2026-12-16"
+   },
+   "end": {
+    "date": "2026-12-17"
+   },
+   "status": "confirmed",
+   "eventType": "DEFAULT"
+  },
+  {
+   "summary": "Francis - Hockey Academy Night (U10/U12)",
+   "start": {
+    "dateTime": "2026-12-16T18:15:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2026-12-16T19:45:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "location": "The Lindum",
    "eventType": "DEFAULT"
   }
  ]
