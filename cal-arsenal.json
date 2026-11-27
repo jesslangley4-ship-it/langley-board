@@ -194,6 +194,21 @@
    "location": "Emirates Stadium, London",
    "eventType": "DEFAULT",
    "description": "Premier League | Matchweek 20 | Watch live on UK - Sky Sports. Join us for analysis and live commentary in The Breakdown Live on the Arsenal App and Arsenal.com | Join In #ARSBRE"
+  },
+  {
+   "summary": "Arsenal Women vs Brighton & Hove Albion Women (H)",
+   "start": {
+    "dateTime": "2027-01-10T12:30:00Z",
+    "timeZone": "Europe/London"
+   },
+   "end": {
+    "dateTime": "2027-01-10T14:30:00Z",
+    "timeZone": "Europe/London"
+   },
+   "status": "confirmed",
+   "location": "Emirates Stadium, London",
+   "eventType": "DEFAULT",
+   "description": "Barclays WSL | Join in @ArsenalFCW"
   }
  ]
 }
