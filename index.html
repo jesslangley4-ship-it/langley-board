@@ -940,34 +940,8 @@
      The board reads this instead of calling window.claude / MCP, so it renders
      on a plain browser (the kitchen Raspberry Pi) with no Claude login. */
   var BAKED = {
-    "generatedISO": "2026-11-27T15:06:56.842Z",
+    "generatedISO": "2026-11-28T07:06:47.726Z",
     "primary": [
-      {
-        "summary": "Gymnastics",
-        "start": {
-          "dateTime": "2026-11-27T09:30:00Z",
-          "timeZone": "Europe/London"
-        },
-        "end": {
-          "dateTime": "2026-11-27T10:30:00Z",
-          "timeZone": "Europe/London"
-        },
-        "status": "confirmed",
-        "location": "Allegro Gymnastics Academy"
-      },
-      {
-        "summary": "Swimming",
-        "start": {
-          "dateTime": "2026-11-27T13:30:00Z",
-          "timeZone": "Europe/London"
-        },
-        "end": {
-          "dateTime": "2026-11-27T14:30:00Z",
-          "timeZone": "Europe/London"
-        },
-        "status": "confirmed",
-        "location": "Emmerson Pool Hire"
-      },
       {
         "summary": "Sarah engagement party",
         "start": {
@@ -1136,35 +1110,19 @@
           "timeZone": "Europe/London"
         },
         "status": "confirmed"
+      },
+      {
+        "summary": "Francis: Pay Lincolnshire Music guitar invoice (£240.35) - due by 7 Dec",
+        "start": {
+          "date": "2026-12-07"
+        },
+        "end": {
+          "date": "2026-12-08"
+        },
+        "status": "confirmed"
       }
     ],
     "familyTicker": [
-      {
-        "summary": "Gymnastics",
-        "start": {
-          "dateTime": "2026-11-27T09:30:00Z",
-          "timeZone": "Europe/London"
-        },
-        "end": {
-          "dateTime": "2026-11-27T10:30:00Z",
-          "timeZone": "Europe/London"
-        },
-        "status": "confirmed",
-        "location": "Allegro Gymnastics Academy"
-      },
-      {
-        "summary": "Swimming",
-        "start": {
-          "dateTime": "2026-11-27T13:30:00Z",
-          "timeZone": "Europe/London"
-        },
-        "end": {
-          "dateTime": "2026-11-27T14:30:00Z",
-          "timeZone": "Europe/London"
-        },
-        "status": "confirmed",
-        "location": "Emmerson Pool Hire"
-      },
       {
         "summary": "Sarah engagement party",
         "start": {
@@ -1466,6 +1424,19 @@
         "status": "confirmed"
       },
       {
+        "summary": "Santa",
+        "start": {
+          "dateTime": "2026-12-13T13:30:00Z",
+          "timeZone": "Europe/London"
+        },
+        "end": {
+          "dateTime": "2026-12-13T14:30:00Z",
+          "timeZone": "Europe/London"
+        },
+        "status": "confirmed",
+        "location": "Lincolnshire Wolds Railway"
+      },
+      {
         "summary": "Nursery Christmas Party",
         "start": {
           "date": "2026-12-14"
@@ -1548,21 +1519,35 @@
         },
         "status": "confirmed",
         "location": "The Lindum"
+      },
+      {
+        "summary": "Gymnastics",
+        "start": {
+          "dateTime": "2026-12-18T09:30:00Z",
+          "timeZone": "Europe/London"
+        },
+        "end": {
+          "dateTime": "2026-12-18T10:30:00Z",
+          "timeZone": "Europe/London"
+        },
+        "status": "confirmed",
+        "location": "Allegro Gymnastics Academy"
+      },
+      {
+        "summary": "Swimming",
+        "start": {
+          "dateTime": "2026-12-18T13:30:00Z",
+          "timeZone": "Europe/London"
+        },
+        "end": {
+          "dateTime": "2026-12-18T14:30:00Z",
+          "timeZone": "Europe/London"
+        },
+        "status": "confirmed",
+        "location": "Emmerson Pool Hire"
       }
     ],
     "alex": [
-      {
-        "summary": "CYCLONE",
-        "start": {
-          "date": "2026-11-09"
-        },
-        "end": {
-          "date": "2026-11-28"
-        },
-        "status": "confirmed",
-        "location": "Salisbury",
-        "colorId": "11"
-      },
       {
         "summary": "Christmas Leave",
         "start": {
@@ -1919,15 +1904,15 @@
      date — if today isn't in the map, it falls back to '' (nothing planned)
      rather than showing a stale day. */
   var WEEK_MEAL_PLAN = {
-    "2026-11-27": { meal: "Veggie bean & sweet potato chilli (double batch)", note: "Gymnastics 9:30am & swimming 1:30pm today, evening's free \u2014 good day to batch-cook extra for Monday's parents' evening" },
     "2026-11-28": { meal: "Eating out", note: "Sarah's engagement party 6-7pm \u2014 tea out tonight, no cooking. Alex back from CYCLONE and onto Christmas leave." },
     "2026-11-29": { meal: "Slow-cooker beef & root veg stew with mash & greens", note: "This week's one meat night, and Alex's first Sunday home. Francis's hockey fixture today (time still TBC) \u2014 slow cooker on by 9am so tea's ready whenever you're back" },
     "2026-11-30": { meal: "Reheat: Friday's bean & sweet potato chilli with rice", note: "Preschool Parents' Evening 6-7:30pm \u2014 quick reheat gets tea done before you head out" },
     "2026-12-01": { meal: "Air-fryer frozen fishcakes with mash & peas", note: "Hull hockey training 6-7pm (Hymers College) plus travel \u2014 air fryer gets tea done fast either side" },
     "2026-12-02": { meal: "Air-fryer halloumi & veg wraps with sweet potato wedges", note: "Hockey Academy Night 6:15-7:45pm (The Lindum) \u2014 a new one to try, ready in 20 minutes either side of the run" },
-    "2026-12-03": { meal: "Mediterranean baked cod with tomatoes, chickpeas & couscous", note: "Free evening \u2014 a new one to try to round off the week" }
+    "2026-12-03": { meal: "Mediterranean baked cod with tomatoes, chickpeas & couscous", note: "Free evening \u2014 a new one to try to round off the week" },
+    "2026-12-04": { meal: "Air-fryer peri-peri cod with sweet potato wedges & corn", note: "" }
   };
-  var WEEK_MEAL_PLAN_UPDATED = '2026-11-27T15:06:53Z';
+  var WEEK_MEAL_PLAN_UPDATED = '2026-11-28T07:06:45Z';
 
   var TEA_TONIGHT = (function(){
     var todayISO = ymdLocal(new Date());

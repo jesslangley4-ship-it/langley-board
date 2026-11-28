@@ -1,19 +1,6 @@
 {
  "events": [
   {
-   "summary": "CYCLONE",
-   "start": {
-    "date": "2026-11-09"
-   },
-   "end": {
-    "date": "2026-11-28"
-   },
-   "status": "confirmed",
-   "colorId": "11",
-   "location": "Salisbury",
-   "eventType": "DEFAULT"
-  },
-  {
    "summary": "Christmas Leave",
    "start": {
     "date": "2026-11-28"
